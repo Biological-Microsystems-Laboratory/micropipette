@@ -13,3 +13,5 @@ todo
 - [x] add initial cad designs in stl
 - [ ] add dimentions spreadsheet
  - [ ] take dimentions for 5 mL, 3 mL and 1 mL 
+
+- [ ] add printing protocol from .blend file to printing with makerbot
