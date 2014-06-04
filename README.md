@@ -26,4 +26,17 @@ todo
 
 - [ ] rename case.stl to body.stl
 
-- [ ] add *.md~ to .gitignore file
+- [ ] add .md~ to .gitignore file
+
+- [ ] incorporate syringe-lock function into body
+
+long term todo
+--------------
+
+- [ ] Make flexing syringe plunger design rather then plunger-shaft button
+
+- [ ] Make design using 1 mL pipette that can do micro volumes 5 - 200 uL
+
+- [ ] Public release 
+ - [ ] complete readme and wiki so that they are presentable
+ - [ ] make offical name and imbed in design 
