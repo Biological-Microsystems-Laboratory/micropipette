@@ -8,10 +8,22 @@ todo
 - [ ] make explicit git protocol for general and CAD files
  - [x] add git walkthrough and workflow
 
-- [x] add blender tutorial 
+- [ ] create additional parts in CAD for dimension and rendering purposes
+ - [ ] bolt
+ - [ ] nut 	 
+ - [ ] syringe - plunger and barrel
+ - [ ] spring
 
-- [x] add initial cad designs in stl
-- [ ] add dimentions spreadsheet
- - [ ] take dimentions for 5 mL, 3 mL and 1 mL 
+- [ ] get a working version of plunger-shaft
+ - [ ] rename plunger.stl to plunger-shaft.stl
+ - [ ] find the working final design for this part - email SD team
+ - [ ] make bottom flat
 
-- [ ] add printing protocol from .blend file to printing with makerbot
+- [x] add dimentions spreadsheet
+ - [ ] re-measure dimensions with calipers
+
+- [x] add printing protocol from .blend file to printing with makerbot
+
+- [ ] rename case.stl to body.stl
+
+- [ ] add *.md~ to .gitignore file
