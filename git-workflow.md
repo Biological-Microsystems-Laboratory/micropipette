@@ -165,3 +165,22 @@ You can also quickly make a new branch and switch the HEAD to it to start workin
     
     $ git checkout -b newer
 
+
+Basic Commands:
+You can check your working dirctory by typing " pwd " in to you Git Bash window.
+
+pwd 
+
+
+To change the directory on your computer type" cd "
+
+cd 
+
+then list the path to the folder
+
+ex : 
+cd Documents/ ...
+
+You can list the directory contects by typing 
+ 
+ls
