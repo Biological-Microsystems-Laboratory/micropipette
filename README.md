@@ -9,9 +9,9 @@ todo
  - [x] add git walkthrough and workflow
 
 - [ ] create additional parts in CAD for dimension and rendering purposes
- - [ ] bolt
- - [ ] nut 	 
- - [ ] syringe - plunger and barrel
+ - [x] bolt
+ - [x] nut 	 
+ - [x] syringe - plunger and barrel
  - [ ] spring
 
 - [ ] get a working version of plunger-shaft
@@ -20,7 +20,7 @@ todo
  - [ ] make bottom flat
 
 - [x] add dimentions spreadsheet
- - [ ] re-measure dimensions with calipers
+ - [x] re-measure dimensions with calipers
 
 - [x] add printing protocol from .blend file to printing with makerbot
 
