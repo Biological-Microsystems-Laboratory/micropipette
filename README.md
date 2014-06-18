@@ -24,7 +24,7 @@ todo
 
 - [x] add printing protocol from .blend file to printing with makerbot
 
-- [ ] rename case.stl to body.stl
+- [x] rename case.stl to body.stl
 
 - [ ] add .md~ to .gitignore file
 
