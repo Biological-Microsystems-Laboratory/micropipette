@@ -11,7 +11,7 @@ todo
 - [ ] create additional parts in CAD for dimension and rendering purposes
  - [x] bolt
  - [x] nut 	 
- - [x] syringe -  plunger and barrel
+ - [x] syringe - plunger and barrel
  - [ ] spring
 
 - [ ] get a working version of plunger-shaft
