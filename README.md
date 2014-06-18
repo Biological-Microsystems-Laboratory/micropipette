@@ -14,8 +14,8 @@ todo
  - [x] syringe - plunger and barrel
  - [ ] spring
 
-- [ ] get a working version of plunger-shaft
- - [ ] rename plunger.stl to plunger-shaft.stl
+- [x] get a working version of plunger-shaft
+ - [x] rename plunger.stl to plunger-shaft.stl
  - [ ] find the working final design for this part - email SD team
  - [ ] make bottom flat
 
