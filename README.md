@@ -12,7 +12,7 @@ todo
  - [x] bolt
  - [x] nut 	 
  - [x] syringe - plunger and barrel
- - [ ] spring
+ - [x] spring
 
 - [x] get a working version of plunger-shaft
  - [x] rename plunger.stl to plunger-shaft.stl
