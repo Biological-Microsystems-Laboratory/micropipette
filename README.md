@@ -8,7 +8,7 @@ todo
 - [ ] make explicit git protocol for general and CAD files
  - [x] add git walkthrough and workflow
 
-- [ ] create additional parts in CAD for dimension and rendering purposes
+- [x] create additional parts in CAD for dimension and rendering purposes
  - [x] bolt
  - [x] nut 	 
  - [x] syringe - plunger and barrel
