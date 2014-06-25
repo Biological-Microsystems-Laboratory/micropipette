@@ -28,7 +28,7 @@ todo
 
 - [ ] add .md~ to .gitignore file
 
-- [ ] incorporate syringe-lock function into body
+- [x] incorporate syringe-lock function into body
 
 long term todo
 --------------
