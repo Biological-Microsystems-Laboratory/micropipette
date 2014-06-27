@@ -5,6 +5,12 @@ micropipette
 
 todo
 ----
+
+- [ ] clean up Syringe branch then merge it into master
+- [ ] start develop branch (from master) were most work will happen (or in branches from 'develop')
+- [ ] figure out how to make non-binary STLs from solidworks
+- [ ] figure out how to checkout older respsitory versions (file versions)
+- [ ] learn how to tag file/repository versions
 - [ ] make explicit git protocol for general and CAD files
  - [x] add git walkthrough and workflow
 
