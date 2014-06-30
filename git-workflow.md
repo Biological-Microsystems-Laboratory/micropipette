@@ -184,3 +184,66 @@ cd Documents/ ...
 You can list the directory contects by typing 
  
 ls
+
+
+How to Access older versions of repositoris "Pulled from GitHub"
+Go to     http://githowto.com/getting_old_versions    for more info
+ 
+git hist
+Note: Do not forget to define hist in your .gitconfig file? If you do not remember how, review the lesson on aliases.
+
+RESULT:
+$ git hist
+* fa3c141 2011-03-09 | Added HTML header (HEAD, master) [Marina Pushkova]
+* 8c32287 2011-03-09 | Added standard HTML page tags [Marina Pushkova]
+* 43628f7 2011-03-09 | Added h1 tag [Marina Pushkova]
+* 911e8c9 2011-03-09 | First Commit [Marina Pushkova]
+Check the log data and find the hash for the first commit. You will find it in the last line of the git hist data. Use the code (its first 7 chars are enough) in the command below. After that check the contents of the hello.html file.
+
+RUN:
+git checkout <hash>
+cat hello.html
+Note: Many commands depend on the hash values in the repository. Since my hash values will be different from yours, substitute in the appropriate hash value for your repository everytime you see <hash> or <treehash> in the command.
+
+You will see …
+
+RESULT:
+$ git checkout 911e8c9
+Note: checking out '911e8c9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 911e8c9... First Commit
+$ cat hello.html
+Hello, World
+The checkout command output totally clarifies the situation. Older git versions will complain about not being on a local branch. But you don’t need to worry about that right now.
+
+Note that the content of the hello.html file is the default content.
+
+02 Returning to the latest version in the master branch
+
+RUN:
+git checkout master
+cat hello.html
+You will see …
+
+RESULT:
+$ git checkout master
+Previous HEAD position was 911e8c9... First Commit
+Switched to branch 'master'
+$ cat hello.html
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+‘master’ is the name of the default branch. By checking out a branch by name, you go to its lastest version.
