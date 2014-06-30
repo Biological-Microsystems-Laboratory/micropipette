@@ -188,7 +188,12 @@ ls
 
 How to Access older versions of repositoris "Pulled from GitHub"
 Go to     http://githowto.com/getting_old_versions    for more info
- 
+First run this command in Git to set up alias 
+
+	git config --global alias.hist 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
+
+then run
+
 git hist
 Note: Do not forget to define hist in your .gitconfig file? If you do not remember how, review the lesson on aliases.
 
