@@ -10,7 +10,7 @@ todo
 - [x] start develop branch (from master) were most work will happen (or in branches from 'develop')
 - [x] figure out how to make non-binary STLs from solidworks (2 options Bianry or  ASCII
 - [x] figure out how to checkout older respsitory versions (file versions)
-- [ ] learn how to tag file/repository versions
+- [x] learn how to tag file/repository versions
 - [ ] make explicit git protocol for general and CAD files
  - [x] add git walkthrough and workflow
 
