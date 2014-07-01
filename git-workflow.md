@@ -188,6 +188,7 @@ ls
 
 How to Access older versions of repositoris "Pulled from GitHub"
 Go to     http://githowto.com/getting_old_versions    for more info
+
 First run this command in Git to set up alias 
 
 	git config --global alias.hist 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
@@ -197,24 +198,13 @@ then run
 git hist
 Note: Do not forget to define hist in your .gitconfig file? If you do not remember how, review the lesson on aliases.
 
-RESULT:
-$ git hist
-* fa3c141 2011-03-09 | Added HTML header (HEAD, master) [Marina Pushkova]
-* 8c32287 2011-03-09 | Added standard HTML page tags [Marina Pushkova]
-* 43628f7 2011-03-09 | Added h1 tag [Marina Pushkova]
-* 911e8c9 2011-03-09 | First Commit [Marina Pushkova]
 Check the log data and find the hash for the first commit. You will find it in the last line of the git hist data. Use the code (its first 7 chars are enough) in the command below. After that check the contents of the hello.html file.
 
 RUN:
 git checkout <hash>
-cat hello.html
+
 Note: Many commands depend on the hash values in the repository. Since my hash values will be different from yours, substitute in the appropriate hash value for your repository everytime you see <hash> or <treehash> in the command.
 
-You will see …
-
-RESULT:
-$ git checkout 911e8c9
-Note: checking out '911e8c9'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -225,30 +215,94 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at 911e8c9... First Commit
-$ cat hello.html
-Hello, World
-The checkout command output totally clarifies the situation. Older git versions will complain about not being on a local branch. But you don’t need to worry about that right now.
-
-Note that the content of the hello.html file is the default content.
 
 02 Returning to the latest version in the master branch
 
 RUN:
 git checkout master
-cat hello.html
-You will see …
 
-RESULT:
-$ git checkout master
-Previous HEAD position was 911e8c9... First Commit
-Switched to branch 'master'
+‘master’ is the name of the default branch. By checking out a branch by name, you go to its lastest version.
+
+
+
+
+
+
+
+
+
+Tagging Previous Versions in Git
+go to 
+http://githowto.com/tagging_versions 
+for more help
+
+Tags for previous versions
+
+Let’s tag the version prior to the current version with the name v1-beta. First of all we will checkout the previous version. Instead of looking up the hash, we are going to use the ^ notation indicating “the parent of v1”.
+
+If the v1^ notation causes troubles, try using v1~1, referencing the same version. This notation means “the first version prior to v1”.
+
+RUN:
+git checkout v1^
+cat hello.html
+RUN:
+$ git checkout v1^
+Note: checking out 'v1^'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 8c32287... Added standard HTML page tags
 $ cat hello.html
 <html>
-  <head>
-  </head>
   <body>
     <h1>Hello, World!</h1>
   </body>
 </html>
-‘master’ is the name of the default branch. By checking out a branch by name, you go to its lastest version.
+This is the version with <html> and <body> tags, but without <head>. Let’s make it’s the v1-beta version.
+
+RUN:
+git tag v1-beta
+03 Check out by the tag name
+
+Now try to checkout between the two tagged versions.
+
+RUN:
+git checkout v1
+git checkout v1-beta
+RESULT:
+$ git checkout v1
+Previous HEAD position was 8c32287... Added standard HTML page tags
+HEAD is now at fa3c141... Added HTML header
+$ git checkout v1-beta
+Previous HEAD position was fa3c141... Added HTML header
+HEAD is now at 8c32287... Added standard HTML page tags
+04 Viewing tags with the tag command
+
+You can see the available tags using the git tag command.
+
+RUN:
+git tag
+RESULT:
+$ git tag
+v1
+v1-beta
+05 Viewing tags in logs
+
+You can also check for tags in the log.
+
+RUN:
+git hist master --all
+RESULT:
+$ git hist master --all
+* fa3c141 2011-03-09 | Added HTML header (v1, master) [Marina Pushkova]
+* 8c32287 2011-03-09 | Added standard HTML page tags (HEAD, v1-beta) [Marina Pushkova]
+* 43628f7 2011-03-09 | Added h1 tag [Marina Pushkova]
+* 911e8c9 2011-03-09 | First Commit [Marina Pushkova]
+You can see tags (v1 and v1-beta) listed in the log together with the name of the branch (master). The HEAD shows the commit you checked out (currently v1-beta).
