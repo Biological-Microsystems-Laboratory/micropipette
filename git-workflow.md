@@ -285,7 +285,7 @@ Previous HEAD position was fa3c141... Added HTML header
 HEAD is now at 8c32287... Added standard HTML page tags
 04 Viewing tags with the tag command
 
-You can see the available tags using the git tag command.
+You can see the available  tags using the git tag command.
 
 RUN:
 git tag
