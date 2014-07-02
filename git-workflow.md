@@ -233,7 +233,7 @@ git checkout master
 
 Tagging Previous Versions in Git
 go to 
-http://githowto.com/tagging_versions 
+       http://githowto.com/tagging_versions 
 for more help
 
 Tags for previous versions
