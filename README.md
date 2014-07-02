@@ -23,8 +23,8 @@ todo
 - [x] get a working version of plunger-shaft
  - [x] rename plunger.stl to plunger-shaft.stl
  - [ ] find the working final design for this part - email SD team
- - [ ] make bottom flat
-- [ ] Limit the movement of the button
+ - [x] make bottom  flat
+- [x] Limit the movement of the button
 
 - [x] add dimentions spreadsheet
  - [x] re-measure dimensions with calipers
