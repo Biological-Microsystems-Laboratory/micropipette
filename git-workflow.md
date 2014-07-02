@@ -373,7 +373,7 @@ a6b4c97498bd301d84096da251c98a07c7723e65 beginning write support
 Now, suppose you forgot to tag the project at v1.2, which was at the "updated rakefile" commit. You can add it after the fact. To tag that commit, you specify the commit checksum (or part of it) at the end of the command:
 
 $ git tag -a v1.2 -m 'version 1.2' 9fceb02
-You can see that you’ve tagged the commit:
+You can see that you’ve tagged the commit :
 
 $ git tag
 v0.1
