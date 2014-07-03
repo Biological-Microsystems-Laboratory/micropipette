@@ -11,7 +11,7 @@ todo
 - [x] figure out how to make non-binary STLs from solidworks (2 options Bianry or  ASCII
 - [x] figure out how to checkout  older respsitory versions (file versions)
 - [x] learn how to tag file/repository versions
-- [ ] make explicit git protocol for general and CAD files
+- [x] make explicit git protocol for general and CAD files
  - [x] add git walkthrough and workflow
 
 - [x] create additional parts in CAD for dimension and rendering purposes
