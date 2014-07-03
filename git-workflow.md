@@ -181,7 +181,7 @@ then list the path to the folder
 ex : 
 cd Documents/ ...
 
-You can list the directory contects by typing 
+You can list the directory contents by typing 
  
 ls
 
