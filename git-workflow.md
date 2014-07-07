@@ -257,7 +257,6 @@ Tagger: Scott Chacon <schacon@gee-mail.com>
 Date:   Mon Feb 9 14:45:11 2009 -0800
 
 Sharing Tags
-By default, the git push command doesn’t transfer tags to remote servers. You will have to explicitly push tags to a shared server after you have created them. This process is just like sharing remote branches — you can run git push origin [tagname].
 
 $ git push origin v1.5
 Counting objects: 50, done.
