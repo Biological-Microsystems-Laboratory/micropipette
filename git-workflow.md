@@ -186,8 +186,10 @@ You can list the directory contents by typing
 ls
 
 
-How to Access older versions of repositoris "Pulled from GitHub"
-Go to     http://githowto.com/getting_old_versions    for more info
+Access older versions of repositories "Pulled from GitHub"
+Go to     
+http://githowto.com/getting_old_versions    
+for more info
 
 First run this command in Git to set up alias 
 
@@ -198,7 +200,7 @@ then run
 git hist
 Note: Do not forget to define hist in your .gitconfig file? If you do not remember how, review the lesson on aliases.
 
-Check the log data and find the hash for the first commit. You will find it in the last line of the git hist data. Use the code (its first 7 chars are enough) in the command below. After that check the contents of the hello.html file.
+Check the log data and find the hash for the first commit. You will find it in the last line of the git hist data. Use the code (its first 7 chars are enough) in the command below. 
 
 RUN:
 git checkout <hash>
@@ -226,11 +228,6 @@ git checkout master
 
 
 
-
-
-
-
-
 Tagging Git
 go to
  http://git-scm.com/book/en/Git-Basics-Tagging
@@ -243,39 +240,23 @@ Annotated Tags
 Creating an annotated tag in Git is simple. The easiest way is to specify -a when you run the tag command:
 
 $ git tag -a v1.4 -m 'my version 1.4'
+
 $ git tag
-v0.1
-v1.3
-v1.4
+
 The -m specifies a tagging message, which is stored with the tag. If you don’t specify a message for an annotated tag, Git launches your editor so you can type it in.
 
 You can see the tag data along with the commit that was tagged by using the git show command:
 
 $ git show v1.4
-tag v1.4
-Tagger: Scott Chacon <schacon@gee-mail.com>
-Date:   Mon Feb 9 14:45:11 2009 -0800
+
 
 Sharing Tags
 
 $ git push origin v1.5
-Counting objects: 50, done.
-Compressing objects: 100% (38/38), done.
-Writing objects: 100% (44/44), 4.56 KiB, done.
-Total 44 (delta 18), reused 8 (delta 1)
-To git@github.com:schacon/simplegit.git
-* [new tag]         v1.5 -> v1.5
+
 If you have a lot of tags that you want to push up at once, you can also use the --tags option to the git push command. This will transfer all of your tags to the remote server that are not already there.
 
 $ git push origin --tags
-Counting objects: 50, done.
-Compressing objects: 100% (38/38), done.
-Writing objects: 100% (44/44), 4.56 KiB, done.
-Total 44 (delta 18), reused 8 (delta 1)
-To git@github.com:schacon/simplegit.git
- * [new tag]         v0.1 -> v0.1
- * [new tag]         v1.2 -> v1.2
- * [new tag]         v1.4 -> v1.4
- * [new tag]         v1.4-lw -> v1.4-lw
- * [new tag]         v1.5 -> v1.5
+
+
 Now, when someone else clones or pulls from your repository, they will get all your tags as well.
