@@ -117,6 +117,7 @@ Now so you can see that everything is working go to the repository in Github. Yo
 You should see git download the changes you made and now when you look at the file on your computer it will include the edits you made through Github. Yay! also when you run git log you will see your edit and commit that you made.
 
 Using the Develop Branch
+
 1. when working on a file, pull from the Branch Develop. This will sychronize your local files with the latest files on GitHub.
 
 2. Start working on the files in your local folder. As you are working commit the changes on the Git Hub windows with short comments. 
@@ -124,6 +125,8 @@ Using the Develop Branch
 3.When you finish a product/item then go to branch master by
 git checkout branch master
 then merge the develp branch into master.
+
+4. You can also add branches and form new branches after pulling from Develop. Then you must merge that branch in to develop and and then into master. This keeps the master branch clean.
 
 Remotes
 ---
