@@ -10,7 +10,7 @@ If you lost the directory from last time or are getting merge errors start a fre
 
 		$ git clone https://github.com/mbrenn3/Volvox-C-section.git
 
-2. Start working. Save and commit changes often.
+2. Start working. Save and  commit changes often.
 
 	
 		$ git commit -am "concise commit comment"
