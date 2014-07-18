@@ -57,7 +57,7 @@ To list identity and settings
 	
 ###Initialize a repository, add a readme, a remote, and push to github
 
-make a new directory and enter it, and make a file
+make a new directory and enter it, and make a file 
 
     $ mkdir test
     $ cd test
