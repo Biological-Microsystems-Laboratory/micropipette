@@ -6,44 +6,22 @@ micropipette
 todo
 ----
 
-- [x] clean up Syringe branch then merge it into master
-- [x] start develop branch (from master) were most work will happen (or in branches from 'develop')
-- [x] figure out how to make non-binary STLs from solidworks (2 options Bianry or  ASCII
-- [x] figure out how to checkout  older respsitory versions (file versions)
-- [x] learn how to tag file/repository versions
-- [x] make explicit git protocol for general and CAD files
- - [x] add git walkthrough and workflow
+- [ ] make presentation
+ - [ ] data analysis and plots
+ - [ ] photos
+  - [ ] shots of assmbled and broken down with all parts
+ - [ ] video
+ - [ ] bring working pipette for demo
+ - [ ] competing designs
+ - [ ] next steps
 
-- [x] create additional parts in CAD for dimension and rendering purposes
- - [x] bolt
- - [x] nut 	 
- - [x] syringe - plunger and barrel
- - [x] spring
+future
+-----
 
-- [x] get a working version of plunger-shaft
- - [x] rename plunger.stl to plunger-shaft.stl
- - [ ] find the working final design for this part - email SD team
- - [x] make bottom  flat
-- [x] Limit the movement of the button
+ - [ ] ejector
 
-- [x] add dimentions spreadsheet
- - [x] re-measure dimensions with calipers
+ - [ ] make wiki
 
-- [x] add printing protocol from .blend file to printing with makerbot
+ - [ ] make github page
 
-- [x] rename case.stl to body.stl
-
-- [ ] add .md~ to .gitignore file
-
-- [x] incorporate syringe-lock function into body
-
-long term todo
---------------
-
-- [ ] Make flexing syringe plunger design rather then plunger-shaft button
-
-- [ ] Make design using 1 mL pipette that can do micro volumes 5 - 200 uL
-
-- [ ] Public release 
- - [ ] complete readme and wiki so that they are presentable
  - [ ] make offical name and imbed in design 
