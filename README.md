@@ -8,12 +8,19 @@ todo
 
 - [ ] make presentation
  - [ ] data analysis and plots
- - [ ] photos
+ - [ ] photos (labeled)
   - [ ] shots of assmbled and broken down with all parts
  - [ ] video
  - [ ] bring working pipette for demo
  - [ ] competing designs
  - [ ] next steps
+ - [ ] protocol for user data (user and explanation)
+ - [ ] mesure drift for commercil pipette
+ - [ ] data and analysis for user data
+ - [ ] protocol for all data and tests
+ - [ ] commercial vs our pipette pictures 
+ - [ ] syringe tolerances
+ - [ ] tolerance for the commercial pipettes 
 
 future
 -----
@@ -27,7 +34,8 @@ future
  - [ ] make offical name and imbed in design 
  
  - [ ] publish in plosone or peerj
-
+ 
+ - [ ] rotation count for mesurement
 ##Additional Parts
 
 1. M3 Hex Nut McMaster part# 90591A121
