@@ -24,6 +24,7 @@ todo
 ####Documentation 
 - [ ] photos (labeled)
  - [ ] shots of assmbled and broken down with all parts
+
 - [ ] re shoot video with better angle
 - [ ] protocol for all data and tests
 
@@ -43,13 +44,13 @@ todo
 - [ ] review style-guide
 - [ ] make general workflow guide
 
- - [ ] ejector
- - [ ] make wiki
- - [ ] make github page
- - [ ] make offical name and imbed in design  
- - [ ] publish in plosone or peerj 
- - [ ] rotation count for mesurement 
- - [ ] add links for similar designs to readme
+- [ ] ejector
+- [ ] make wiki
+- [ ] make github page
+- [ ] make offical name and imbed in design  
+- [ ] publish in plosone or peerj 
+- [ ] rotation count for mesurement 
+- [ ] add links for similar designs to readme
 
 ##Additional Parts
 
