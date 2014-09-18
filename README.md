@@ -6,36 +6,51 @@ micropipette
 todo
 ----
 
-- [ ] make presentation
- - [ ] data analysis and plots
- - [ ] photos (labeled)
-  - [ ] shots of assmbled and broken down with all parts
- - [ ] video
- - [ ] bring working pipette for demo
- - [ ] competing designs
- - [ ] next steps
- - [ ] protocol for user data (user and explanation)
- - [ ] mesure drift for commercil pipette
- - [ ] data and analysis for user data
- - [ ] protocol for all data and tests
- - [ ] commercial vs our pipette pictures 
- - [ ] syringe tolerances
- - [ ] tolerance for the commercial pipettes 
+####Data 
 
-future
------
+- [ ] measure drift for commercial pipette
+ - [ ] 50 measurements at 200 uL
+ - [ ] is measured drift statistically significant?
+ 
+- [ ] data and analysis for user data
+ - [ ] experimental description and protocol
+ - [ ] instructions (protocol) for test subject
+
+####Research
+- [ ] commercial vs our pipette pictures 
+- [ ] syringe tolerances
+- [ ] tolerance for the commercial pipettes 
+ 
+####Documentation 
+- [ ] photos (labeled)
+ - [ ] shots of assmbled and broken down with all parts
+- [ ] re shoot video with better angle
+- [ ] protocol for all data and tests
+
+- [ ] update additional parts list
+ - [ ] 1mL and 3mL specific parts
+ 
+- [ ] update specifications
+ - [ ] 1mL and 3mL specific
+ 
+- [ ] Add user guide to readme
+ - [ ] assembly
+ - [ ] feature description and function
+ - [ ] usage
+ 
+####Future Development
+
+- [ ] review style-guide
+- [ ] make general workflow guide
 
  - [ ] ejector
-
  - [ ] make wiki
-
  - [ ] make github page
+ - [ ] make offical name and imbed in design  
+ - [ ] publish in plosone or peerj 
+ - [ ] rotation count for mesurement 
+ - [ ] add links for similar designs to readme
 
- - [ ] make offical name and imbed in design 
- 
- - [ ] publish in plosone or peerj
- 
- - [ ] rotation count for mesurement
 ##Additional Parts
 
 1. M3 Hex Nut McMaster part# 90591A121
