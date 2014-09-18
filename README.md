@@ -39,6 +39,10 @@ todo
  - [ ] feature description and function
  - [ ] usage
  
+- [ ] Add Photos to readme
+
+- [ ] Add tables and plots to readme 
+ 
 ####Future Development
 
 - [ ] review style-guide
