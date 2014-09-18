@@ -64,7 +64,7 @@ todo
 
 
 ## Specifications
-The 3mL Syringe Micropipette can dispense up to 1.1mL of liquid. It can be adjusted to any value between 0.0mL to 1.1mL.
+The 3mL Syringe Micropipette can dispense up to 1mL of liquid. It can be adjusted to any value between 0.0mL to 1.1mL.
 
 When the plunger is fully depressed into its lock position the syringe reads 0.7mL. 
 
