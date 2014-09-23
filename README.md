@@ -8,8 +8,8 @@ todo
 
 ####Data 
 
-- [ ] measure drift for commercial pipette
- - [ ] 50 measurements at 200 uL
+- [x] measure drift for commercial pipette
+ - [x] 50 measurements at 200 uL
  - [ ] is measured drift statistically significant?
  
 - [ ] data and analysis for user data
@@ -25,7 +25,7 @@ todo
 - [ ] photos (labeled)
  - [ ] shots of assmbled and broken down with all parts
 
-- [ ] re shoot video with better angle
+- [x] re shoot video with better angle
 - [ ] protocol for all data and tests
 
 - [ ] update additional parts list
