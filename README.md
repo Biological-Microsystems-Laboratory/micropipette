@@ -31,8 +31,8 @@ todo
 - [ ] update additional parts list
  - [ ] 1mL and 3mL specific parts
  
-- [ ] update specifications
- - [ ] 1mL and 3mL specific
+- [x] update specifications
+ - [x] 1mL and 3mL specific
  
 - [ ] Add user guide to readme
  - [ ] assembly

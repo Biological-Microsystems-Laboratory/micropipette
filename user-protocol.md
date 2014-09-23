@@ -1,7 +1,7 @@
 Protocol for Users
 
 1.	Prepare the scale
-2.	Place a tray onto the  scale and zero out the scale
+2.	Place a weight boat onto the  scale and zero out the scale
 3.	Attach the syringe to the pipette housing
 	a. remove the syringe plunger and place a spring into the 	syringe
 	b. replace the syringe plunger back onto the syringe
@@ -19,6 +19,7 @@ Protocol for Users
 14.	Place your tip inside the liquid you want to measure and 	press the release button
 15.	Dispense the liquid on to the tray place on the scale
 16.	Wait for the scale to finish measuring and record the 	measurement
-17.	Readjust the screw (if needed) and repeat steps 13-16
-18.	Repeat steps for 10,20, and 50uL measurements. (replace 	the 200uL in step 7 with one of these values)
+17.	Readjust the screw (if needed) and repeat steps 13-16 two more times for each mesurement.
+18.	Recalabirate the scale.
+19.	Repeat steps for 10,20, and 50uL measurements. (replace 	the 200uL in step 7 with one of these values)
 
