@@ -7,3 +7,5 @@ the user protocol. They will perform 3 trials for each measurement. They will we
 themselves and will be informed of the weight. They will also be allowed to readjust the screw after 
 each trial if needed. The 3 trials at the 4 different measurements by 10 subjects allows us to 
 demonstrate the ease of use, accuracy, and precision of the pipette.
+
+User Protocol for the experiment is in the "user-protocol" file.
