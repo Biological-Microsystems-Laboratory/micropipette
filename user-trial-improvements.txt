@@ -1,0 +1,4 @@
+Improve User Trials
+1. Decrese the percent error to 10%
+2. Give a Demo of using the device and a chart to help with comverting entities
+3. 
