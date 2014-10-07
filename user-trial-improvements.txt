@@ -1,4 +1,5 @@
 Improve User Trials
 1. Decrese the percent error to 10%
 2. Give a Demo of using the device and a chart to help with comverting entities
-3. 
+3. Make someway of determining the number of turns and relating that to amount dispensed in the piptte
+4.
