@@ -10,7 +10,7 @@ todo
 
 - [x] measure drift for commercial pipette
  - [x] 50 measurements at 200 uL
- - [ ] is measured drift statistically significant?
+ - [x] is measured drift statistically significant? No
  
 - [ ] data and analysis for user data
  - [ ] experimental description and protocol
@@ -22,7 +22,7 @@ todo
 - [ ] tolerance for the commercial pipettes 
  
 ####Documentation 
-- [ ] photos (labeled)
+- [x] photos (labeled)
  - [ ] shots of assmbled and broken down with all parts
 
 - [x] re shoot video with better angle
@@ -93,4 +93,16 @@ User-Guide
 12.	Place your tip inside the liquid you want to measure and 	press the release button
 
 
+
+Images
+Body
+ 
+Plunger-Shaft
+ 
+Luer-Lock
+ 
+
+
+Syringe (Plunger and Barrel 
+ 
 
