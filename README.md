@@ -17,9 +17,9 @@ todo
  - [ ] instructions (protocol) for test subject
 
 ####Research
-- [ ] commercial vs our pipette pictures 
-- [ ] syringe tolerances
-- [ ] tolerance for the commercial pipettes 
+- [x] commercial vs our pipette pictures 
+- [x] syringe tolerances
+- [x] tolerance for the commercial pipettes 
  
 ####Documentation 
 - [x] photos (labeled)
