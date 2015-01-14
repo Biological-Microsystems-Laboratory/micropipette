@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 *.md~
 .DS_Store
 .~*
 .blend2*
 .blend1*
+=======
+.~*
+.DS_Store
+>>>>>>> master

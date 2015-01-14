@@ -8,36 +8,36 @@ todo
 
 ####Data 
 
-- [ ] measure drift for commercial pipette
- - [ ] 50 measurements at 200 uL
- - [ ] is measured drift statistically significant?
+- [x] measure drift for commercial pipette
+ - [x] 50 measurements at 200 uL
+ - [x] is measured drift statistically significant? No
  
 - [ ] data and analysis for user data
  - [ ] experimental description and protocol
  - [ ] instructions (protocol) for test subject
 
 ####Research
-- [ ] commercial vs our pipette pictures 
-- [ ] syringe tolerances
-- [ ] tolerance for the commercial pipettes 
+- [x] commercial vs our pipette pictures 
+- [x] syringe tolerances
+- [x] tolerance for the commercial pipettes 
  
 ####Documentation 
-- [ ] photos (labeled)
+- [x] photos (labeled)
  - [ ] shots of assmbled and broken down with all parts
 
-- [ ] re shoot video with better angle
+- [x] re shoot video with better angle
 - [ ] protocol for all data and tests
 
 - [ ] update additional parts list
  - [ ] 1mL and 3mL specific parts
  
-- [ ] update specifications
- - [ ] 1mL and 3mL specific
+- [x] update specifications
+ - [x] 1mL and 3mL specific
  
-- [ ] Add user guide to readme
- - [ ] assembly
- - [ ] feature description and function
- - [ ] usage
+- [x] Add user guide to readme
+ - [x] assembly
+ - [x] feature description and function
+ - [x] usage
  
 - [ ] Add Photos to readme
 
@@ -64,12 +64,46 @@ todo
 
 
 ## Specifications
-The 3mL Syringe Micropipette can dispense up to 1.1mL of liquid. It can be adjusted to any value between 0.0mL to 1.1mL.
+Specifications may vary depending on the syringe
+3mL Syringe
+Pipet up to 1mL or 1000 µL ± 10 µL
+Adjust in increments of 100 µL
+Tolerance ±10 µL
 
-When the plunger is fully depressed into its lock position the syringe reads 0.7mL. 
+1mL Syringe 
+Pipet up to 350uL ± 1 µL
+Adjust in increments of 10 µL
+Tolerance ±1 µL
 
-When the plunger is released and the screw at its lowest value reads 0.7mL.
+User-Guide
+1.	Attach the syringe to the pipette housing
+	a. remove the syringe plunger and place a spring into the 	syringe
+	b. replace the syringe plunger back onto the syringe
+	c. then place the wings of the syringe against the bottom 		face of the body and twist until the syringe is secured.
+2.	Push the micropipettes plunger until it is locked.
+3.	Place a tip at the end of the syringe
+4.	Record the value of the syringe form where the syringe 	 	plunger is in contact with the spring (this will be the 	initial value in uL)
+5.	Add the value you want dispense to the initial value (this   	will be the "adjusted value")
+6.	release the pipette plunger and adjust the screw until 	your syringe reads 50uL above the "adjusted value"
+7.	Then place the tip inside the solution you want to measure 	and press the release to release the plunger
+8.	Then push the pipettes plunger all the way down to 	dispense all the liquid back into the solution.
+9.	Repeat this steps 7-8 two more times (this is called pre-	wetting )
+10.	Then make sure your plunger is in the released position.
+11.	Adjust the screw so that your syringe reads the adjusted 	value from step 3
+12.	Place your tip inside the liquid you want to measure and 	press the release button
 
-When the plunger is released and the screw at its highest value reads 1.8mL.
 
-Thus this micropipette can dispense amounts as low as 0.0mL and amounts as high as 1.1mL. Any value in between can be adjusted to 0.1mL.
+
+Images
+Body
+
+ 
+Plunger-Shaft
+ 
+Luer-Lock
+ 
+
+
+Syringe (Plunger and Barrel 
+ 
+
