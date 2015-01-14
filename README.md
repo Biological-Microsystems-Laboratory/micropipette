@@ -6,44 +6,104 @@ micropipette
 todo
 ----
 
-- [x] clean up Syringe branch then merge it into master
-- [x] start develop branch (from master) were most work will happen (or in branches from 'develop')
-- [x] figure out how to make non-binary STLs from solidworks (2 options Bianry or  ASCII
-- [x] figure out how to checkout  older respsitory versions (file versions)
-- [x] learn how to tag file/repository versions
-- [x] make explicit git protocol for general and CAD files
- - [x] add git walkthrough and workflow
+####Data 
 
-- [x] create additional parts in CAD for dimension and rendering purposes
- - [x] bolt
- - [x] nut 	 
- - [x] syringe - plunger and barrel
- - [x] spring
+- [x] measure drift for commercial pipette
+ - [x] 50 measurements at 200 uL
+ - [x] is measured drift statistically significant? No
+ 
+- [ ] data and analysis for user data
+ - [ ] experimental description and protocol
+ - [ ] instructions (protocol) for test subject
 
-- [x] get a working version of plunger-shaft
- - [x] rename plunger.stl to plunger-shaft.stl
- - [ ] find the working final design for this part - email SD team
- - [x] make bottom  flat
-- [x] Limit the movement of the button
+####Research
+- [x] commercial vs our pipette pictures 
+- [x] syringe tolerances
+- [x] tolerance for the commercial pipettes 
+ 
+####Documentation 
+- [x] photos (labeled)
+ - [ ] shots of assmbled and broken down with all parts
 
-- [x] add dimentions spreadsheet
- - [x] re-measure dimensions with calipers
+- [x] re shoot video with better angle
+- [ ] protocol for all data and tests
 
-- [x] add printing protocol from .blend file to printing with makerbot
+- [ ] update additional parts list
+ - [ ] 1mL and 3mL specific parts
+ 
+- [x] update specifications
+ - [x] 1mL and 3mL specific
+ 
+- [x] Add user guide to readme
+ - [x] assembly
+ - [x] feature description and function
+ - [x] usage
+ 
+- [ ] Add Photos to readme
 
-- [x] rename case.stl to body.stl
+- [ ] Add tables and plots to readme 
+ 
+####Future Development
 
-- [ ] add .md~ to .gitignore file
+- [ ] review style-guide
+- [ ] make general workflow guide
 
-- [x] incorporate syringe-lock function into body
+- [ ] ejector
+- [ ] make wiki
+- [ ] make github page
+- [ ] make offical name and imbed in design  
+- [ ] publish in plosone or peerj 
+- [ ] rotation count for mesurement 
+- [ ] add links for similar designs to readme
 
-long term todo
---------------
+##Additional Parts
 
-- [ ] Make flexing syringe plunger design rather then plunger-shaft button
+1. M3 Hex Nut McMaster part# 90591A121
+2. M3 20mm length, Socket Head Screw Mcmaster part # 91292A123
+3. Metric Compression Spring 33mm Overall, part# 94125k542
 
-- [ ] Make design using 1 mL pipette that can do micro volumes 5 - 200 uL
 
-- [ ] Public release 
- - [ ] complete readme and wiki so that they are presentable
- - [ ] make offical name and imbed in design 
+## Specifications
+Specifications may vary depending on the syringe
+3mL Syringe
+Pipet up to 1mL or 1000 µL ± 10 µL
+Adjust in increments of 100 µL
+Tolerance ±10 µL
+
+1mL Syringe 
+Pipet up to 350uL ± 1 µL
+Adjust in increments of 10 µL
+Tolerance ±1 µL
+
+User-Guide
+1.	Attach the syringe to the pipette housing
+	a. remove the syringe plunger and place a spring into the 	syringe
+	b. replace the syringe plunger back onto the syringe
+	c. then place the wings of the syringe against the bottom 		face of the body and twist until the syringe is secured.
+2.	Push the micropipettes plunger until it is locked.
+3.	Place a tip at the end of the syringe
+4.	Record the value of the syringe form where the syringe 	 	plunger is in contact with the spring (this will be the 	initial value in uL)
+5.	Add the value you want dispense to the initial value (this   	will be the "adjusted value")
+6.	release the pipette plunger and adjust the screw until 	your syringe reads 50uL above the "adjusted value"
+7.	Then place the tip inside the solution you want to measure 	and press the release to release the plunger
+8.	Then push the pipettes plunger all the way down to 	dispense all the liquid back into the solution.
+9.	Repeat this steps 7-8 two more times (this is called pre-	wetting )
+10.	Then make sure your plunger is in the released position.
+11.	Adjust the screw so that your syringe reads the adjusted 	value from step 3
+12.	Place your tip inside the liquid you want to measure and 	press the release button
+
+
+
+Images
+Body
+
+ 
+Plunger-Shaft
+ 
+Luer-Lock
+ 
+
+
+Syringe (Plunger and Barrel 
+ 
+
