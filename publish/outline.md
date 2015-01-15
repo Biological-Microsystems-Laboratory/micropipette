@@ -40,4 +40,5 @@ Figure 4
 --------
 Novice user data
 
-Drift of the set point was tested by pipetteing 50 times at the same setting. 
+Results? and Discussion
+
