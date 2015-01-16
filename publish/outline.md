@@ -42,3 +42,10 @@ Novice user data
 
 Results? and Discussion
 
+Questions
+=======
+
+how should I site thingiverse things like other pipettes and the centrifuge?
+
+
+
