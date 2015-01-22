@@ -1,6 +1,11 @@
 Outline
 ======
 
+todo
+---
+
+-[ ] novice user data
+
 Introduction
 -----------
 
