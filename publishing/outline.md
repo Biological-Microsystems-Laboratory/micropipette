@@ -6,8 +6,6 @@ quick plan
 
 add authors
 
-take out author summary
-
 spell check
 
 find centifuge article
