@@ -1,6 +1,24 @@
 Outline
 ======
 
+quick plan
+-----
+
+user data figure
+
+materials section
+
+add authors
+
+take out author summary
+
+spell check
+
+find centifuge article
+
+
+	
+
 todo
 ---
 
@@ -37,15 +55,22 @@ Charaterization of Accuracy and Precision
 -comparison of adjustment by eye to commerical ticker (table)
 -Novice user data (figure)
 
-Figure 3
+Results? and Discussion
+-----
+
+
+
+Table 1
 --------
 Data comparison to commercial pipette
 
-Figure 4
+Figure 3
 --------
 Novice user data
 
-Results? and Discussion
+
+
+
 
 Questions
 =======
