@@ -4,8 +4,6 @@ Outline
 quick plan
 -----
 
-user data figure
-
 materials section
 
 add authors
