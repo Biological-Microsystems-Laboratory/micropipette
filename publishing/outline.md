@@ -4,8 +4,6 @@ Outline
 quick plan
 -----
 
-materials section
-
 add authors
 
 take out author summary
