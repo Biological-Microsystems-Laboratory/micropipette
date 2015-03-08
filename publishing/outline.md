@@ -1,6 +1,21 @@
 Outline
 ======
 
+quick plan
+-----
+
+add authors
+
+find centifuge article
+
+
+	
+
+todo
+---
+
+-[ ] novice user data
+
 Introduction
 -----------
 
@@ -32,12 +47,27 @@ Charaterization of Accuracy and Precision
 -comparison of adjustment by eye to commerical ticker (table)
 -Novice user data (figure)
 
-Figure 3
+Results? and Discussion
+-----
+
+
+
+Table 1
 --------
 Data comparison to commercial pipette
 
-Figure 4
+Figure 3
 --------
 Novice user data
 
-Drift of the set point was tested by pipetteing 50 times at the same setting. 
+
+
+
+
+Questions
+=======
+
+how should I site thingiverse things like other pipettes and the centrifuge?
+
+
+
