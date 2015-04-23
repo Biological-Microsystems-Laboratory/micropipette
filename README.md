@@ -3,8 +3,8 @@
 
 This printable micropipette actuates a disposable syringe an adjustable set point using an assembly of 3D-printable parts and basic hardware.
 
-images
 
+<img src="images/render-parts.PNG" alt="image" style="width: 300px;"/>
 
 
 ##Additional Parts
