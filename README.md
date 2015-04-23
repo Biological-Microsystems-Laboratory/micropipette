@@ -4,7 +4,6 @@
 This printable micropipette actuates a disposable syringe an adjustable set point using an assembly of 3D-printable parts and basic hardware.
 
 images
-ÑÑÑ
 
 
 
@@ -15,17 +14,16 @@ images
 3. Metric Compression Spring 33mm Overall, part# 94125k542
 
 Data in tables
-ÑÑÑÑÑÑÑ
 
 ## Specifications
 Specifications may vary depending on the syringe
 3mL Syringe
-Pipet up to 1mL or 1000 µL ± 10 µL
-Adjust in increments of 100 µL
-Tolerance ±10 µL
+Pipet up to 1mL or 1000 uL +/-10 uL
+Adjust in increments of 100 uL
+Tolerance +/-10 uL
 
 1mL Syringe 
-Pipet up to 350uL ± 1 µL
-Adjust in increments of 10 µL
-Tolerance ±1 µL 
+Pipet up to 350uL +/- 1 uL
+Adjust in increments of 10 uL
+Tolerance +/-1 uL 
 
