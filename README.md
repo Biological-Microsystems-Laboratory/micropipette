@@ -1,10 +1,10 @@
 3D Printable Micropipette
 =========================
 
-This printable micropipette actuates a disposable syringe an adjustable set point using an assembly of 3D-printable parts and basic hardware.
+This printable micropipette actuates a disposable syringe to an adjustable set point using an assembly of 3D-printable parts and basic hardware.
 
 
-<img src="images/render-parts.PNG" alt="image" style="width: 300px;"/>
+<img src="images/complete.PNG" alt="image" style="width: 300px;"/>
 
 
 ##Additional Parts
@@ -13,7 +13,14 @@ This printable micropipette actuates a disposable syringe an adjustable set poin
 2. M3 20mm length, Socket Head Screw Mcmaster part # 91292A123
 3. Metric Compression Spring 33mm Overall, part# 94125k542
 
-Data in tables
+
+Validation
+----
+
+<img src="images/average-first-attempt.PNG" alt="image" style="width: 300px;"/>
+
+Data taken from first time users as the attempt to pipette 200 uL, 100 uL, 50 uL, and 10 uL. Black circles are individual attempts and red plus is the group average.
+
 
 ## Specifications
 Specifications may vary depending on the syringe
