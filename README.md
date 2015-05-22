@@ -17,6 +17,10 @@ This printable micropipette actuates a disposable syringe to an adjustable set-p
 
 Validation
 ----
+<img src="data/printed-Vs-commercial/comparison-table.png" alt="image" style="width: 300px;"/>
+
+The printed pipette was compared to a commerical pipette and volumes of 200, 50 and 20 microliters. The precision is expressed as the standard deviation of the sample.
+
 
 <img src="images/average-first-attempt.png" alt="image" style="width: 300px;"/>
 
