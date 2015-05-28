@@ -1,9 +1,14 @@
-Data notes
+Data notes printed pipette
 ---
 
 * rows are multiple measurements without adjusting the pipette
 * columns are trials where the pipette was adjusted from a different value
 * Values are mass in grams of water dispensed onto the scale
+
+commercial pipette
+----
+* rows are measurements without readjusting or changing the pipette
+* columns are 20, 50 and 200 uL
 
 comparison of accuracy and precision of the printed pipette with the commercial pipette
 ----
