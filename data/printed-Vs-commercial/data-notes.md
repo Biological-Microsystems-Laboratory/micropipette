@@ -8,7 +8,7 @@ Data notes printed pipette
 commercial pipette
 ----
 * rows are measurements without readjusting or changing the pipette
-* columns are 20, 50 and 200 uL
+* columns are 200, 50 and 20 uL
 
 comparison of accuracy and precision of the printed pipette with the commercial pipette
 ----
