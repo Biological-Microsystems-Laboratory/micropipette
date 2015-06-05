@@ -21,7 +21,7 @@ commercial_std_20=std(commercial_pipette(:,3));
 commercial_std_50=std(commercial_pipette(:,2));
 commercial_std_200=std(commercial_pipette(:,1));
 
-means = [mean20 mean50 mean200; commercial_mean_20 commercial_mean_50 commercial_mean_200]*1000
+means = [mean20 mean50 mean200; commercial_mean_20 commercial_mean_50 commercial_mean_200]*1000;
 
 stds = [std20 std50 std200; commercial_std_20 commercial_std_50 commercial_std_200]*1000;
 

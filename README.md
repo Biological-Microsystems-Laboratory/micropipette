@@ -18,15 +18,12 @@ This printable micropipette actuates a disposable syringe to an adjustable set-p
 Validation
 ----
 
-First Header  | Second Header | third header
-------------- | ------------- | ------------
-Content Cell  | Content Cell  |
-Content Cell  | Content Cell  |
+|                    | 20 uL         | 50 uL        | 200 uL       |
+|--------------------|---------------|--------------|--------------|
+| Printed Pipette    | 19.5 ± 0.612  | 53.53 ± 1.76 | 196.4 ± 2.23 |
+| Commercial Pipette | 19.87 ± 0.164 | 49.9 ± 0.141 | 204.5 ± 2.91 |
 
-
-<img src="data/printed-Vs-commercial/comparison-table.png" alt="image" style="width: 300px;"/>
-
-The printed pipette was compared to a commerical pipette and volumes of 200, 50 and 20 microliters. The precision is expressed as the standard deviation of the sample.
+The printed pipette was compared to a commerical pipette and volumes of 20, 50 and 200 microliters. The precision is expressed as the standard deviation of the sample.
 
 
 <img src="images/average-first-attempt.png" alt="image" style="width: 300px;"/>
