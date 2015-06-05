@@ -28,7 +28,7 @@ The printed pipette was compared to a commerical pipette and volumes of 20, 50 a
 
 <img src="images/average-first-attempt.png" alt="image" style="width: 300px;"/>
 
-Data taken from first time users as the attempt to pipette 200 uL, 100 uL, 50 uL, and 10 uL. Black circles are individual attempts and red plus is the group average.
+Data taken from first time users as the attempt to pipette 200, 50, 20, and 10 microliters. Black circles are individual attempts and red plus is the group average.
 
 
 ## Specifications
