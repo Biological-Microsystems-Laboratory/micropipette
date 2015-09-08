@@ -8,7 +8,6 @@
 *.blg
 *.dvi
 *.out
-*.pdf
 *.log
 *.gz
 *.Rap*
