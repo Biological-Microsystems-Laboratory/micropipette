@@ -106,6 +106,8 @@
 % rotating package for sideways tables
 \usepackage{rotating}
 
+\usepackage{multirow}
+
 % Remove comment for double spacing
 %\usepackage{setspace} 
 %\doublespacing
@@ -210,23 +212,50 @@ David T. Eddington\textsuperscript{1,*},
 \end{flushleft}
 % Please keep the abstract below 300 words
 \section*{Abstract}
-This is the abstract.
+Open source development of lab equipment is being facilitated, in part, by growing availability of 3D printing which allows the production of simple lab tools.
+We developed 3D-printable parts that, along with a disposable syringe, form a micropipette.
+Once assembled the pipette requires no calibration or validation with a scale.
+Our printed micropipette is assessed in comparison to a commercial pipette demonstrating comparable performance in accuracy and precision and approaches ISO standard.
 
 \linenumbers
 
 \section*{Introduction}
-3D printing as a form of additive manufacturing has existed for decades although the recent availability of inexpensive desktop printers have made it feasible for consumers to design and print prototypes and even functional parts, and consumer goods\cite{Fullerton2014}.
-The open source software movement and has spawned the additional areas of open source hardware, such as micro controller boards (Arduino) as well as 3D printers themselves (RepRap). 
-Open source scientific instruments and laboratory equipment are being actively developed(openpcr.org, opensource lab book.) 
-3D-printable lab equipment is and an attractive idea because of the simplicity of downloading and printing a functional object for only the price of the raw material\cite{Waldbaur2011,Zhang2013}. 
-In addition, end users can customize the equipment to their application. 
-Some of the more clever printable parts that have emerged are ones that give a new function to a ubiquitous existing device. 
-For example a drill bit attachment was designed and printed to hold micro centrifuge tubes allowing a drill to be used for centrifuging samples. 
-Although this may make a rather crude centrifuge it may be and adequate method that only costs pennies compared to commercially available centrifuges and could allow researchers in the developing world to better participate in science by reducing some financial barriers of entry. 
-Printable micropipette designs can be found on 3D-part sharing websites (thingiverse). 
-While existing designs may require only pen springs, a gasket made from a balloon, and tape, none allow adjustment to know volumes nor have any been rigorously validated. 
-We present a pipette constructed from 3D printed parts that allows a 1 ml syringe to be actuated to an adjustable volume. 
+The open source development model, initially applied to software, is thriving in the development of open source scientific equipment due in part to increasing access of 3D printing \cite{Baden2015,Pearce2014}.
+Open design 3D-printable lab equipment is and attractive idea because, like open source software, it allows free access to technology that is otherwise inaccessible due to proprietary and/or financial barriers. 
+Open design tools create opportunity for scientists and educational programs in remote or resource limited areas to participate with inexpensive and easy to make tools\cite{Baden2015}. 
+Open source development also enables the development of custom solutions to meet unique applications not met by commercial products that are shared freely and are user modifiable\cite{Fullerton2014,Pearce2012}.
+Some advanced, noteworthy open-source scientific equipment include a PCR device\cite{ChaiBiotechnologiesInc2015}, and a two-photon microscope\cite{Rosenegger2014} although even simple tools are impactful especially if the fabrication is simplified by 3D printing.
+%The user is required to assemble the tools requiring them the learn how it functions.
+%The user is then equipped to diagnose problems and enact their own fixes and changes which is limited when dealing with commercial products.
+
+3D printing as a form of additive manufacturing has existed for decades although the recent availability of inexpensive desktop printers\cite{MakerbotIndustries2016,Reprap2015} have made it feasible for consumers to design and print prototypes and even functional parts, and consumer goods\cite{Fullerton2014}.
+Proliferation of free CAD software[OpenSCAD, Blender, SketchUp] and design sharing sites\cite{MakerbotIndustries2016,NationalInstitutesofHealth2015,grabCAD,GitHubInc.2016} have also supported the growth and popularity of open designed parts and projects.
+Some simple and clever printable parts that have emerged are ones that give a new function to a ubiquitous existing device such as drill bit attachment designed to hold centrifuge tubes, turning the drill into a centrifuge\cite{Garvey2009}.
+Although this may make a rather crude centrifuge it may be and adequate method that only costs pennies compared to commercially available centrifuges.
+Other examples of open-design research tools that utilize 3D printed parts include optics equipment\cite{Zhang2013}, microscopes\cite{Baden2014a,Walus2014}, syringe pumps\cite{Wijnen2014}, and reactionware\cite{Symes2012} to name a few.
+
+There are a few open design printable micropipettes including a popular one which uses parts scavenged from a retractable pen in addition to the printed parts\cite{Baden2014}.
+An air displacement pipette uses a piston operating principal to draw liquid into the pipette.
+In a typical commercial pipette the piston is made gas-tight with a gasketed plunger inside a smooth barrel.
+Consumer grade fused deposition modeling (FDM) printers are unable to form a smooth surface do to the formation of ridges that occur as each layer that is deposited.
+The ridges formed by FDM make it impractical to form a gas-tight seal between moving parts, even with a gasket.
+Printable open-design micropipettes get around this limitation by stretching a membrane over one end of a printed tube, which when pressed causes the displacement.
+The displacement membrane can be made from any elastic material such as a latex glove.
+After assembly this design requires the user to validate the volumes dispensed with a high precision scale.
+%uncertianty  
+Without verification with a scale the volumes dispensed can only be estimated based on theoretical displacement intended by the design.
+There is no built-in feature such as a digital readout for the user to set the displacement to a desired volume.
+The pipette can be calibrated to a specific volume with a set screw but if a new volume is desired it has to be re-adjusted and validated with a scale.
+%In addition no open-design pipettes have be rigorously validated.
+
+We present a new open design 3D-printable micropipette that works by actuating a 1 mL syringe to a user adjustable set-point.
+This allows the user to set the pipette to a volume a priori by reading the graduations of the syringe barrel.
 The scale marks on the syringe can be used to adjust the dispensed volume accurately without calibrating with a scale.
+Our pipette also offers a simplified assembly requiring no glue, tape or permanent connections. 
+
+%range of 226 ul, one tip size per pipette
+
+
 
 %\begin{equation}\label{eq:schemeP} 
 %D_{coll} = \frac{D_f+\frac{[S]^2}{K_D S_T} D_S} {1+\frac{[S]^2}{K_D S_T}}, 
@@ -239,22 +268,34 @@ The scale marks on the syringe can be used to adjust the dispensed volume accura
 \section*{Materials and Methods}
 \subsection*{Design}
 
-The device is designed to actuate a pipette to a set distance. The pipette is plunger is actuated to three points, two fixed and one adjustable. 
-The fixed points are the dispensed point, when the plunger is all the way down, and the reset point, when the plunger is ready to withdraw fluid. 
-The adjustable point is the set point, which determines the volume of fluid that will be drawn into the pipette and depends on the position of the screw. 
-The system is spring loaded towards the set point. 
-A spring notch, in the plunger shaft part, and a groove, in the body part, hold the plunger at the reset position where it can be released by pressing in the notch. 
-A 1 ml BD syringe twists to lock into the body part. 
+Our printed pipette is designed to actuate a 1 mL syringe to a user set displacement.
+The core of the design is two printed parts, the body and the plunger.
+A 1 mL BD syringe twists to lock in the body part and is held into place by the syringe flanges.
+The plunger part slides freely in the body part and actuates the syringe by pushing the thumb press. 
+The pipette is spring loaded towards a set point which is adjustable by a set-screw. 
+When the plunger is depressed the system locks when it reaches the ready point, where it is ready to draw in fluid.
+The plunger is held in place with a notch and groove design which is then released with a lever drawing in fluid. 
+The displacement is directly readable with the syringe graduations and is equal to the distance between the set and the ready point.
+The pipette can also be pressed past the ready point to purge the transfered fluid completely from the pipette tip.   
 An additional printed part adapts standard micropipette tips to the luer fitting of the pipette.
-Our printed pipette mimics commercial pipettes is design, function, and user operation, and is intuitive to use.
-3D parts were designed in Blender and SolidWorks and printed by Fineline Prototyping via selective laser sintering. 
-Additional materials include a spring, a nut and bolt and two washers.
+Additional materials required for assembly include a spring, a nut and bolt and washers.
+
+Our printed pipette mimics commercial pipettes's design, function, and user operation, making it intuitive to use.
+It also can reach to the bottom of a 15 mL conical tube.
+
+%3D parts were designed in Blender and SolidWorks and printed by Fineline Prototyping via selective laser sintering. 
+
 
 \begin{figure}
 \caption{
 {\bf CAD rendering of printable parts.}  Three parts are printed: the body, plunger shaft, and luer-lock adapter for pipette tips.
 }
 \label{fig1}
+% Ideally: cad rendering showing the design and function of the pipette. 
+% a) Un-assembled whole parts next to their cross-sections.  
+% b) Assembly next to crossection
+% c) close up of how the locking groove/mechanism works
+% d) cross-section showing the two positions of the plunger, locked at the goove and stopped at the screw 
 \end{figure}
 
 \begin{figure}
@@ -262,19 +303,29 @@ Additional materials include a spring, a nut and bolt and two washers.
 {\bf Photos of pipette.}  The pipette is composed of three printed parts, a 1 mL syringe and some additional hardware.  
 }
 \label{fig2}
+% Ideally: Photo showing assembled pipette as well as parts
 \end{figure}
 
 \subsection*{Validation}
 The pipette was validated and compared to a commercial pipette. 
 The pipette was tested to see if the set point would drift between during use for example small, incremental movements of the screw or other parts causing the pipetted volume to drift. 
-To test the pipette the same volume was pipetted times without moving or re-adjusting the set point. 
+To test the pipette the same volume was pipetted 50 times without moving or re-adjusting the set point. 
 The printed pipette’s accuracy and precision was characterized and compared to a commercial pipette. 
 The printed pipette and a series of commercial pipettes were tested at volumes of 20 $\mu$L 50 $\mu$L and 200 $\mu$L. 
 The printed pipette was adjusted to the the target volume by eye from the syringe graduations, and the resulting volume was measured and repeated 5 times to account for variability.
 Measurements were taken from the commercial pipette in a similar way.
+
 To test user friendliness and feasibility for using the pipette without verifying with a scale, data was also gathered from novice users. 
+This group included researchers experienced with pipettes as well as undergraduates with little to no experience pipetting at all.
 After a quick overview of the operation of the pipette measurements were taken after the volunteers adjusted the pipette to 200, 50, 20 and 10 $\mu$L. 
-After the first attempt was measured on the scale the volunteer was allowed to adjust the set point and re-measure until within 15\% of the target volume was 58 reached.
+
+For the printed pipette the 1000 $\mu$L tips were used for the 200 $\mu$L measurement. 100 $\mu$L tips were used for the 50, 20 and 10 $\mu$L measurements.
+
+compare the force required to press the button.
+
+compare the weight of the pipettes
+
+%After the first attempt was measured on the scale the volunteer was allowed to adjust the set point and re-measure until within 15\% of the target volume was reached.
 
 % For figure citations, please use "Fig." instead of "Figure".
 %Nulla mi mi, Fig.~\ref{fig1} venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, \nameref{S1_Video} vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
@@ -296,26 +347,75 @@ Novice users were asked to pipette volumes of 200, 50, 20 and 10 $\mu$L without 
 
 Our printed pipette had a comparable accuracy to a commercial pipette (Table~\ref{table1}).
 The commercial pipette has a digital readout that allows the user to adjust precisely to set values where the printed pipette is adjusted by eye according to graduations.
-This is certainly the cause of the lower accuracy and wider deviation although it's performance is impressive. 
+Due to being unable to re-set the printed pipette back to the exact mechanical location it may be hard to compare directly with the commercial pipettes.
+This is certainly the cause of the lower accuracy and wider deviation although it's performance is impressive.
+Despite this additional variability the printed pipette's accuracy and precision approaches the ISO 8655 standard.
 
-\begin{table}[!ht]
+The Novice user data demonstrates that even someone inexperienced with pipetting and unfamiliar with our design is able to use out pipette accurately with out the use of a scale. 
+The systematic error trended towards over estimating the displacement. 
+This is likely due the function of adjusting the volume where it is easier to start at a lower displacement and increase it by unscrewing, or releasing compression of the spring.
+This explains the negative systematic error as the user avoids 'going over'.
+
+This pipette improves on existing open design pipettes in several ways. 
+It requires only two printed parts, a syringe, and some hardware.
+It is able to reach into a 15 mL conical tube which is a routine requirement for cell culture.
+No permanent connections using tape or glue are required for assembly allowing worn out or broken part to be replaced easily.
+Assembly does not require a membrane that may wear or stretch and require tedious replacement.
+No validation or calibration is required.
+The pipette can be assembled and used to accurately pipette micro volumes without first validating with a scale.
+
+The only major limitation of this design compared to the briopipette is the option for a pipette tip ejector, although incorporation of a similar design in our pipette would not leave room for it to reach into a 15 mL conical tube. 
+Our pipette requires a syringe and some additional hardware where briopipette's additional parts can be obtained virtually anywhere.
+The briopipette also allows step-wise shifts in displacement allowing the user to quickly change to a relative volume
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\centering
 \caption{
-\bf{Comparison of Accuracy and Precision}}
-\begin{tabular}{|c|c|c|c|}
-\hline
-    Target Volume & 20 $\mu$L & 50 $\mu$L & 200 $\mu$L  \\
-    \hline
-    Printed Pipette & 196.4 $\pm$ 2.2 & 53.5 $\pm$ 1.8 & 19.5 $\pm$ 0.6 \\
-    Commercial Pipette & 204.5 $\pm$ 2.9 & 49.9 $\pm$ 0.1 & 19.9 $\pm$ 0.2 \\
-    \hline
+\bf{Comparison of error between the printed and commercially produced pipette}}
+\begin{tabular}{llllll}
+                  Volume &   & Systematic error &  & Random error & \\
+                  \hline
+\multirow{2}{*}{10 $\mu$L} & printed & 2.17 \% & $\pm$0.217$\mu$L  & 1.96\% & $\pm$0.196$\mu$L   \\
+                  & commercial & 3\% & $\pm$0.3$\mu$L  & 1\% & $\pm$0.1$\mu$L  \\
+                  \hline
+\multirow{2}{*}{20 $\mu$L} & printed  & 0.33\% & $\pm$0.066$\mu$L & 1.18 \% & $\pm$0.236$\mu$L \\
+                  & commercial & 2.50\% & $\pm$0.5$\mu$L & 0.70\% & $\pm$0.14$\mu$L \\
+                  \hline
+\multirow{2}{*}{50 $\mu$L} & printed & 1.17\% & $\pm$0.585$\mu$L & 0.50\% & $\pm$0.25$\mu$L \\
+                  & commercial & 1\% & $\pm$0.5$\mu$L & 0.30\% & $\pm$0.15$\mu$L \\
+                  \hline
+\multirow{2}{*}{200 $\mu$L} & printed & 2.52\% & $\pm$5.04$\mu$L & 0.69\% & $\pm$1.38$\mu$L  \\
+                  & commercial & 0.6\% & $\pm$1.2$\mu$L & 0.20\% & $\pm$0.4$\mu$L
 \end{tabular}
-\begin{flushleft} Average measured volume by weight and standard deviation.
+\begin{flushleft} Error assessed for average measured volume by weight of water compared with published specifications of commercial pipette. [Alos compare to data taken with commercial pipettes in our lab]
 \end{flushleft}
 \label{table1}
- \end{table}
+\end{table}
 
 The novice user data demonstrates that the pipette set point is user friendly and is capable of accurate measurements without validating with a scale (Figure~\ref{fig3}).
 
+\begin{table}[]
+\centering9
+\caption{
+\bf{Novice Users' first attempt}}
+\begin{tabular}{llll}
+Target volume & Average $\pm$ SD & Systematic error  & Random error\\
+\hline
+10 $\mu$L         & 7.6 $\pm$ 3.3     & -23.80\% & 9.95\% \\
+\hline
+20 $\mu$L         & 18.1 $\pm$ 4.4   & -9.60\%   & 6.66\% \\
+\hline
+50 $\mu$L         & 45.3 $\pm$ 4.6   & -9.48\%   & 2.75\% \\
+\hline
+200 $\mu$L       & 185.2 $\pm$ 5.6 & -7.43\%   & 0.84\%
+\end{tabular}
+\begin{flushleft} Error assessed for average measured volume by weight of water compared with published specifications of commercial pipette.
+\end{flushleft}
+\label{table2}
+\end{table}
 
 %\begin{table}[!ht]
 %\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
