@@ -73,6 +73,7 @@ m.tips.prt.1000 = colMeans(vol.prt.1000)
 m.tips.prt.500 = colMeans(vol.prt.500)
 m.tips.prt.200_3mL = colMeans(vol.prt.200_3mL)
 
+m.tips.prt.300 = colMeans(vol.prt.300)
 m.tips.prt.200 = colMeans(vol.prt.200)
 m.tips.prt.50 = colMeans(vol.prt.50)
 m.tips.prt.20 = colMeans(vol.prt.20)
@@ -102,6 +103,13 @@ se.vol.prt.200_3mL = mean(m.tips.prt.200_3mL) - 200
 se.p.prt.200_3mL = 100*(se.vol.prt.200_3mL/200)
 analyzed.prt.200_3mL = c(m.prt.200_3mL, se.vol.prt.200_3mL, se.p.prt.200_3mL, re.vol.prt.200_3mL, re.p.prt.200_3mL)
 
+#300 uL
+m.prt.300 = mean(m.tips.prt.300)
+re.vol.prt.300 = sd(m.tips.prt.300)
+re.p.prt.300 = 100*(re.vol.prt.300/m.prt.300)
+se.vol.prt.300 = mean(m.tips.prt.300) - 300
+se.p.prt.300 = 100*(se.vol.prt.300/300)
+analyzed.prt.300 = c(m.prt.300, se.vol.prt.300, se.p.prt.300, re.vol.prt.300, re.p.prt.300)
 
 #200 uL
 m.prt.200 = mean(m.tips.prt.200)
@@ -141,10 +149,10 @@ colnames(commercial_analyzed) <- c("Mean", "Systematic Error","% Sys. err.","Ran
 rownames(commercial_analyzed) <- c("200 uL", "50 uL","20 uL","10 uL")
 write.csv(commercial_analyzed, file='commercial_analyzed.csv')
 
-printed_analyzed = t(matrix(c(analyzed.prt.1000, analyzed.prt.500, analyzed.prt.200_3mL, analyzed.prt.200, analyzed.prt.50, analyzed.prt.20, analyzed.prt.10), nrow=5, ncol=7))
+printed_analyzed = t(matrix(c(analyzed.prt.1000, analyzed.prt.500, analyzed.prt.200_3mL, analyzed.prt.300, analyzed.prt.200, analyzed.prt.50, analyzed.prt.20, analyzed.prt.10), nrow=5, ncol=8))
 printed_analyzed = as.data.frame(printed_analyzed)
 colnames(printed_analyzed) <- c("Mean", "Systematic Error","% Sys. err.","Random Error","% Rand. err.")
-rownames(printed_analyzed) <- c("1000 uL", "500 uL","200 uL, 3mL","200 uL", "50 uL","20 uL","10 uL")
+rownames(printed_analyzed) <- c("1000 uL", "500 uL","200 uL, 3mL", "300 uL", "200 uL", "50 uL","20 uL","10 uL")
 write.csv(printed_analyzed, file='printed_analyzed.csv')
 
 
