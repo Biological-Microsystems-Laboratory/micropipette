@@ -52,7 +52,9 @@ analyzed.com.10 = c(m.com.10, se.vol.com.10, se.p.com.10, re.vol.com.10, re.p.co
 printed_1000uL <- read.csv(file='1000uL_printed.csv', sep=',')
 printed_500uL <- read.csv(file='500uL_printed.csv', sep=',')
 printed_200uL_3mL <- read.csv(file='200uL_printed_3mL.csv', sep=',')
+printed_100uL_3mL <- read.csv(file='100uL_printed_3mL.csv', sep=',')
 
+printed_300uL <- read.csv(file='300uL_printed.csv', sep=',')
 printed_200uL <- read.csv(file='200uL_printed.csv', sep=',')
 printed_50uL <- read.csv(file='50uL_printed.csv', sep=',')
 printed_20uL <- read.csv(file='20uL_printed.csv', sep=',')
@@ -62,7 +64,9 @@ printed_10uL <- read.csv(file='10uL_printed.csv', sep=',')
 vol.prt.1000 = printed_1000uL*1.0038
 vol.prt.500 = printed_500uL*1.0038
 vol.prt.200_3mL = printed_200uL_3mL*1.0038
+vol.prt.100_3mL = printed_100uL_3mL*1.0038
 
+vol.prt.300 = printed_300uL*1.0038
 vol.prt.200 = printed_200uL*1.0038
 vol.prt.50 = printed_50uL*1.0038
 vol.prt.20 = printed_20uL*1.0038
@@ -72,6 +76,7 @@ vol.prt.10 = printed_10uL*1.0038
 m.tips.prt.1000 = colMeans(vol.prt.1000)
 m.tips.prt.500 = colMeans(vol.prt.500)
 m.tips.prt.200_3mL = colMeans(vol.prt.200_3mL)
+m.tips.prt.100_3mL = colMeans(vol.prt.100_3mL)
 
 m.tips.prt.300 = colMeans(vol.prt.300)
 m.tips.prt.200 = colMeans(vol.prt.200)
@@ -102,6 +107,14 @@ re.p.prt.200_3mL = 100*(re.vol.prt.200_3mL/m.prt.200_3mL)
 se.vol.prt.200_3mL = mean(m.tips.prt.200_3mL) - 200
 se.p.prt.200_3mL = 100*(se.vol.prt.200_3mL/200)
 analyzed.prt.200_3mL = c(m.prt.200_3mL, se.vol.prt.200_3mL, se.p.prt.200_3mL, re.vol.prt.200_3mL, re.p.prt.200_3mL)
+
+#100 uL 3mL
+m.prt.100_3mL = mean(m.tips.prt.100_3mL)
+re.vol.prt.100_3mL = sd(m.tips.prt.100_3mL)
+re.p.prt.100_3mL = 100*(re.vol.prt.100_3mL/m.prt.100_3mL)
+se.vol.prt.100_3mL = mean(m.tips.prt.100_3mL) - 100
+se.p.prt.100_3mL = 100*(se.vol.prt.100_3mL/100)
+analyzed.prt.100_3mL = c(m.prt.100_3mL, se.vol.prt.100_3mL, se.p.prt.100_3mL, re.vol.prt.100_3mL, re.p.prt.100_3mL)
 
 #300 uL
 m.prt.300 = mean(m.tips.prt.300)
@@ -149,10 +162,32 @@ colnames(commercial_analyzed) <- c("Mean", "Systematic Error","% Sys. err.","Ran
 rownames(commercial_analyzed) <- c("200 uL", "50 uL","20 uL","10 uL")
 write.csv(commercial_analyzed, file='commercial_analyzed.csv')
 
-printed_analyzed = t(matrix(c(analyzed.prt.1000, analyzed.prt.500, analyzed.prt.200_3mL, analyzed.prt.300, analyzed.prt.200, analyzed.prt.50, analyzed.prt.20, analyzed.prt.10), nrow=5, ncol=8))
+printed_analyzed = t(matrix(c(analyzed.prt.1000, analyzed.prt.500, analyzed.prt.200_3mL, analyzed.prt.100_3mL, analyzed.prt.300, analyzed.prt.200, analyzed.prt.50, analyzed.prt.20, analyzed.prt.10), nrow=5, ncol=9))
 printed_analyzed = as.data.frame(printed_analyzed)
 colnames(printed_analyzed) <- c("Mean", "Systematic Error","% Sys. err.","Random Error","% Rand. err.")
-rownames(printed_analyzed) <- c("1000 uL", "500 uL","200 uL, 3mL", "300 uL", "200 uL", "50 uL","20 uL","10 uL")
+rownames(printed_analyzed) <- c("1000 uL", "500 uL", "200 uL, 3mL", "100 uL, 3mL", "300 uL", "200 uL", "50 uL","20 uL","10 uL")
 write.csv(printed_analyzed, file='printed_analyzed.csv')
 
+#ISO and comparison plots
+ISO_300uL <- read.csv(file='300uL_ISO.csv', sep=',')
+
+#commercial_200uL <- read.csv(file='200uL_commercial.csv', sep=',')
+
+ISO_mean = commercial_analyzed["Mean"]
+
+
+ISO_mean$ nominal <- c("200", "50", "20", "10")
+ISO_mean$ printed = printed_analyzed[6:9,"Mean"]
+ISO_mean$ plus = ISO_300uL[1:4,"plus"]
+ISO_mean$ minus = ISO_300uL[1:4,"minus"]
+
+
+ggplot(ISO_mean, aes(x=nominal,ymin = `minus`, 
+              ymax = `plus`, lower = `minus`, 
+              upper = `plus`, middle = `Mean`)) + 
+  geom_boxplot(stat = 'identity') +
+  xlab('Nominal Volume') + 
+  ylab('Volume') +
+  geom_crossbar(aes(y = `Mean` ))+
+  geom_crossbar(aes(y = `printed`))
 
