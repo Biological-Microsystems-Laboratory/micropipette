@@ -174,13 +174,13 @@ ISO_300uL <- read.csv(file='300uL_ISO.csv', sep=',')
 #commercial_200uL <- read.csv(file='200uL_commercial.csv', sep=',')
 
 ISO_mean = commercial_analyzed["Mean"]
-
-
+ISO_mean = as.data.frame(ISO_mean)
 ISO_mean$ nominal <- c("200uL", "50uL", "20uL", "10uL")
 ISO_mean$ printed = printed_analyzed[6:9,"Mean"]
 ISO_mean$ plus = ISO_300uL[1:4,"plus"]
 ISO_mean$ minus = ISO_300uL[1:4,"minus"]
 
+library(reshape2)
 library(ggplot2)
 ggplot(ISO_mean, aes(x=nominal,ymin = `minus`, 
               ymax = `plus`, lower = `minus`, 
@@ -198,14 +198,16 @@ colnames(ISO_mean1000) <- c("Mean")
 ISO_mean1000$ plus = ISO_1000uL[1:4,"plus"]
 ISO_mean1000$ minus = ISO_1000uL[1:4,"minus"]
 ISO_mean1000$ nominal <- c("1000uL", "500uL", "200uL", "100uL")
+ISO_mean1000$nominal <- as.character(ISO_mean1000$nominal)
+ISO_mean1000$nominal <- factor(ISO_mean1000$nominal, levels=unique(ISO_mean1000$nominal))
+
 
 library(ggplot2)
-ggplot(ISO_mean1000, aes(x=nominal,ymin = `minus`, 
+ggplot(ISO_mean1000[1:2,], aes(x=nominal, ymin = `minus`, 
                      ymax = `plus`, lower = `minus`, 
                      upper = `plus`, middle = `Mean`)) + 
   geom_boxplot(stat = 'identity') +
   xlab('Nominal Volume') + 
   ylab('Volume') +
   geom_crossbar(aes(y = `Mean` ))
-  
 
