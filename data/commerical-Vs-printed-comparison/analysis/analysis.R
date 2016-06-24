@@ -1,20 +1,43 @@
 # read in raw data
+
+
+eppendorf1000 <- read.csv(file='eppendorf_1000iso_1000', sep=',')
+eppendorf500 <- read.csv(file='eppendorf_1000iso_500', sep=',')
+eppendorf200 <- read.csv(file='eppendorf_1000iso_200', sep=',')
+eppendorf100 <- read.csv(file='eppendorf_1000iso_100', sep=',')
+
 commercial_200uL <- read.csv(file='200uL_commercial.csv', sep=',')
 commercial_50uL <- read.csv(file='50uL_commercial.csv', sep=',')
 commercial_20uL <- read.csv(file='20uL_commercial.csv', sep=',')
 commercial_10uL <- read.csv(file='10uL_commercial.csv', sep=',')
 
 # conversion of mass to volume according to temp and air pressure
+vol.epp.1000 = eppendorf1000*1.0038
+vol.epp.500 = eppendorf500*1.0038
+vol.epp.200 = eppendorf200*1.0038
+vol.epp.100 = eppendorf100*1.0038
 vol.com.200 = commercial_200uL*1.0038
 vol.com.50 = commercial_50uL*1.0038
 vol.com.20 = commercial_20uL*1.0038
 vol.com.10 = commercial_10uL*1.0038
 
 #take mean of 5 transfers for each tip
+m.tips.epp.1000 = colMeans(vol.epp.1000)
+m.tips.epp.500 = colMeans(vol.epp.500)
+m.tips.epp.200 = colMeans(vol.epp.200)
+m.tips.epp.100 = colMeans(vol.epp.100)
 m.tips.com.200 = colMeans(vol.com.200)
 m.tips.com.50 = colMeans(vol.com.50)
 m.tips.com.20 = colMeans(vol.com.20)
 m.tips.com.10 = colMeans(vol.com.10)
+
+#200 uL
+m.epp.1000 = mean(m.tips.epp.1000)
+re.vol.com.200 = sd(m.tips.com.200)
+re.p.com.200 = 100*(re.vol.com.200/m.com.200)
+se.vol.com.200 = mean(m.tips.com.200) - 200
+se.p.com.200 = 100*(se.vol.com.200/200)
+analyzed.com.200 = c(m.com.200, se.vol.com.200, se.p.com.200, re.vol.com.200, re.p.com.200)
 
 #200 uL
 m.com.200 = mean(m.tips.com.200)
@@ -167,27 +190,3 @@ printed_analyzed = as.data.frame(printed_analyzed)
 colnames(printed_analyzed) <- c("Mean", "Systematic Error","% Sys. err.","Random Error","% Rand. err.")
 rownames(printed_analyzed) <- c("1000 uL", "500 uL", "200 uL, 3mL", "100 uL, 3mL", "300 uL", "200 uL", "50 uL","20 uL","10 uL")
 write.csv(printed_analyzed, file='printed_analyzed.csv')
-
-#ISO and comparison plots
-ISO_300uL <- read.csv(file='300uL_ISO.csv', sep=',')
-
-#commercial_200uL <- read.csv(file='200uL_commercial.csv', sep=',')
-
-ISO_mean = commercial_analyzed["Mean"]
-
-
-ISO_mean$ nominal <- c("200", "50", "20", "10")
-ISO_mean$ printed = printed_analyzed[6:9,"Mean"]
-ISO_mean$ plus = ISO_300uL[1:4,"plus"]
-ISO_mean$ minus = ISO_300uL[1:4,"minus"]
-
-
-ggplot(ISO_mean, aes(x=nominal,ymin = `minus`, 
-              ymax = `plus`, lower = `minus`, 
-              upper = `plus`, middle = `Mean`)) + 
-  geom_boxplot(stat = 'identity') +
-  xlab('Nominal Volume') + 
-  ylab('Volume') +
-  geom_crossbar(aes(y = `Mean` ))+
-  geom_crossbar(aes(y = `printed`))
-
