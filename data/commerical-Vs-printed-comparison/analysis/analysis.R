@@ -1,20 +1,43 @@
 # read in raw data
+
+
+eppendorf1000 <- read.csv(file='eppendorf_1000iso_1000', sep=',')
+eppendorf500 <- read.csv(file='eppendorf_1000iso_500', sep=',')
+eppendorf200 <- read.csv(file='eppendorf_1000iso_200', sep=',')
+eppendorf100 <- read.csv(file='eppendorf_1000iso_100', sep=',')
+
 commercial_200uL <- read.csv(file='200uL_commercial.csv', sep=',')
 commercial_50uL <- read.csv(file='50uL_commercial.csv', sep=',')
 commercial_20uL <- read.csv(file='20uL_commercial.csv', sep=',')
 commercial_10uL <- read.csv(file='10uL_commercial.csv', sep=',')
 
 # conversion of mass to volume according to temp and air pressure
+vol.epp.1000 = eppendorf1000*1.0038
+vol.epp.500 = eppendorf500*1.0038
+vol.epp.200 = eppendorf200*1.0038
+vol.epp.100 = eppendorf100*1.0038
 vol.com.200 = commercial_200uL*1.0038
 vol.com.50 = commercial_50uL*1.0038
 vol.com.20 = commercial_20uL*1.0038
 vol.com.10 = commercial_10uL*1.0038
 
 #take mean of 5 transfers for each tip
+m.tips.epp.1000 = colMeans(vol.epp.1000)
+m.tips.epp.500 = colMeans(vol.epp.500)
+m.tips.epp.200 = colMeans(vol.epp.200)
+m.tips.epp.100 = colMeans(vol.epp.100)
 m.tips.com.200 = colMeans(vol.com.200)
 m.tips.com.50 = colMeans(vol.com.50)
 m.tips.com.20 = colMeans(vol.com.20)
 m.tips.com.10 = colMeans(vol.com.10)
+
+#200 uL
+m.epp.1000 = mean(m.tips.epp.1000)
+re.vol.com.200 = sd(m.tips.com.200)
+re.p.com.200 = 100*(re.vol.com.200/m.com.200)
+se.vol.com.200 = mean(m.tips.com.200) - 200
+se.p.com.200 = 100*(se.vol.com.200/200)
+analyzed.com.200 = c(m.com.200, se.vol.com.200, se.p.com.200, re.vol.com.200, re.p.com.200)
 
 #200 uL
 m.com.200 = mean(m.tips.com.200)
@@ -49,22 +72,80 @@ se.p.com.10 = 100*(se.vol.com.10/10)
 analyzed.com.10 = c(m.com.10, se.vol.com.10, se.p.com.10, re.vol.com.10, re.p.com.10)
 
 #printed pipette data
+printed_1000uL <- read.csv(file='1000uL_printed.csv', sep=',')
+printed_500uL <- read.csv(file='500uL_printed.csv', sep=',')
+printed_200uL_3mL <- read.csv(file='200uL_printed_3mL.csv', sep=',')
+printed_100uL_3mL <- read.csv(file='100uL_printed_3mL.csv', sep=',')
+
+printed_300uL <- read.csv(file='300uL_printed.csv', sep=',')
 printed_200uL <- read.csv(file='200uL_printed.csv', sep=',')
 printed_50uL <- read.csv(file='50uL_printed.csv', sep=',')
 printed_20uL <- read.csv(file='20uL_printed.csv', sep=',')
 printed_10uL <- read.csv(file='10uL_printed.csv', sep=',')
 
 # Conversion to volume from mass
+vol.prt.1000 = printed_1000uL*1.0038
+vol.prt.500 = printed_500uL*1.0038
+vol.prt.200_3mL = printed_200uL_3mL*1.0038
+vol.prt.100_3mL = printed_100uL_3mL*1.0038
+
+vol.prt.300 = printed_300uL*1.0038
 vol.prt.200 = printed_200uL*1.0038
 vol.prt.50 = printed_50uL*1.0038
 vol.prt.20 = printed_20uL*1.0038
 vol.prt.10 = printed_10uL*1.0038
 
 #take mean of 5 transfers for each tip
+m.tips.prt.1000 = colMeans(vol.prt.1000)
+m.tips.prt.500 = colMeans(vol.prt.500)
+m.tips.prt.200_3mL = colMeans(vol.prt.200_3mL)
+m.tips.prt.100_3mL = colMeans(vol.prt.100_3mL)
+
+m.tips.prt.300 = colMeans(vol.prt.300)
 m.tips.prt.200 = colMeans(vol.prt.200)
 m.tips.prt.50 = colMeans(vol.prt.50)
 m.tips.prt.20 = colMeans(vol.prt.20)
 m.tips.prt.10 = colMeans(vol.prt.10)
+
+#1000 uL
+m.prt.1000 = mean(m.tips.prt.1000)
+re.vol.prt.1000 = sd(m.tips.prt.1000)
+re.p.prt.1000 = 100*(re.vol.prt.1000/m.prt.1000)
+se.vol.prt.1000 = mean(m.tips.prt.1000) - 1000
+se.p.prt.1000 = 100*(se.vol.prt.1000/1000)
+analyzed.prt.1000 = c(m.prt.1000, se.vol.prt.1000, se.p.prt.1000, re.vol.prt.1000, re.p.prt.1000)
+
+#500 uL
+m.prt.500 = mean(m.tips.prt.500)
+re.vol.prt.500 = sd(m.tips.prt.500)
+re.p.prt.500 = 100*(re.vol.prt.500/m.prt.500)
+se.vol.prt.500 = mean(m.tips.prt.500) - 500
+se.p.prt.500 = 100*(se.vol.prt.500/500)
+analyzed.prt.500 = c(m.prt.500, se.vol.prt.500, se.p.prt.500, re.vol.prt.500, re.p.prt.500)
+
+#200 uL 3mL
+m.prt.200_3mL = mean(m.tips.prt.200_3mL)
+re.vol.prt.200_3mL = sd(m.tips.prt.200_3mL)
+re.p.prt.200_3mL = 100*(re.vol.prt.200_3mL/m.prt.200_3mL)
+se.vol.prt.200_3mL = mean(m.tips.prt.200_3mL) - 200
+se.p.prt.200_3mL = 100*(se.vol.prt.200_3mL/200)
+analyzed.prt.200_3mL = c(m.prt.200_3mL, se.vol.prt.200_3mL, se.p.prt.200_3mL, re.vol.prt.200_3mL, re.p.prt.200_3mL)
+
+#100 uL 3mL
+m.prt.100_3mL = mean(m.tips.prt.100_3mL)
+re.vol.prt.100_3mL = sd(m.tips.prt.100_3mL)
+re.p.prt.100_3mL = 100*(re.vol.prt.100_3mL/m.prt.100_3mL)
+se.vol.prt.100_3mL = mean(m.tips.prt.100_3mL) - 100
+se.p.prt.100_3mL = 100*(se.vol.prt.100_3mL/100)
+analyzed.prt.100_3mL = c(m.prt.100_3mL, se.vol.prt.100_3mL, se.p.prt.100_3mL, re.vol.prt.100_3mL, re.p.prt.100_3mL)
+
+#300 uL
+m.prt.300 = mean(m.tips.prt.300)
+re.vol.prt.300 = sd(m.tips.prt.300)
+re.p.prt.300 = 100*(re.vol.prt.300/m.prt.300)
+se.vol.prt.300 = mean(m.tips.prt.300) - 300
+se.p.prt.300 = 100*(se.vol.prt.300/300)
+analyzed.prt.300 = c(m.prt.300, se.vol.prt.300, se.p.prt.300, re.vol.prt.300, re.p.prt.300)
 
 #200 uL
 m.prt.200 = mean(m.tips.prt.200)
@@ -104,10 +185,8 @@ colnames(commercial_analyzed) <- c("Mean", "Systematic Error","% Sys. err.","Ran
 rownames(commercial_analyzed) <- c("200 uL", "50 uL","20 uL","10 uL")
 write.csv(commercial_analyzed, file='commercial_analyzed.csv')
 
-printed_analyzed = t(matrix(c(analyzed.prt.200, analyzed.prt.50, analyzed.prt.20, analyzed.prt.10), nrow=5, ncol=4))
+printed_analyzed = t(matrix(c(analyzed.prt.1000, analyzed.prt.500, analyzed.prt.200_3mL, analyzed.prt.100_3mL, analyzed.prt.300, analyzed.prt.200, analyzed.prt.50, analyzed.prt.20, analyzed.prt.10), nrow=5, ncol=9))
 printed_analyzed = as.data.frame(printed_analyzed)
 colnames(printed_analyzed) <- c("Mean", "Systematic Error","% Sys. err.","Random Error","% Rand. err.")
-rownames(printed_analyzed) <- c("200 uL", "50 uL","20 uL","10 uL")
+rownames(printed_analyzed) <- c("1000 uL", "500 uL", "200 uL, 3mL", "100 uL, 3mL", "300 uL", "200 uL", "50 uL","20 uL","10 uL")
 write.csv(printed_analyzed, file='printed_analyzed.csv')
-
-
