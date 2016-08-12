@@ -274,7 +274,7 @@ A 1 mL BD syringe twists to lock in the body part and is held into place by the 
 The plunger part slides freely in the body part and actuates the syringe by pushing the thumb press. 
 The pipette is spring loaded towards a set point which is adjustable by a set-screw. 
 When the plunger is depressed the system locks when it reaches the ready point, where it is ready to draw in fluid.
-The plunger is held in place with a notch and groove design which is then released with a lever drawing in fluid. 
+The plunger is held in place with a notch and groove design which is then released with a lever drawing in fluid.
 The displacement is directly readable with the syringe graduations and is equal to the distance between the set and the ready point.
 The pipette can also be pressed past the ready point to purge the transfered fluid completely from the pipette tip.   
 An additional printed part adapts standard micropipette tips to the luer fitting of the pipette.
@@ -300,9 +300,21 @@ It also can reach to the bottom of a 15 mL conical tube.
 
 \begin{figure}
 \caption{
-{\bf Photos of pipette.}  The pipette is composed of three printed parts, a 1 mL syringe and some additional hardware.  
+{\bf CAD rendering of printable parts.}  Three parts are printed: the body, plunger shaft, and luer-lock adapter for pipette tips.
 }
 \label{fig2}
+% Ideally: cad rendering showing the design and function of the pipette. 
+% a) Un-assembled whole parts next to their cross-sections.  
+% b) Assembly next to crossection
+% c) close up of how the locking groove/mechanism works
+% d) cross-section showing the two positions of the plunger, locked at the goove and stopped at the screw 
+\end{figure}
+
+\begin{figure}
+\caption{
+{\bf Photos of pipette.}  The pipette is composed of three printed parts, a 1 mL syringe and some additional hardware.  
+}
+\label{fig3}
 % Ideally: Photo showing assembled pipette as well as parts
 \end{figure}
 
@@ -371,81 +383,78 @@ The briopipette also allows step-wise shifts in displacement allowing the user t
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
-\begin{table}[]
+\begin{table}[!ht]
+\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
 \centering
-\caption{
-\bf{Comparison of error between the printed and commercially produced pipette}}
-\begin{tabular}{llllll}
-                  Volume &   & Systematic error &  & Random error & \\
-                  \hline
-\multirow{2}{*}{10 $\mu$L} & printed & 2.17 \% & $\pm$0.217$\mu$L  & 1.96\% & $\pm$0.196$\mu$L   \\
-                  & commercial & 3\% & $\pm$0.3$\mu$L  & 1\% & $\pm$0.1$\mu$L  \\
-                  \hline
-\multirow{2}{*}{20 $\mu$L} & printed  & 0.33\% & $\pm$0.066$\mu$L & 1.18 \% & $\pm$0.236$\mu$L \\
-                  & commercial & 2.50\% & $\pm$0.5$\mu$L & 0.70\% & $\pm$0.14$\mu$L \\
-                  \hline
-\multirow{2}{*}{50 $\mu$L} & printed & 1.17\% & $\pm$0.585$\mu$L & 0.50\% & $\pm$0.25$\mu$L \\
-                  & commercial & 1\% & $\pm$0.5$\mu$L & 0.30\% & $\pm$0.15$\mu$L \\
-                  \hline
-\multirow{2}{*}{200 $\mu$L} & printed & 2.52\% & $\pm$5.04$\mu$L & 0.69\% & $\pm$1.38$\mu$L  \\
-                  & commercial & 0.6\% & $\pm$1.2$\mu$L & 0.20\% & $\pm$0.4$\mu$L
-\end{tabular}
-\begin{flushleft} Error assessed for average measured volume by weight of water compared with published specifications of commercial pipette. [Alos compare to data taken with commercial pipettes in our lab]
-\end{flushleft}
-\label{table0}
-\end{table}
-
-\begin{table}[]
-\centering
-\caption{\bfseries{Commercial and Printed pipettes compared to ISO standard 8655.}}
-\label{my-label}
-\begin{tabular}{lllllll}
-Volume & Pipette & Mean   & SE    & \% SE & RE & \% RE \\
-       & ISO, 20-200 $\mu$L & 200 $\mu$L       & $\pm$1.60         & $\pm$0.08          & 0.60 & 0.30 \\
-200 $\mu$L & Commercial & 198.23       & -1.77        & -0.88         & 1.14 & 0.58 \\
-       & Printed  & 193.40       & -6.60        & -3.30         & 2.86 & 1.48 \\
-       &                     &              &              &               &      &      \\
-       & ISO, 20-200 $\mu$L & 50 $\mu$L        & $\pm$1.60         &$\pm$3.20          & 0.60 & 1.20 \\
-50 $\mu$L  & Commercial   & 48.89        & -1.11        & -2.23         & 0.71 & 1.46 \\
-       & Printed      & 49.62        & -0.38        & -0.76         & 1.26 & 2.53 \\
-       &                     &              &              &               &      &      \\
-       & ISO, 20-200 $\mu$L & 20 $\mu$L        & $\pm$1.60         & $\pm$8.00          & 0.60 & 3.00 \\
-20 $\mu$L  & Commercial   & 20.16        & 0.16         & 0.81          & 0.16 & 0.81 \\
-       & Printed     & 18.70        & -1.30        & -6.48         & 0.38 & 2.01 \\
-       &                     &              &              &               &      &      \\
-       & ISO, 10-100 $\mu$L & 10 $\mu$L        & $\pm$0.80         & $\pm$8.00          & 0.30 & 3.00 \\
-10 $\mu$L  & Commercial   & 9.88         & -0.12        & -1.23         & 0.34 & 3.39 \\
-       & Printed      & 11.95        & 1.95         & 19.52         & 0.73 & 6.08 \\
-       &                     &              &              &               &      &      \\
-       & ISO, 20-200 $\mu$L & 10 $\mu$L        & $\pm$1.60         & $\pm$16.00         & 0.60 & 6.00 \\
-10 $\mu$L* & Commercial   & 9.88         & -0.12        & -1.23         & 0.34 & 3.39 \\
-       & Printed      & 11.95        & 1.95         & 19.52         & 0.73 & 6.08
-\end{tabular}
-\begin{flushleft} Commercial and Printed pipettes compared to ISO standard 8655.
-\end{flushleft}
+\caption{ISO 8655 for 100-1000 uL comparing a commercial pipette with our printed pipette used with existing 3 mL syringe scale and an adjusted scale}
 \label{table1}
+\begin{tabular}{lllllll}
+        &                       & Mean   & Systematic Error & \% Sys. err. & Random Error & \% Rand. err. \\
+1000 uL & ISO 8655, 100-1000 uL & 1000    & 8.00             & 0.80         & 3.00         & 0.30          \\
+        & Commercial Pipette    & 1002.98 & 2.98             & 0.30         & 1.72         & 0.17          \\
+        & Printed Pipette       & 949.29  & -50.71           & -5.07        & 0.60         & 0.06          \\
+        & Printed Pipette Scale & 1003.57 & 3.57             & 0.36         & 0.89         & 0.09          \\
+        &                       &         &                  &              &              &               \\
+500 uL  & ISO 8655, 100-1000 uL & 500     & 8.00             & 1.60         & 3.00         & 0.60          \\
+        & Commercial Pipette    & 503.67  & 3.67             & 0.73         & 0.49         & 0.10          \\
+        & Printed Pipette       & 475.99  & -24.01           & -4.80        & 4.75         & 1.00          \\
+        & Printed Pipette Scale & 503.62  & 3.62             & 0.72         & 1.64         & 0.33          \\
+        &                       &         &                  &              &              &               \\
+200 uL  & ISO 8655, 100-1000 uL & 200     & 8.00             & 4.00         & 3.00         & 1.50          \\
+        & Commercial Pipette    & 204.61  & 4.61             & 2.30         & 0.15         & 0.07          \\
+        & Printed Pipette       & 186.55  & -13.45           & -6.72        & 1.31         & 0.70          \\
+        & Printed Pipette Scale & 201.87  & 1.87             & 0.94         & 1.47         & 0.73          \\
+        &                       &         &                  &              &              &               \\
+100 uL  & ISO 8655, 100-1000 uL & 100     & 8.00             & 8.00         & 3.00         & 3.00          \\
+        & Commercial Pipette    & 104.29  & 4.29             & 4.29         & 1.65         & 1.58          \\
+        & Printed Pipette       & 94.02   & -5.98            & -5.98        & 4.81         & 5.12          \\
+        & Printed Pipette Scale & 101.00  & 1.00             & 1.00         & 1.05         & 1.04         
+\end{tabular}
+%\begin{flushleft} Table notes Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed.
+%\end{flushleft}
+\end{adjustwidth}
 \end{table}
 
-The novice user data demonstrates that the pipette set point is user friendly and is capable of accurate measurements without validating with a scale (Figure~\ref{fig3}).
-
-\begin{table}[]
-\centering9
-\caption{
-\bf{Novice Users' first attempt}}
-\begin{tabular}{llll}
-Target volume & Average $\pm$ SD & Systematic error  & Random error\\
-\hline
-10 $\mu$L         & 7.6 $\pm$ 3.3     & -23.80\% & 9.95\% \\
-\hline
-20 $\mu$L         & 18.1 $\pm$ 4.4   & -9.60\%   & 6.66\% \\
-\hline
-50 $\mu$L         & 45.3 $\pm$ 4.6   & -9.48\%   & 2.75\% \\
-\hline
-200 $\mu$L       & 185.2 $\pm$ 5.6 & -7.43\%   & 0.84\%
-\end{tabular}
-\begin{flushleft} Error assessed for average measured volume by weight of water compared with published specifications of commercial pipette.
-\end{flushleft}
+\begin{table}[!ht]
+\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
+\centering
+\caption{ISO 8655 for 30-300 uL comparing a commercial pipette with our printed pipette used with existing 3 mL syringe scale and an adjusted scale}
 \label{table2}
+\begin{tabular}{lllllll}
+       &                       & Mean   & Systematic Error & \% Sys. err. & Random Error & \% Rand. err. \\
+300 uL & ISO 8655, 30-300 uL   & 300    & 4.00             & 1.33         & 1.50         & 0.50          \\
+       & Commercial Pipette    & 301.19 & 1.19             & 0.40         & 0.53         & 0.18          \\
+       & Printed Pipette       & 286.91 & -13.09           & -4.36        & 0.42         & 0.15          \\
+       & Printed Pipette Scale & 299.11 & -0.89            & -0.30        & 0.48         & 0.16          \\
+       &                       &        &                  &              &              &               \\
+200 uL & ISO 8655, 30-300 uL   & 200    & 4                & 2            & 1.5          & 0.75          \\
+       & Commercial Pipette    & 200.06 & 0.06             & 0.03         & 0.46         & 0.23          \\
+       & Printed Pipette       & 193.40 & -6.60            & -3.30        & 2.86         & 1.48          \\
+       & Printed Pipette Scale & 200.57 & 0.57             & 0.28         & 0.86         & 0.43          \\
+       &                       &        &                  &              &              &               \\
+50 uL  & ISO 8655, 30-300 uL   & 50     & 4                & 8            & 1.5          & 3             \\
+       & Commercial Pipette    & 49.02  & -0.98            & -1.96        & 0.10         & 0.20          \\
+       & Printed Pipette       & 49.62  & -0.38            & -0.76        & 1.26         & 2.53          \\
+       & Printed Pipette Scale & 48.73  & -1.27            & -2.54        & 1.11         & 2.27          \\
+       &                       &        &                  &              &              &               \\
+30 uL  & ISO 8655, 30-300 uL   & 30     & 4                & 13.3         & 1.5          & 5             \\
+       & Commercial Pipette    & 29.08  & -0.92            & -3.06        & 0.09         & 0.31          \\
+       & Printed Pipette       & 29.22  & -0.78            & -2.59        & 0.31         & 1.07          \\
+       & Printed Pipette Scale & 27.78  & -2.22            & -7.41        & 1.37         & 4.93          \\
+       &                       &        &                  &              &              &               \\
+20 uL* & ISO 8655, 30-300 uL   & 20     & 4                & 20           & 1.5          & 7.5           \\
+       & Commercial Pipette    & NA     & NA               & NA           & NA           & NA            \\
+       & Printed Pipette       & 18.70  & -1.30            & -6.48        & 0.38         & 2.01          \\
+       & Printed Pipette Scale & 17.94  & -2.06            & -10.29       & 1.87         & 10.42         \\
+       &                       &        &                  &              &              &               \\
+10 uL* & ISO 8655, 30-300 uL   & 10     & 4                & 40           & 1.5          & 15            \\
+       & Commercial Pipette    & NA     & NA               & NA           & NA           & NA            \\
+       & Printed Pipette       & 11.95  & 1.95             & 19.52        & 0.73         & 6.08          \\
+       & Printed Pipette Scale & 7.64   & -2.36            & -23.64       & 0.38         & 4.92         
+\end{tabular}
+\begin{flushleft} * The 20 uL and 10 uL volumes are out of the range in this case but we wanted to demonstrate that the pipette is capable of even smaller volumes.
+\end{flushleft}
+\end{adjustwidth}
 \end{table}
 
 %\begin{table}[!ht]
