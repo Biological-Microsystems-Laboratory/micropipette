@@ -268,20 +268,37 @@ Our pipette also offers a simplified assembly requiring no glue, tape or permane
 \section*{Materials and Methods}
 \subsection*{Design}
 
-Our printed pipette is designed to actuate a 1 mL syringe to a user set displacement.
-The core of the design is two printed parts, the body and the plunger.
+Our printed pipette is designed to actuate a 1 mL or 3 mL syringe to a user set displacement.
+The core of the design is two printed parts, the body and the plunger which are able to be printed on a consumer grade FDM printer.
 A 1 mL BD syringe twists to lock in the body part and is held into place by the syringe flanges.
 The plunger part slides freely in the body part and actuates the syringe by pushing the thumb press. 
 The pipette is spring loaded towards a set point which is adjustable by a set-screw. 
-When the plunger is depressed the system locks when it reaches the ready point, where it is ready to draw in fluid.
-The plunger is held in place with a notch and groove design which is then released with a lever drawing in fluid.
-The displacement is directly readable with the syringe graduations and is equal to the distance between the set and the ready point.
-The pipette can also be pressed past the ready point to purge the transfered fluid completely from the pipette tip.   
-An additional printed part adapts standard micropipette tips to the luer fitting of the pipette.
+When the plunger is depressed the system locks when it reaches the latched position, where it is ready to draw in fluid.
+The plunger is held in place with a latching button design which is released with a lever drawing in fluid.
+The displacement is equal to the distance between the set position and the latched position.
+The pipette can also be pressed past the latched position to 'blow-out' the transfered fluid completely from the pipette tip.   
 Additional materials required for assembly include a spring, a nut and bolt and washers.
+Attempts to make a printable luer lock adapter for tips was abandoned as the surface of printed parts is too rough to make an air tight seal with the luer or pipette tip.
+Instead a combination of a barbed luer adapter and elastic tubing was used to attach the pipette tips.
 
 Our printed pipette mimics commercial pipettes's design, function, and user operation, making it intuitive to use.
-It also can reach to the bottom of a 15 mL conical tube.
+The button is pressed with the thumb until the latched position is reached.
+The the tip immersed in fluid and drawn in by actuating the lever with the palm or fingers.
+Conveniently this design can also reach to the bottom of a 15 mL conical tube allowing tasks such as aspirating supernatant fluid from a cell pellet where existing printed designs cannot.
+
+Our pipette uses the air-displacement design, where a pocket of air is used to draw liquid into the pipette.
+As air is an expansible fluid, this pocket of air expands due to the weight of the liquid pulling on it.
+Due to this effect the graduations on the syringe are not accurate, as they are designed for measuring liquid within the syringe.
+At larger volumes this is more pronounced where the volume of are measured is greater then the amount of liquid pulled into the syringe.
+
+when the liquid volume is pulling due to the force of gravity.
+This effect increases as the larger volumes are transfered.
+Due to the expandability of air the graduations on the syringe are not accurate.
+This effect is the greatest at larger volumes corresponding to a greater mass pulling on the air pocket.
+The pocket of air that is drawing in the water is stretched causing the inaccurate readings.
+We remedied this by creating a new scale to account for the expansion.
+The scale which is printed on a transparency sheet is pasted on the syringe as a guide for the set point.
+%Testing taken with the original scale along with the adjusted scale is shown in table 1 and 2.
 
 %3D parts were designed in Blender and SolidWorks and printed by Fineline Prototyping via selective laser sintering. 
 
@@ -319,34 +336,17 @@ It also can reach to the bottom of a 15 mL conical tube.
 \end{figure}
 
 \subsection*{Validation}
-The pipette was validated and compared to a commercial pipette. 
+The printed pipette was validated and compared to a commercial pipette. 
 The pipette was tested to see if the set point would drift between during use for example small, incremental movements of the screw or other parts causing the pipetted volume to drift. 
-To test the pipette the same volume was pipetted 50 times without moving or re-adjusting the set point. 
-The printed pipette’s accuracy and precision was characterized and compared to a commercial pipette. 
-The printed pipette and a series of commercial pipettes were tested at volumes of 20 $\mu$L 50 $\mu$L and 200 $\mu$L. 
+To test the pipette the same volume was pipetted 50 times without moving or re-adjusting the set point.
+A small amount of paraffin wax was applied to the screw to prevent it from slipping during each actuation. 
+The printed pipette’s accuracy and precision was characterized and compared to a commercial pipette.
+The printed pipette and a series of commercial pipettes were tested at volumes of 10 $\mu$L, 20 $\mu$L, 30 $\mu$L, 50 $\mu$L, 200 $\mu$L, 300 $\mu$L, 500 $\mu$L and 1000 $\mu$L. 
 The printed pipette was adjusted to the the target volume by eye from the syringe graduations, and the resulting volume was measured and repeated 5 times to account for variability.
 Measurements were taken from the commercial pipette in a similar way.
 
-To test user friendliness and feasibility for using the pipette without verifying with a scale, data was also gathered from novice users. 
-This group included researchers experienced with pipettes as well as undergraduates with little to no experience pipetting at all.
-After a quick overview of the operation of the pipette measurements were taken after the volunteers adjusted the pipette to 200, 50, 20 and 10 $\mu$L. 
-
-For the printed pipette the 1000 $\mu$L tips were used for the 200 $\mu$L measurement. 100 $\mu$L tips were used for the 50, 20 and 10 $\mu$L measurements.
-
-compare the force required to press the button.
-
-compare the weight of the pipettes
-
-%After the first attempt was measured on the scale the volunteer was allowed to adjust the set point and re-measure until within 15\% of the target volume was reached.
-
 % For figure citations, please use "Fig." instead of "Figure".
 %Nulla mi mi, Fig.~\ref{fig1} venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, \nameref{S1_Video} vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
-
-\begin{figure}[h]
-\caption{{\bf Novice User efficacy.}
-Novice users were asked to pipette volumes of 200, 50, 20 and 10 $\mu$L without the use of a scale.}
-\label{fig3}
-\end{figure}
 
 %\begin{enumerate}
 %\item{react}
