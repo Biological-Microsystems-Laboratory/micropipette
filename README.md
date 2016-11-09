@@ -7,12 +7,18 @@ This printable micropipette actuates a disposable syringe to an adjustable set-p
 <img src="images/complete.png" alt="image" style="width: 300px;"/>
 
 
-##Additional Parts
+##Parts
 
-1. M3 Hex Nut McMaster part# 90591A121
-2. M3 20mm length, Socket Head Screw Mcmaster part # 91292A123
-3. Metric Compression Spring 33mm Overall, part# 94125k542
-4. 2 Washers Mcmaster part # 90107A012
+| Parts        | Unit price | Source         | Part number |
+|--------------|------------|----------------|-------------|
+| Filiment     | $1.63      | Makerbot       | NA          |
+| 1 mL Syringe | $0.15      | BD Biosciences | 309628      |
+| 3 mL Syringe | $0.73      | BD Biosciences | 309657      |
+| Bolt         | $0.12      | McMaster-Carr  | 91287A026   |
+| Nut          | $0.01      | McMaster-Carr  | 90591A121   |
+| Spring       | $4.14      | McMaster-Carr  | 94125K542   |
+| Washers      | ??         | McMaster-Carr  | ??          |
+| Total        | $6.78      |                |             |
 
 
 Validation
@@ -38,10 +44,10 @@ Pipet up to 1mL or 1000 uL +/-10 uL
 Adjust in increments of 100 uL
 Tolerance +/-10 uL
 
-1mL Syringe 
+1mL Syringe
 Pipet up to 350uL +/- 1 uL
 Adjust in increments of 10 uL
-Tolerance +/-1 uL 
+Tolerance +/-1 uL
 
 =======
 3D Printable Micropipette
@@ -65,7 +71,7 @@ Pipet up to 1mL or 1000 uL +/-10 uL
 Adjust in increments of 100 uL
 Tolerance +/-10 uL
 
-1mL Syringe 
+1mL Syringe
 Pipet up to 350uL +/- 1 uL
 Adjust in increments of 10 uL
-Tolerance +/-1 uL 
+Tolerance +/-1 uL

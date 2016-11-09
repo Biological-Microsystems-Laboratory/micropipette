@@ -239,16 +239,15 @@ A open design pipette that can be made for cheap can cut costs for labs as well 
 
 Air displacement pipettes use a piston operating principal to draw liquid into the pipette\cite{ISO2002}.
 In a typical commercial pipette the piston is made to be gas-tight with a gasketed plunger inside a smooth barrel.
-Consumer grade fused deposition modeling (FDM) printers are unable to form a smooth surface do to the formation of ridges that occur as each layer that is deposited.
+Consumer grade fused deposition modeling (FDM) printers are unable to build a smooth surface do to the formation of ridges that occur as each layer is deposited.
 The ridges formed by FDM make it impractical to form a gas-tight seal between moving parts, even with a gasket.
-Printable open-design micropipettes get around this limitation by stretching a membrane over one end of a printed tube, which when pressed causes the displacement.
+Existing printable open-design micropipettes get around this limitation by stretching a membrane over one end of a printed tube, which when pressed causes the displacement.
 The displacement membrane can be made from any elastic material such as a latex glove.
-There are a few open design printable micropipettes including a popular one which uses parts scavenged from a retractable pen in addition to the printed parts\cite{Baden2014}.
-This design requires the user to validate the volumes dispensed with a high precision scale.
-There is no built-in feature such as a readout for the user to set the displacement to a desired volume.
+There are a few open design printable micropipettes including a popular one which, in addition to the printed parts, uses parts scavenged from a retractable pen \cite{Baden2014}.
+Because there is no built-in feature such as a readout for the user to set the displacement to a desired volume, this design requires the user to validate the volumes dispensed with a high precision scale.
 Without verification with a scale the volumes dispensed can only be estimated based on calculations of the deflection of the membrane.
-We submit a new design whose major strength is the ability to adjust to any volume according to built in scale.
 
+We submit a new design whose major strength is the ability to adjust to any volume according to built in scale.
 Our open design 3D-printable micropipette works by actuating a disposable syringe to a user adjustable set-point.
 This allows the user to set the pipette to a volume by reading the graduations on the syringe barrel.
 The scale marks on the syringe can be used to adjust the dispensed volume accurately without calibrating with a scale.
@@ -267,17 +266,15 @@ Our pipette also offers a simplified assembly requiring no glue, tape or permane
 % You may title this section "Methods" or "Models". 
 % "Models" is not a valid title for PLoS ONE authors. However, PLoS ONE
 % authors may use "Analysis" 
-\section*{Materials and Methods}
-\subsection*{Design}
+\section*{Design}
 
 Our printed pipette is designed to actuate a 1 mL or 3 mL syringe to a user set displacement.
 A syringe is used because the current state of FDM leaves ridges on the surface of printed parts making a airtight connection impossible. 
 Micropipette designs use a piston operating principle to draw fluid into the device.
-Previous 3D printed designs have gotten around this limitation by using a flexable membrane to make an airtight tube.
+Previous 3D printed designs have gotten around this limitation by using a flexible membrane to make an airtight tube.
 Then when the membrane is depressed the air is displaced allowing liquid to be drawn in.
 This allows a functional pipette to be created with very few easily sourced parts.
 
-These pipettes do now allow the 
 The core of the design is two printed parts, the body and the plunger which are able to be printed on a consumer grade FDM printer.
 A 1 mL BD syringe twists to lock in the body part and is held into place by the syringe flanges.
 The plunger part slides freely in the body part and actuates the syringe by pushing the thumb press. 
@@ -292,48 +289,59 @@ Instead a combination of a barbed luer adapter and elastic tubing was used to at
 
 Our printed pipette mimics commercial pipettes's design, function, and user operation, making it intuitive to use.
 The button is pressed with the thumb until the latched position is reached.
-The the tip immersed in fluid and drawn in by actuating the lever with the palm or fingers.
-Conveniently this design can also reach to the bottom of a 15 mL conical tube allowing tasks such as aspirating supernatant fluid from a cell pellet where existing printed designs cannot.
+Then the tip immersed in fluid and drawn in by actuating the lever with the palm or fingers.
+Conveniently this design can also reach to the bottom of a 15 mL conical tube allowing tasks such as aspirating supernatant fluid from a cell pellet.
 
+\subsection*{Adjusted Syringe Graduations}
 Our pipette uses the air-displacement design, where a pocket of air is used to draw liquid into the pipette.
 As air is an expansible fluid, this pocket of air expands due to the weight of the liquid pulling on it.
 Due to this effect the graduations on the syringe are not accurate, as they are designed for measuring liquid within the syringe.
-At larger volumes this is more pronounced where the volume of are measured is greater then the amount of liquid pulled into the syringe.
-
-when the liquid volume is pulling due to the force of gravity.
-This effect increases as the larger volumes are transfered.
-Due to the expandability of air the graduations on the syringe are not accurate.
-This effect is the greatest at larger volumes corresponding to a greater mass pulling on the air pocket.
-The pocket of air that is drawing in the water is stretched causing the inaccurate readings.
+At larger volumes this effect is more pronounced resulting in the volume measured being greater then the amount of liquid pulled into the syringe.
 We remedied this by creating a new scale to account for the expansion.
-The scale which is printed on a transparency sheet is pasted on the syringe as a guide for the set point.
+The scale is printed on a transparency sheet and is pasted on the syringe for accurate measurements. 
+
+\subsection*{Materials and Assembly}
+
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{table1}
+\begin{tabular}{|l|l|l|l|}
+\hline
+             & Unit price & Source         & Part number \\ \hline
+Filiment     & \$1.63     & Makerbot       & NA          \\ \hline
+1 mL Syringe & \$0.15     & BD Biosciences & 309628      \\ \hline
+3 mL Syringe & \$0.73     & BD Biosciences & 309657      \\ \hline
+Bolt         & \$0.12     & McMaster-Carr  & 91287A026   \\ \hline
+Nut          & \$0.01     & McMaster-Carr  & 90591A121   \\ \hline
+Spring       & \$4.14     & McMaster-Carr  & 94125K542   \\ \hline
+Washers      & ??         & McMaster-Carr  & ??          \\ \hline
+Total        & \$6.78     &                &             \\ \hline
+\end{tabular}
+\end{table}
+
+% cost for each part filiment,syringe hardware
+% tips used
+% syringes used
+% printer used and settings
+
+
 %Testing taken with the original scale along with the adjusted scale is shown in table 1 and 2.
 
 %3D parts were designed in Blender and SolidWorks and printed by Fineline Prototyping via selective laser sintering. 
-
-
-\begin{figure}
-\caption{
-{\bf CAD rendering of printable parts.}  Three parts are printed: the body, plunger shaft, and luer-lock adapter for pipette tips.
-}
-\label{fig1}
-% Ideally: cad rendering showing the design and function of the pipette. 
-% a) Un-assembled whole parts next to their cross-sections.  
-% b) Assembly next to crossection
-% c) close up of how the locking groove/mechanism works
-% d) cross-section showing the two positions of the plunger, locked at the goove and stopped at the screw 
-\end{figure}
 
 \begin{figure}
 \caption{
 {\bf CAD renderings of printable parts.} Two parts are printed: The plunger part (A) slides inside the body part (B).
 }
 \label{fig1}
-% Ideally: cad rendering showing the design and function of the pipette. 
-% a) Un-assembled whole parts next to their cross-sections.  
-% b) Assembly next to crossection
-% c) close up of how the locking groove/mechanism works
-% d) cross-section showing the two positions of the plunger, locked at the goove and stopped at the screw 
+\end{figure}
+
+\begin{figure}
+\caption{
+{\bf CAD renderings of assembled pipette and function.} The pipetted actuates the syringe to three positions. {\bf(i) The set position.} The position of the screw determines the total displacement. The pipette is spring loaded to return to this position {\bf (ii) The latched position.} When the plunger is pressed the pipette locks at this position. The tip is then placed in a liquid and the button pressed to release the pipette back to the set position, drawing in liquid. {\bf (iii) The blow-out position.} The fluid is transfered by pressing the plunger past the latched position to blow-out all the liquid.  
+}
+\label{fig1}
 \end{figure}
 
 \begin{figure}
@@ -390,7 +398,7 @@ The briopipette also allows step-wise shifts in displacement allowing the user t
 \begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
 \centering
 \caption{ISO 8655 for 100-1000 uL comparing a commercial pipette with our printed pipette used with existing 3 mL syringe scale and an adjusted scale}
-\label{table1}
+\label{table2}
 \begin{tabular}{lllllll}
         &                       & Mean   & Systematic Error & \% Sys. err. & Random Error & \% Rand. err. \\
 1000 uL & ISO 8655, 100-1000 uL & 1000    & 8.00             & 0.80         & 3.00         & 0.30          \\
@@ -422,7 +430,7 @@ The briopipette also allows step-wise shifts in displacement allowing the user t
 \begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
 \centering
 \caption{ISO 8655 for 30-300 uL comparing a commercial pipette with our printed pipette used with existing 3 mL syringe scale and an adjusted scale}
-\label{table2}
+\label{table3}
 \begin{tabular}{lllllll}
        &                       & Mean   & Systematic Error & \% Sys. err. & Random Error & \% Rand. err. \\
 300 uL & ISO 8655, 30-300 uL   & 300    & 4.00             & 1.33         & 1.50         & 0.50          \\
