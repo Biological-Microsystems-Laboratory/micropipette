@@ -3,26 +3,21 @@
 
 This printable micropipette actuates a disposable syringe to an adjustable set-point using an assembly of 3D-printable parts and basic hardware.
 
-
-<img src="images/complete.png" alt="image" style="width: 300px;"/>
-
+<img src="images/CAD-renderings/gifs/gif-side-cross1.gif" alt="image" style="width: 500px;"/>
 
 ##Parts
 
-| Parts        | Unit price | Source         | Part number |
-|--------------|------------|----------------|-------------|
-| Filiment     | $1.63      | Makerbot       | NA          |
-| 1 mL Syringe | $0.15      | BD Biosciences | 309628      |
-| 3 mL Syringe | $0.73      | BD Biosciences | 309657      |
-| Bolt         | $0.12      | McMaster-Carr  | 91287A026   |
-| Nut          | $0.01      | McMaster-Carr  | 90591A121   |
-| Spring       | $4.14      | McMaster-Carr  | 94125K542   |
-| Washers      | ??         | McMaster-Carr  | ??          |
-| Total        | $6.78      |                |             |
+| Parts        | price/build | Source         | Part number |
+|--------------|-------------|----------------|-------------|
+| Filiment     | $1.63       | Makerbot       | NA          |
+| 1 mL Syringe | $0.15       | BD Biosciences | 309628      |
+| 3 mL Syringe | $0.73       | BD Biosciences | 309657      |
+| Bolt         | $0.12       | McMaster-Carr  | 91287A026   |
+| Nut          | $0.01       | McMaster-Carr  | 90591A121   |
+| Spring       | $4.14       | McMaster-Carr  | 94125K542   |
 
 
-Validation
-----
+##Validation
 
 |                    | 20 uL         | 50 uL        | 200 uL       |
 |--------------------|---------------|--------------|--------------|
@@ -50,28 +45,53 @@ Adjust in increments of 10 uL
 Tolerance +/-1 uL
 
 =======
-3D Printable Micropipette
-=========================
-
-This printable micropipette actuates a disposable syringe an adjustable set point using an assembly of 3D-printable parts and basic hardware.
-
-
-<img src="images/render-parts.PNG" alt="image" style="width: 300px;"/>
-
-
-##Additional Parts
-
-1. M3 Hex Nut McMaster part# 90591A121
-2. M3 35mm length, Hex Head Cap Screw Mcmaster part # 91287A026
-3. Metric Compression Spring 33mm Overall, part# 94125k542
-## Specifications
-Specifications may vary depending on the syringe
-3mL Syringe
-Pipet up to 1mL or 1000 uL +/-10 uL
-Adjust in increments of 100 uL
-Tolerance +/-10 uL
-
-1mL Syringe
-Pipet up to 350uL +/- 1 uL
-Adjust in increments of 10 uL
+3D Printable Micropipette
+
+=========================
+
+
+
+This printable micropipette actuates a disposable syringe an adjustable set point using an assembly of 3D-printable parts and basic hardware.
+
+
+
+
+
+<img src="images/render-parts.PNG" alt="image" style="width: 300px;"/>
+
+
+
+
+
+##Additional Parts
+
+
+
+1. M3 Hex Nut McMaster part# 90591A121
+
+2. M3 35mm length, Hex Head Cap Screw Mcmaster part # 91287A026
+
+3. Metric Compression Spring 33mm Overall, part# 94125k542
+
+
+## Specifications
+
+Specifications may vary depending on the syringe
+
+3mL Syringe
+
+Pipet up to 1mL or 1000 uL +/-10 uL
+
+Adjust in increments of 100 uL
+
+Tolerance +/-10 uL
+
+
+
+1mL Syringe
+
+Pipet up to 350uL +/- 1 uL
+
+Adjust in increments of 10 uL
+
 Tolerance +/-1 uL
