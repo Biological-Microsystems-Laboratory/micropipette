@@ -29,7 +29,7 @@ Both the 30-300 uL Pipette and the 100-1000 uL Pipette use the same printed part
 | 3 mL Syringe | $0.73      | BD Biosciences | 309657      |
 | Bolt         | $0.12      | McMaster-Carr  | 91287A026   |
 | Nut          | $0.01      | McMaster-Carr  | 90591A121   |
-| Spring       | $4.14      | McMaster-Carr  | 94125K542   |
+| Spring (2)   | $4.14      | McMaster-Carr  | 94125K542   |
 | **total**    | **$6.63**  |                |             |
 
 ## Paste on Scale
