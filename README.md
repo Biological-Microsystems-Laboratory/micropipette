@@ -33,6 +33,10 @@ Both the 30-300 uL Pipette and the 100-1000 uL Pipette use the same printed part
 | Spring (2)   | $4.14      | McMaster-Carr  | 94125K542   |
 | **total**    | **$6.63**  |                |             |
 
+## Assembly
+
+See our video demonstration: https://www.youtube.com/watch?v=D8y5WUYpcW0
+
 ## Paste on Scale
 
 For ease of use and to achieve the highest accuracy replace the syringe graduations with the adjusted scale. Print out on a transparency sheet and tape on to the syringe aligning the zero point with the plunger position.
