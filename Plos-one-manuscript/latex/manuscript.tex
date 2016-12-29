@@ -232,7 +232,7 @@ Although this may make a rather crude centrifuge it may be an adequate method wh
 Other examples of open-design research tools that utilize 3D printed parts include optics equipment\cite{Zhang2013}, microscopes\cite{Baden2014a,Walus2014}, syringe pumps\cite{Wijnen2014}, and reactionware\cite{Symes2012} to name a few.
 
 One example of a everyday scientific tool that provides opportunity for an open design solution is the micropipette.
-Micropipettes are and indispensable tool used routinely in lab tasks and can easily cost \$1000 USD for a set.
+Micropipettes are an indispensable tool used routinely in lab tasks and can easily cost \$1000 USD for a set.
 Often a lab will require several sets each for a dedicated task.
 Some pipettes are even re-calibrated for use with liquids of different properties.
 A open design pipette that can be made for cheap can cut costs for labs as well as allow a option for educational settings.
@@ -252,22 +252,8 @@ Our open design 3D-printable micropipette works by actuating a disposable syring
 This allows the user to set the pipette to a volume by reading the graduations on the syringe barrel.
 The scale marks on the syringe can be used to adjust the dispensed volume accurately without calibrating with a scale.
 Our pipette also offers a simplified assembly requiring no glue, tape or permanent connections.
-%In addition no open-design pipettes have be rigorously validated.
 
-%range of 226 uL, one tip size per pipette
-
-
-
-%\begin{equation}\label{eq:schemeP} 
-%D_{coll} = \frac{D_f+\frac{[S]^2}{K_D S_T} D_S} {1+\frac{[S]^2}{K_D S_T}}, 
-%D_{sm} = \frac{D_f+ \frac{[S]}{K_D} D_S}{1+\frac{[S]}{K_D}},
-%\end{equation}
-
-% You may title this section "Methods" or "Models". 
-% "Models" is not a valid title for PLoS ONE authors. However, PLoS ONE
-% authors may use "Analysis" 
-\section*{Materials and Methods}
-
+\section*{Methods}
 Our printed pipette is designed to actuate a 1 mL or 3 mL syringe to a user set displacement.
 The core of the design is two printed parts, the body and the plunger which are able to be printed on a consumer grade FDM printer.
 A 1 mL or 3 mL syringe twists to lock in the body part and is held into place by the syringe flanges.
@@ -292,13 +278,13 @@ We remedied this by creating a new scale to account for the expansion.
 The scale is printed on a transparency sheet and is pasted on the syringe for accurate measurements. 
 
 \subsection*{Assembly}
-
 A small amount of paraffin wax is applied to the screw to prevent slop from causing the set point to drift after each actuation.
 The nut is sunk in to the hex inset in the body part.
 The bolt is threaded in from the top of the body into the nut.
 Springs and washers are threaded onto the plunger of the 1 mL syringe for the 30-300 uL configuration.
 Springs are placed inside the 3 mL syringe for the 100-1000 mL configuration.
 The plunger part is inserted in the body and the syringe assembly is pushed in and locked from the syringe flanges to the body part to complete assembly.
+Parts and cost are listed in tables~\ref{table1,table2}
 
 \begin{table}[!ht]
 \centering
@@ -344,7 +330,7 @@ The plunger part is inserted in the body and the syringe assembly is pushed in a
 \caption{
 {\bf CAD renderings of assembled pipette and function.} The pipetted actuates the syringe to three positions. {\bf(i) The set position.} The position of the screw determines the total displacement. The pipette is spring loaded to return to this position {\bf (ii) The latched position.} When the plunger is pressed the pipette locks at this position. The tip is then placed in a liquid and the button pressed to release the pipette back to the set position, drawing in liquid. {\bf (iii) The blow-out position.} The fluid is transferred by pressing the plunger past the latched position to blow-out all the liquid.  
 }
-\label{fig1}
+\label{fig2}
 \end{figure}
 
 \begin{figure}
@@ -352,43 +338,29 @@ The plunger part is inserted in the body and the syringe assembly is pushed in a
 {\bf Photos of pipette.}  The pipette is composed of two printed parts, a 1 mL syringe and some additional hardware.  
 }
 \label{fig3}
-% Ideally: Photo showing assembled pipette as well as parts
 \end{figure}
 
 \subsection*{Validation}
 The printed pipette’s accuracy and precision was characterized and compared to a commercial pipette as well as ISO 8655.
 The printed pipette was adjusted to the target volume by eye from the syringe graduations, and the resulting volume was measured and repeated 5 times to account for transfer variability.
-Data was taken for printed pipettes with existing graduations as well as with the adjusted scale.
-The commercial pipette was adjusted to the desired volume and 5 transfers were taken.
-The systematic error and random error was calculated according to ISO 8655 (Table~\ref{table3,table4}).
+Data was taken for printed pipettes with existing syringe graduations as well as with the our adjusted scale.
+Data was taken with commercial pipettes of 30-300 and 100-1000 to compare to the printed pipette. 
+The systematic error and random error was calculated according to ISO 8655~\ref{ISO2013} (Table~\ref{table3,table4}).
 
-% For figure citations, please use "Fig." instead of "Figure".
-%Nulla mi mi, Fig.~\ref{fig1} venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, \nameref{S1_Video} vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
-
-%\begin{enumerate}
-%\item{react}
-%\item{diffuse free particles}
-%\item{increment time by dt and go to 1}
-%\end{enumerate}
-
-% Results and Discussion can be combined.
 \section*{Results and Discussion}
+Validation testing preformed with the existing graduations printed on the syringes did not meet the ISO standards.
+Due to the expansion of air the built in graduations were not accurate, especially at larger volumes.
+Replacing the scale with our scale that accounts for the expansion corrected this effect. 
+Our printed pipette with the adjusted scale meets ISO standards for accuracy and precision. (Table~\ref{table1 ,table2}).
 
-Initially validation was preformed with the original graduations printed on the syringes.
-Due to the expansion of air the built in graduations are were not accurate, especially at larger volumes.
-Using our redesigned scale volumes were accurate.
-Our printed pipette meets ISO standards for accuracy and precision. (Table~\ref{table1 ,table2}).
-
-This pipette improves on existing open design pipettes in several ways. 
+Our printed pipette improves on existing open design pipettes in several ways. 
 Most significantly the user is able to adjust the syringe accurately without verifying the volume with a scale.
 In addition the assembly requires no permanent connections using tape or glue which allows for re-configuration and easy replacement of parts.
 Our pipette is able to transfer from the bottom of a 15 mL conical tube which is a requirement for many routine lab procedures such as aspirating supernatant from a centrifuged cell pellet.
 This design does not use a membrane that may wear out and require tedious replacement.
 
-The only major limitation of this design compared to the biropipette is the option for a pipette tip ejector, although incorporation of a similar design in our pipette would not leave room for it to reach into a 15 mL conical tube. 
-Our pipette requires a syringe and some additional hardware where biropipette's additional parts can be obtained virtually anywhere.
-The biropipette also allows step-wise shifts in displacement allowing the user to quickly change to a relative volume
-
+The only major limitation of this design compared to the biropipette is the option for a pipette tip ejector.
+The biropipette also uses easier to source parts relative to what is required from our design.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
