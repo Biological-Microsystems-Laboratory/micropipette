@@ -232,7 +232,7 @@ Although this may make a rather crude centrifuge it may be an adequate method wh
 Other examples of open-design research tools that utilize 3D printed parts include optics equipment\cite{Zhang2013}, microscopes\cite{Baden2014a,Walus2014}, syringe pumps\cite{Wijnen2014}, and reactionware\cite{Symes2012} to name a few.
 
 One example of a everyday scientific tool that provides opportunity for an open design solution is the micropipette.
-A open design pipette that can be made for cheap can cut costs and allow for more options for labs and educational settings.
+A open design micropipette that can be made for cheap can cut costs and allow for more options for labs and educational settings.
 Micropipettes are an indispensable tool used routinely in lab tasks and can easily cost \$1000 USD for a set.
 Often a lab will require several sets each for a dedicated task.
 Some pipettes are even re-calibrated for use with liquids of different properties.
@@ -276,12 +276,13 @@ At larger volumes this effect is more pronounced resulting in the volume measure
 We remedied this by creating a new scale to account for the expansion.
 The scale is printed on a transparency sheet and is taped onto the syringe for accurate measurements. 
 
-\subsection*{Assembly}
+\subsection*{Fabrication & Assembly}
+Two parts are printed (body.stl and plunger.stl) at normal resolution with rafts on a Makerbot Replicator.
 A small amount of paraffin wax is applied to the screw to prevent slop from causing the set point to drift after each actuation.
-The nut is sunk in to the hex inset in the body part.
+The nut is sunk in to the hex inset in the printed body part.
 The bolt is threaded in from the top of the body into the nut.
-Springs and washers are threaded onto the plunger of the 1 mL syringe for the 30-300 uL configuration.
-Springs are placed inside the 3 mL syringe for the 100-1000 mL configuration.
+Springs and washers are threaded onto the plunger of a 1 mL syringe for the 30-300 uL configuration.
+Springs are placed inside a 3 mL syringe for the 100-1000 mL configuration.
 The plunger part is inserted in the body and the syringe assembly is pushed in and locked from the syringe flanges to the body part to complete assembly.
 Parts and cost are listed in tables~\ref{table1,table2}
 
@@ -342,36 +343,37 @@ Parts and cost are listed in tables~\ref{table1,table2}
 \subsection*{Validation}
 The printed pipette’s accuracy and precision was characterized and compared to a commercial pipette as well as ISO 8655.
 The printed pipette was adjusted to the target volume by eye from the syringe graduations.
-Dionized water was transfered and measured with a scale,
-Five transferes were recorded and averaged to account for random variability.
+Deionized water was transferred and measured with a scale,
+Five transfers were recorded and averaged to account for random variability.
 Data was taken for printed pipettes with existing syringe graduations as well as with the our adjusted scale.
 Data was taken with commercial pipettes of 30-300 and 100-1000 to compare to the printed pipette. 
 The systematic error and random error was calculated according to ISO 8655~\ref{ISO2013} (Table~\ref{table3,table4}).
 
 \section*{Results and Discussion}
 Validation testing preformed with the existing graduations printed on the syringes did not meet the ISO standards.
-According to ISO 8655 for a pipette with the maximum nominal volume of 1000 uL the systematic error cannot excede 8 uL and the random error cannot excede 3 uL and the the maximum nominal volume of 300 uL the systemic error cannot excede 4 uL and the random error cannot excede 1.5 uL.
-The commerical pipettes met these standards handidly, but in our initial tests with our printed pipette we noticied large negaive systematic error suggesting that we were missing a biasing factor. 
-This error was exagurated while transfering larger volumes.
+According to ISO 8655 for a pipette with the maximum nominal volume of 1000 uL the systematic error cannot exceed 8 uL and the random error cannot exceed 3 uL
+For the maximum nominal volume of 300 uL the systemic error cannot exceed 4 uL and the random error cannot exceed 1.5 uL.
+The commercial pipettes met these standards handily, but in our initial tests with our printed pipette we noticed large negative systematic error suggesting that we were missing a biasing factor. 
+This error was exaggerated while transferring larger volumes.
 After further investigation we realized that the graduations are intended to measure incompressible fluids within the syringe while we were using them to measure air while under vacuum.
-Becasue the syringe graduations were used measure the air under vacuum it could not be expected to serve as a 1:1 volume ratio of water that was pulled into the tip because under vacuum the air had expanded.
+Because the syringe graduations were used measure the air under vacuum it could not be expected to serve as a 1:1 volume ratio of water that was pulled into the tip because under vacuum the air had expanded.
 This explains the negative systematic error we were experiencing.
-The water in the tip pulls on the air due to gravity whcih causes it to expand slighty but enough to make measuing with the graduation in this way inaccurate.
-Our solution was to replace the built-in scale with a scale that acounted for the expansion.
-Using the data from our inital testing we calulated a factor for the expansion and used that to make the new scale.
+The water in the tip pulls on the air due to gravity which causes it to expand slightly but enough to make measuring with the graduation in this way inaccurate.
+Our solution was to replace the built-in scale with a scale that accounted for the expansion.
+Using the data from our initial testing we calculated a factor for the expansion and used that to make the new scale.
 With the new scale taped on the syringe our validation testing met the ISO 8655 standard.
 Replacing the scale with our scale that accounts for the expansion corrected this effect. 
 Our printed pipette with the adjusted scale meets ISO standards for accuracy and precision. (Table~\ref{table1 ,table2}).
 
 Our printed pipette improves on existing open design pipettes in several ways. 
 Most significantly the user is able to adjust the syringe accurately without verifying the volume with a scale.
-The pipette can be adjuseted to any discrete volume within range.
+The pipette can be adjusted to any discrete volume within range.
 In addition the assembly requires no permanent connections using tape or glue which allows for re-configuration and easy replacement of parts.
 Conveniently our design can also reach to the bottom of a 15 mL conical tube allowing tasks such as aspirating supernatant fluid from a cell pellet.
-Unlike existing designs our desing does not use a membrane that may wear out and require tedious replacement.
+Unlike existing designs our design does not use a membrane that may wear out and require tedious replacement.
 The only major limitation of this design compared to the biropipette is the option for a pipette tip ejector.
 The biropipette also uses arguably easier to source parts (a pen VS a syringe) relative to what is required from our design.
-The biropipette also was developed in OpenSCAD which is free and open source CAD software where our design was created in Solidworks a propriatiery software. 
+The biropipette also was developed in OpenSCAD which is free and open source CAD software where our design was created in Solidworks a proprietary software. 
 
 The open design nature of this project encourages anyone to use and submit changes to improve and add features to this design.
 All of the working files and documentation are kept in a public repository\ref{micropipetterepo}.
