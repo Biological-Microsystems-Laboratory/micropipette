@@ -254,13 +254,13 @@ Our pipette also offers a simplified assembly requiring no glue, tape, or perman
 
 \section*{Methods}
 Our printed pipette is designed to actuate a 1 mL or 3 mL syringe to a user set displacement.
-The core of the design is two printed parts, the body and the plunger which are able to be printed on a consumer grade FDM printer.
+The core of the design is two printed parts, the body and the plunger which are able to be printed on a consumer grade FDM printer (fig.~\ref{fig1}).
 A 1 mL or 3 mL syringe twists to lock in the body part and is held into place by the syringe flanges.
 The 30-300 uL configuration uses a 1 mL pipette and the 100-1000 uL configuration uses a 3 mL pipette.
-The plunger part slides freely in the body part and actuates the syringe by pushing the thumb press. 
-The pipette is spring loaded towards a set point which is adjustable by a set-screw. 
-When the plunger is depressed the system locks when it reaches the latched position, where it is ready to draw in fluid.
-The plunger is held in place with a latching button design which is released with a lever drawing in fluid.
+The plunger part slides freely in the body part and actuates the syringe by pushing the thumb button (fig.~\ref{fig2}). 
+The pipette is spring loaded towards a set point which is adjustable by a set-screw.
+When the when the thumb button is pressed the system locks when it reaches the latched position, where it is ready to draw in fluid.
+The plunger is held in place with a latching button design which is released with the unlatching button drawing in fluid.
 The displacement is equal to the distance between the set position and the latched position.
 The pipette can also be pressed past the latched position to 'blow-out' the transferred fluid completely from the pipette tip.   
 Additional materials required for assembly include a spring, a nut and bolt and washers.
@@ -268,13 +268,26 @@ Attempts to make a printable luer lock adapter for tips was abandoned as the sur
 Instead, a combination of a barbed luer adapter and elastic tubing is used to attach the pipette tips.
 Our printed pipette mimics commercial pipettes design, function, and user operation, making it intuitive to use.
 
+\begin{figure}
+	\caption{
+		{\bf CAD renderings of printable parts and cross-sections.} (A) The printed plunger part is a shaft pushes on the syringe plunger and slides in the printed body part. The printed plunger has a latching tongue and button which interfaces with the printed body part. (B) The printed body part holds the syringe and interfaces with the printed plunger part. The body part features the un-latching button and slots to hold the syringe in place by its flanges. The body part also has two cutouts in the top for the plunger button and for the hex nut and bolt.
+	}
+	\label{fig1}
+\end{figure}
+
+\begin{figure}
+	\caption{
+		{\bf CAD renderings of assembled pipette and function.} The pipetted actuates the syringe to three positions. {\bf(i) The set position.} The position of the screw determines the total displacement. The pipette is spring loaded to return to this position. {\bf (ii) The latched position.} When the plunger is pressed the pipette locks at this position. The tip is then placed in a liquid and the unlatching button is pressed to release the pipette back to the set position, drawing in liquid. {\bf (iii) The blow-out position.} The fluid is transferred by pressing the plunger past the latched position to blow-out all the liquid.
+	}
+	\label{fig2}
+\end{figure}
+
 Our pipette uses the air-displacement design, where a pocket of air is used to draw liquid into the pipette.
 As air is an compressible fluid, this pocket of air grows due to the weight of the liquid pulling on it.
 Due to this effect the graduations on the syringe are not accurate, as they are designed for measuring liquid within the syringe.
 At larger volumes this effect is more pronounced resulting in the volume measured being greater then the amount of liquid pulled into the syringe.
 We remedied this by creating a new scale to account for the expansion.
 The scale is printed on a transparency sheet and is taped onto the syringe for accurate measurements. 
-
 \subsection*{Fabrication \& Assembly}
 Two parts are printed (body.stl and plunger.stl) at normal resolution with rafts on a Makerbot Replicator.
 A small amount of paraffin wax is applied to the screw to prevent slop from causing the set point to drift after each actuation.
@@ -282,7 +295,7 @@ The nut is sunk in to the hex inset in the printed body part.
 The bolt is threaded in from the top of the body into the nut.
 Springs and washers are threaded onto the plunger of a 1 mL syringe for the 30-300 uL configuration.
 Springs are placed inside a 3 mL syringe for the 100-1000 mL configuration.
-The plunger part is inserted in the body and the syringe assembly is pushed in and locked from the syringe flanges to the body part to complete assembly.
+The plunger part is inserted in the body and the syringe assembly is pushed in and locked from the syringe flanges to the body part to complete assembly(fig.~\ref{fig3}).
 Parts and cost are listed in Table~\ref{table1} and \ref{table2}.
 
 \begin{table}[!ht]
@@ -317,20 +330,6 @@ Parts and cost are listed in Table~\ref{table1} and \ref{table2}.
 	total        & \$6.63     &                &             \\ \hline
 \end{tabular}
 \end{table}
-
-\begin{figure}
-\caption{
-{\bf CAD renderings of printable parts.} Two parts are printed: The plunger part (A) slides inside the body part (B).
-}
-\label{fig1}
-\end{figure}
-
-\begin{figure}
-\caption{
-{\bf CAD renderings of assembled pipette and function.} The pipetted actuates the syringe to three positions. {\bf(i) The set position.} The position of the screw determines the total displacement. The pipette is spring loaded to return to this position {\bf (ii) The latched position.} When the plunger is pressed the pipette locks at this position. The tip is then placed in a liquid and the button pressed to release the pipette back to the set position, drawing in liquid. {\bf (iii) The blow-out position.} The fluid is transferred by pressing the plunger past the latched position to blow-out all the liquid.  
-}
-\label{fig2}
-\end{figure}
 
 \begin{figure}
 \caption{
@@ -463,8 +462,15 @@ Our design is free to use and modify to encourage further collaborative developm
 
 %For more information, see \nameref{S1_Text}.
 
-%\section*{Supporting Information}
+\section*{Supporting Information}
 
+\subsection*{S1 Fig}
+\label{S1_Fig}
+{\bf Adjusted Scale Graduations for 30-300 uL Pipette.} New scale graduations that can be printed on a transparency sheet and taped onto a 1 mL syringe. Using these graduations will correct for expansion of air and allow ISO standards to be met. PDF format for ease of printing to scale. 1 inch and 1 cm marks to check scale as well as reproduction of standard graduation marks.
+
+\subsection*{S2 Fig}
+\label{S2_Fig}
+{\bf Adjusted Scale Graduations for 100-1000 uL Pipette.} New scale graduations that can be printed on a transparency sheet and taped onto a 3 mL syringe. Using these graduations will correct for expansion of air and allow ISO standards to be met. PDF format for ease of printing to scale. 1 inch and 1 cm marks to check scale as well as reproduction of standard graduation marks.
 
 \nolinenumbers
 
