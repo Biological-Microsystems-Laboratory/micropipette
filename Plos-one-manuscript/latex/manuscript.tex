@@ -213,22 +213,21 @@ David T. Eddington\textsuperscript{1,*},
 % Please keep the abstract below 300 words
 \section*{Abstract}
 Open source development of lab equipment is being facilitated, in part, by growing availability of 3D printing which allows the production of simple lab tools.
-We developed 3D-printable parts that, along with a disposable syringe, form a micropipette.
-Once assembled the pipette requires no calibration or validation with a scale.
-Our printed micropipette is assessed in comparison to a commercial pipette demonstrating comparable performance in accuracy and precision and approaches ISO standard.
+We developed 3D-printable parts that, along with a disposable syringe, form a micropipette that requires no calibration or validation with a scale.
+Our printed micropipette is assessed in comparison to a commercial pipette and meets ISO 8655 standards.
 
 \linenumbers
 
 \section*{Introduction}
-The open source development model, initially applied to software, is thriving in the development of open source scientific equipment due in part to increasing access of 3D printing \cite{Baden2015,Pearce2014}.
-Additive manufacturing methods have existed for decades although the recent availability of inexpensive desktop printers\cite{MakerbotIndustries2016,Reprap2015} have made it feasible for consumers to design and print prototypes and even functional parts, and consumer goods\cite{Fullerton2014}.
-Proliferation of free CAD software[OpenSCAD, Blender, SketchUp] and design sharing sites\cite{MakerbotIndustries2016,NationalInstitutesofHealth2015,grabCAD,GitHubInc.2016} have also supported the growth and popularity of open designed parts and projects.
+The open source development model, initially applied to software, is thriving in the development of open source scientific equipment due in part to increasing access of 3D printing\cite{Baden2015,Pearce2013}.
+Additive manufacturing methods have existed for decades although the recent availability of inexpensive desktop printers\cite{MakerbotIndustries,RepRap} have made it feasible for consumers to design and print prototypes and even functional parts, and consumer goods\cite{Fullerton2014}.
+Proliferation of free CAD software\cite{OpenScad,Blender,SketchUp,123D} and design sharing sites\cite{Thingiverse,NationalInstitutesofHealth,GrabCAD,GitHubInc} have also supported the growth and popularity of open designed parts and projects.
 Open design 3D-printable lab equipment is an attractive idea because, like open source software, it allows free access to technology that is otherwise inaccessible due to proprietary and/or financial barriers. 
 Open design tools create opportunity for scientists and educational programs in remote or resource limited areas to participate with inexpensive and easy to make tools\cite{Baden2015}. 
 Open source development also enables the development of custom solutions to meet unique applications not met by commercial products that are shared freely and are user modifiable\cite{Fullerton2014,Pearce2012}.
 Some advanced, noteworthy, open-source scientific equipment include a PCR device\cite{ChaiBiotechnologiesInc2015}, and a two-photon microscope\cite{Rosenegger2014} although simple tools are often more impactful as they can serve a wider community.
 Some simple and clever printable parts that have emerged are ones that give a new function to a ubiquitous existing device, such as drill bit attachment designed to hold centrifuge tubes, allowing a drill to be used as a centrifuge\cite{Garvey2009}.
-Although this may make a rather crude centrifuge it may be an adequate method which only costs pennies compared to commercially available centrifuges.
+Although this may make a rather crude centrifuge it may be adequate which only costs pennies compared to commercially available centrifuges.
 Other examples of open-design research tools that utilize 3D printed parts include optics equipment\cite{Zhang2013}, microscopes\cite{Baden2014a,Walus2014}, syringe pumps\cite{Wijnen2014}, and reactionware\cite{Symes2012} to name a few.
 
 One example of a everyday scientific tool that provides opportunity for an open design solution is the micropipette.
@@ -237,7 +236,7 @@ Micropipettes are an indispensable tool used routinely in lab tasks and can easi
 Often a lab will require several sets each for a dedicated task.
 Some pipettes are even re-calibrated for use with liquids of different properties.
 
-Air displacement pipettes use a piston operating principal to draw liquid into the pipette\cite{ISO2002}.
+Air displacement pipettes use a piston operating principal to draw liquid into the pipette\cite{ISO8655}.
 In a typical commercial pipette the piston is made to be gas-tight with a gasketed plunger inside a smooth barrel.
 Consumer grade fused deposition modeling (FDM) printers are unable to build a smooth surface do to the formation of ridges that occur as each layer is deposited.
 The ridges formed by FDM make it impractical to form a gas-tight seal between moving parts, even with a gasket.
@@ -276,7 +275,7 @@ At larger volumes this effect is more pronounced resulting in the volume measure
 We remedied this by creating a new scale to account for the expansion.
 The scale is printed on a transparency sheet and is taped onto the syringe for accurate measurements. 
 
-\subsection*{Fabrication & Assembly}
+\subsection*{Fabrication \& Assembly}
 Two parts are printed (body.stl and plunger.stl) at normal resolution with rafts on a Makerbot Replicator.
 A small amount of paraffin wax is applied to the screw to prevent slop from causing the set point to drift after each actuation.
 The nut is sunk in to the hex inset in the printed body part.
@@ -284,7 +283,7 @@ The bolt is threaded in from the top of the body into the nut.
 Springs and washers are threaded onto the plunger of a 1 mL syringe for the 30-300 uL configuration.
 Springs are placed inside a 3 mL syringe for the 100-1000 mL configuration.
 The plunger part is inserted in the body and the syringe assembly is pushed in and locked from the syringe flanges to the body part to complete assembly.
-Parts and cost are listed in tables~\ref{table1,table2}
+Parts and cost are listed in Table~\ref{table1} and \ref{table2}.
 
 \begin{table}[!ht]
 \centering
@@ -347,11 +346,11 @@ Deionized water was transferred and measured with a scale,
 Five transfers were recorded and averaged to account for random variability.
 Data was taken for printed pipettes with existing syringe graduations as well as with the our adjusted scale.
 Data was taken with commercial pipettes of 30-300 and 100-1000 to compare to the printed pipette. 
-The systematic error and random error was calculated according to ISO 8655~\ref{ISO2013} (Table~\ref{table3,table4}).
+The systematic error and random error was calculated according to ISO 8655~\cite{ISO8655} (Table~\ref{table3} and \ref{table4}).
 
 \section*{Results and Discussion}
 Validation testing preformed with the existing graduations printed on the syringes did not meet the ISO standards.
-According to ISO 8655 for a pipette with the maximum nominal volume of 1000 uL the systematic error cannot exceed 8 uL and the random error cannot exceed 3 uL
+According to ISO 8655 for a pipette with the maximum nominal volume of 1000 uL the systematic error cannot exceed 8 uL and the random error cannot exceed 3 uL.
 For the maximum nominal volume of 300 uL the systemic error cannot exceed 4 uL and the random error cannot exceed 1.5 uL.
 The commercial pipettes met these standards handily, but in our initial tests with our printed pipette we noticed large negative systematic error suggesting that we were missing a biasing factor. 
 This error was exaggerated while transferring larger volumes.
@@ -363,7 +362,7 @@ Our solution was to replace the built-in scale with a scale that accounted for t
 Using the data from our initial testing we calculated a factor for the expansion and used that to make the new scale.
 With the new scale taped on the syringe our validation testing met the ISO 8655 standard.
 Replacing the scale with our scale that accounts for the expansion corrected this effect. 
-Our printed pipette with the adjusted scale meets ISO standards for accuracy and precision. (Table~\ref{table1 ,table2}).
+Our printed pipette with the adjusted scale meets ISO standards for accuracy and precision. (Table \ref{table3} and \ref{table4}).
 
 Our printed pipette improves on existing open design pipettes in several ways. 
 Most significantly the user is able to adjust the syringe accurately without verifying the volume with a scale.
@@ -454,74 +453,21 @@ All of the working files and documentation are kept in a public repository\ref{m
 \end{table}
 
 \section*{Conclusion}
-We have presented an open design micropipette that uses 3D-printable parts in addition to a disposable syringe and a few eaisly sourced pieces of hardware.
+We have presented an open design micropipette that uses 3D-printable parts in addition to a disposable syringe and a few easily sourced pieces of hardware.
 Our open design pipette is novel in that it allows the user to set the pipette to the desired volume with out the need to calibrate or verify with a weighing scale. 
-We validated the accuracy and presiion of our pipette and developed a new graduation scale to correct for the use of the syringe for air-displacemet measurements.
+We validated the accuracy and precision of our pipette and developed a new graduation scale to correct for the use of the syringe for air-displacement measurements.
 o meet the ISO standard for adjustable pipettes.
-Our design is free to use and modifiy to encourage further collabrateive developlement.
+Our design is free to use and modify to encourage further collaborative development.
 
-%\begin{table}[!ht]
-%\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
-%\caption{
-%{\bf Table caption Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam.}}
-%\begin{tabular}{|l|l|l|l|l|l|l|l|}
-%\hline
-%\multicolumn{4}{|l|}{\bf Heading1} & \multicolumn{4}{|l|}{\bf Heading2}\\ \hline
-%$cell1 row1$ & cell2 row 1 & cell3 row 1 & cell4 row 1 & cell5 row 1 & cell6 row 1 & cell7 row 1 & cell8 row 1\\ \hline
-%$cell1 row2$ & cell2 row 2 & cell3 row 2 & cell4 row 2 & cell5 row 2 & cell6 row 2 & cell7 row 2 & cell8 row 2\\ \hline
-%$cell1 row3$ & cell2 row 3 & cell3 row 3 & cell4 row 3 & cell5 row 3 & cell6 row 3 & cell7 row 3 & cell8 row 3\\ \hline
-%\end{tabular}
-%\begin{flushleft} Table notes Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed.
-%\end{flushleft}
-%\label{table1}
-%\end{adjustwidth}
-%\end{table}
 
-% Please do not create a heading level below \subsection. For 3rd level headings, use \paragraph{}. 
 
-For more information, see \nameref{S1_Text}.
+%For more information, see \nameref{S1_Text}.
 
-\section*{Supporting Information}
+%\section*{Supporting Information}
 
-% Include only the SI item label in the subsection heading. Use the \nameref{label} command to cite SI items in the text.
-%\subsection*{S1 Video}
-%\label{S1_Video}
-%{\bf Bold the first sentence.}  Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
-
-%\subsection*{S1 Text}
-%\label{S1_Text}
-%{\bf Lorem Ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
-
-%\subsection*{S1 Fig}
-%\label{S1_Fig}
-%{\bf Lorem Ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
-
-%\subsection*{S2 Fig}
-%\label{S2_Fig}
-%{\bf Lorem Ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
-
-%\subsection*{S1 Table}
-%\label{S1_Table}
-%{\bf Lorem Ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
-
-%\section*{Acknowledgments}
-%Cras egestas velit mauris, eu mollis turpis pellentesque sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam id pretium nisi. Sed ac quam id nisi malesuada congue. Sed interdum aliquet augue, at pellentesque quam rhoncus vitae.
 
 \nolinenumbers
 
-%\section*{References}
-% Either type in your references using
-% \begin{thebibliography}{}
-% \bibitem{}
-% Text
-% \end{thebibliography}
-%
-% OR
-%
-% Compile your BiBTeX database using our plos2015.bst
-% style file and paste the contents of your .bbl file
-% here.
-% 
 \bibliographystyle{plos2015.bst}
 \bibliography{references}
 
