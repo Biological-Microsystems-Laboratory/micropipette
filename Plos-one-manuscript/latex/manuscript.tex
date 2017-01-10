@@ -211,9 +211,10 @@ David T. Eddington\textsuperscript{1,*},
 \end{flushleft}
 % Please keep the abstract below 300 words
 \section*{Abstract}
-Open source projects make use of 3D printing as an increasingly practical tool to share designs, fabricate parts, and decrease cost of production.
-Scientists
-We developed a micropipette that uses 3D-printable parts and some hardware to actuate a disposable syringe to a user adjustable limit.
+Scientific communities are drawn to the open source model as an increasingly utilitarian method to produce and share work.
+Initially used as a means to develop freely available software, open source projects have been applied to hardware including scientific tools.
+Increasing convenience of 3D printing has fueled the proliferation of open labware projects aiming to develop and share designs for scientific tools that can be produced in-house as cheap alternatives to commercial products.
+We present our design of a micropipette that is assembled from 3D-printable parts and some hardware that works by actuating a disposable syringe to a user adjustable limit.
 Graduations on the syringe are used to accurately adjust the set point to the desired volume.  
 Our open design printed micropipette is assessed in comparison to a commercial pipette and meets ISO 8655 standards.
 
@@ -224,13 +225,13 @@ The open source development model, initially applied to software, is thriving in
 Additive manufacturing methods have existed for decades although the recent availability of inexpensive desktop printers\cite{MakerbotIndustries,RepRap} have made it feasible for consumers to design and print prototypes and even functional parts, and consumer goods\cite{Fullerton2014,Wittbrodt2013}.
 Proliferation of free CAD software\cite{OpenScad,Blender,SketchUp,123D} and design sharing sites\cite{Thingiverse,NationalInstitutesofHealth,GrabCAD,GitHubInc} have also supported the growth and popularity of open designed parts and projects.
 Open design 3D-printable lab equipment is an attractive idea because, like open source software, it allows free access to technology that is otherwise inaccessible due to proprietary and/or financial barriers. 
-Open design tools create opportunity for scientists and educational programs in remote or resource limited areas to participate with inexpensive and easy to make tools\cite{Baden2015,Marzullo2012,Lang2011,Baker2014,Cybulski2014}. 
-Open source development also enables the development of custom solutions to meet unique applications not met by commercial products that are shared freely and are user modifiable\cite{Fullerton2014,Pearce2012,Rankin2014,Sulkin2013}.
-Some advanced, noteworthy, open-source scientific equipment include a PCR device\cite{ChaiBiotechnologiesInc2015}, and a two-photon microscope\cite{Rosenegger2014} although simple tools have potential to be impactful as they can serve a wider community.
+Open design tools create opportunity for scientists and educational programs in remote or resource limited areas to participate with inexpensive and easy to make tools\cite{Marzullo2012,Lang2011,Fobel2013,Baker2014,Cybulski2014}.
+Open source development also enables the development of custom solutions to meet unique applications not met by commercial products that are shared freely and are user modifiable\cite{Fullerton2014,Pearce2012,Rankin2014,Sulkin2013,Dryden2015,DaCosta2014,Tek2008}.
+Some advanced, noteworthy, open source scientific equipment include a PCR device\cite{ChaiBiotechnologiesInc2015}, and a two-photon microscope\cite{Rosenegger2014} although simple tools have potential to be impactful as they can serve a wider community.
 
 Some simple and clever printable parts that have emerged are ones that give a new function to a ubiquitous existing device, such as drill bit attachment designed to hold centrifuge tubes, allowing a dremel to be used as a centrifuge\cite{Garvey2009}.
 Although this may make a rather crude centrifuge it may be an adequate solution for a fraction of the cost of a commercial centrifuge.
-Other examples of open-design research tools that utilize 3D printed parts include optics equipment\cite{Zhang2013}, microscopes\cite{Baden2014a,Walus2014}, syringe pumps\cite{Wijnen2014}, reactionware\cite{Symes2012} and the list continues to grow.
+Other examples of open source research tools that utilize 3D printed parts include optics equipment\cite{Zhang2013}, microscopes\cite{Baden2014a,Walus2014}, syringe pumps\cite{Wijnen2014}, reactionware\cite{Symes2012,Kitson2012,Mathieson2013,Kitson2014}, microfluidics\cite{Brennan2015,Dragone2013} and the list continues to grow\cite{PlosCollections}.
 
 One example of a everyday scientific tool that provides opportunity for an open design solution is the micropipette.
 An open design micropipette that can be made cheaply affords more options for labs and educational settings.
@@ -279,7 +280,7 @@ Our printed pipette mimics commercial pipettes design, function, and user operat
 
 \begin{figure}
 	\caption{
-		{\bf CAD renderings of assembled pipette and function.} The pipetted actuates the syringe to three positions. {\bf(i) The set position.} The position of the screw determines the total displacement. The pipette is spring loaded to return to this position. {\bf (ii) The latched position.} When the plunger is pressed the pipette locks at this position. The tip is then placed in a liquid and the unlatching button is pressed to release the pipette back to the set position, drawing in liquid. {\bf (iii) The blow-out position.} The fluid is transferred by pressing the plunger past the latched position to blow-out all the liquid.
+		{\bf CAD renderings of assembled pipette and function.} The pipette actuates the syringe to three positions. {\bf (A) The latched position.} When the plunger is pressed the pipette locks at this position. The tip is then placed in a liquid and the unlatching button is pressed to release the pipette back to the set position (B), drawing in liquid.  {\bf(B) The set position.} The position of the screw determines the total displacement that the plunger moves. The pipette is spring loaded to return to this position. {\bf (C) The blow-out position.} The fluid is transferred by pressing the plunger past the latched position to blow-out all the liquid. {\bf (D) Return to the latched position.} The pipette returns to the latched position ready to preform another transfer.
 	}
 	\label{fig2}
 \end{figure}
@@ -373,10 +374,86 @@ Because the syringe graduations were used to measure the air under vacuum it cou
 This explains the negative systematic error we were experiencing.
 The water in the tip pulls on the air due to gravity which causes it to expand slightly but enough to make measuring with the graduation in this way inaccurate.
 Our solution was to replace the built-in scale with a scale that accounted for the expansion.
-Using the data from our initial testing we calculated a factor for the expansion and used that to make the new scale.
+Using the data from our initial testing we calculated a factor for the expansion and used that to make the new scale (\nameref{S1_Fig} and \nameref{S1_Fig}.)
 With the new scale taped on the syringe our validation testing met the ISO 8655 standard.
 Replacing the scale with our scale that accounts for the expansion corrected this effect. 
 Our printed pipette with the adjusted scale meets ISO standards for accuracy and precision. (Table \ref{table3} and \ref{table4}).
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[!ht]
+	\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
+		\centering
+		\caption{ISO 8655 for 100-1000 $\mu$L comparing a commercial pipette with our printed pipette used with existing 3 mL syringe scale and an adjusted scale}
+		\label{table3}
+		\begin{tabular}{lllllll}
+			&                       & Mean   & Systematic Error & \% Sys. err. & Random Error & \% Rand. err. \\
+			1000 $\mu$L & ISO 8655, 100-1000 $\mu$L & 1000    & 8.00             & 0.80         & 3.00         & 0.30          \\
+			& Commercial Pipette    & 1002.98 & 2.98             & 0.30         & 1.72         & 0.17          \\
+			& Printed Pipette       & 949.29  & -50.71           & -5.07        & 0.60         & 0.06          \\
+			& Printed Pipette Scale & 1003.57 & 3.57             & 0.36         & 0.89         & 0.09          \\
+			&                       &         &                  &              &              &               \\
+			500 $\mu$L  & ISO 8655, 100-1000 $\mu$L & 500     & 8.00             & 1.60         & 3.00         & 0.60          \\
+			& Commercial Pipette    & 503.67  & 3.67             & 0.73         & 0.49         & 0.10          \\
+			& Printed Pipette       & 475.99  & -24.01           & -4.80        & 4.75         & 1.00          \\
+			& Printed Pipette Scale & 503.62  & 3.62             & 0.72         & 1.64         & 0.33          \\
+			&                       &         &                  &              &              &               \\
+			200 $\mu$L  & ISO 8655, 100-1000 $\mu$L & 200     & 8.00             & 4.00         & 3.00         & 1.50          \\
+			& Commercial Pipette    & 204.61  & 4.61             & 2.30         & 0.15         & 0.07          \\
+			& Printed Pipette       & 186.55  & -13.45           & -6.72        & 1.31         & 0.70          \\
+			& Printed Pipette Scale & 201.87  & 1.87             & 0.94         & 1.47         & 0.73          \\
+			&                       &         &                  &              &              &               \\
+			100 $\mu$L  & ISO 8655, 100-1000 $\mu$L & 100     & 8.00             & 8.00         & 3.00         & 3.00          \\
+			& Commercial Pipette    & 104.29  & 4.29             & 4.29         & 1.65         & 1.58          \\
+			& Printed Pipette       & 94.02   & -5.98            & -5.98        & 4.81         & 5.12          \\
+			& Printed Pipette Scale & 101.00  & 1.00             & 1.00         & 1.05         & 1.04         
+		\end{tabular}
+		%\begin{flushleft} Table notes Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed.
+		%\end{flushleft}
+	\end{adjustwidth}
+\end{table}
+
+\begin{table}[!ht]
+	\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
+		\centering
+		\caption{ISO 8655 for 30-300 $\mu$L comparing a commercial pipette with our printed pipette used with existing 3 mL syringe scale and an adjusted scale}
+		\label{table4}
+		\begin{tabular}{lllllll}
+			&                       & Mean   & Systematic Error & \% Sys. err. & Random Error & \% Rand. err. \\
+			300 $\mu$L & ISO 8655, 30-300 $\mu$L   & 300    & 4.00             & 1.33         & 1.50         & 0.50          \\
+			& Commercial Pipette    & 301.19 & 1.19             & 0.40         & 0.53         & 0.18          \\
+			& Printed Pipette       & 286.91 & -13.09           & -4.36        & 0.42         & 0.15          \\
+			& Printed Pipette Scale & 299.11 & -0.89            & -0.30        & 0.48         & 0.16          \\
+			&                       &        &                  &              &              &               \\
+			200 $\mu$L & ISO 8655, 30-300 $\mu$L   & 200    & 4                & 2            & 1.5          & 0.75          \\
+			& Commercial Pipette    & 200.06 & 0.06             & 0.03         & 0.46         & 0.23          \\
+			& Printed Pipette       & 193.40 & -6.60            & -3.30        & 2.86         & 1.48          \\
+			& Printed Pipette Scale & 200.57 & 0.57             & 0.28         & 0.86         & 0.43          \\
+			&                       &        &                  &              &              &               \\
+			50 $\mu$L  & ISO 8655, 30-300 $\mu$L   & 50     & 4                & 8            & 1.5          & 3             \\
+			& Commercial Pipette    & 49.02  & -0.98            & -1.96        & 0.10         & 0.20          \\
+			& Printed Pipette       & 49.62  & -0.38            & -0.76        & 1.26         & 2.53          \\
+			& Printed Pipette Scale & 48.73  & -1.27            & -2.54        & 1.11         & 2.27          \\
+			&                       &        &                  &              &              &               \\
+			30 $\mu$L  & ISO 8655, 30-300 $\mu$L   & 30     & 4                & 13.3         & 1.5          & 5             \\
+			& Commercial Pipette    & 29.08  & -0.92            & -3.06        & 0.09         & 0.31          \\
+			& Printed Pipette       & 29.22  & -0.78            & -2.59        & 0.31         & 1.07          \\
+			& Printed Pipette Scale & 27.78  & -2.22            & -7.41        & 1.37         & 4.93          \\
+			&                       &        &                  &              &              &               \\
+			20 $\mu$L* & ISO 8655, 30-300 $\mu$L   & 20     & 4                & 20           & 1.5          & 7.5           \\
+			& Commercial Pipette    & NA     & NA               & NA           & NA           & NA            \\
+			& Printed Pipette       & 18.70  & -1.30            & -6.48        & 0.38         & 2.01          \\
+			& Printed Pipette Scale & 17.94  & -2.06            & -10.29       & 1.87         & 10.42         \\
+			&                       &        &                  &              &              &               \\
+			10 $\mu$L* & ISO 8655, 30-300 $\mu$L   & 10     & 4                & 40           & 1.5          & 15            \\
+			& Commercial Pipette    & NA     & NA               & NA           & NA           & NA            \\
+			& Printed Pipette       & 11.95  & 1.95             & 19.52        & 0.73         & 6.08          \\
+			& Printed Pipette Scale & 7.64   & -2.36            & -23.64       & 0.38         & 4.92         
+		\end{tabular}
+		\begin{flushleft} * The 20 $\mu$L and 10 $\mu$L volumes are out of the range in this case but we wanted to demonstrate that the pipette is capable of even smaller volumes.
+		\end{flushleft}
+	\end{adjustwidth}
+\end{table}
 
 Our printed pipette improves on existing open design pipettes in several ways. 
 Most significantly the user is able to adjust the syringe accurately without verifying the volume with a scale.
@@ -387,106 +464,24 @@ Unlike existing designs our design does not use a membrane that may wear out and
 The only major limitation of this design compared to the biropipette is the option for a pipette tip ejector.
 The biropipette also uses arguably easier to source parts (a pen VS a syringe) relative to what is required from our design.
 The biropipette also was developed in OpenSCAD which is free and open source CAD software where our design was created in Solidworks a proprietary software. 
-
-The performance of this pipette relies heavily on the syringe and its
-Luckliy as a regulated medical device the syringe is made to tight standards and 
-This design relies heavily on this specialized part for the core function as well as accuracy.
-As disposable syringes are a regulated medical device they must meet high standards.
+ 
+This design relies heavily on the syringe, a specialized part, for the core function as well as accuracy.
+Fortunately, as disposable syringes are a regulated medical device they must meet high standards making them a reliable part for this design.
 As good as the performance of our printed pipette is, a commercial pipette should be expected to be more reliable and preferred for critical procedures. 
-Adjusting the printed pipette to the desired volume requires more time and attention which would be tedious for procedures requiring many adjustments.
-On the other hand due to the \$6 cost to make the printed pipette would be ideal to assemble several and pre-set each for a planned transfer rather then re-adjusting one commercial pipette for each step.
-The printable pipette can also be used as a disposable, sparing the commercial micropipette, in situations were cross-contamination and re-sterilization is required, or damage from volatile reagents is a concern.
-The syringe of the printed pipette can be easily replaced with a fresh sterile one sparing the expensive commercial pipette.
+Adjusting our printed pipette to the desired volume requires more time and attention which would be tedious for procedures requiring many adjustments.
+On the other hand, due to the \$6 cost to make, many printed pipettes could be assembled and pre-set, each for a planned transfer, rather then re-adjusting one commercial pipette for each step.
+The printable pipette can also be used as a disposable, sparing the commercial micropipette, in situations were cross-contamination and resterilization is required, or damage from volatile reagents is a concern.
 This pipette would also be ideal for high school and teaching labs or any resource limited program especially as part of a module about 3D printing.
 
 The open design nature of this project encourages anyone to use and submit changes to improve and add features to this design.
 All of the working files and documentation are kept in a public repository~\cite{BMLmicropipette}.
-Future directions for this project include developing a tip ejection system and additional configurations for transferring volumes below 30 uL as well as  increasing over all user friendliness, such as making the adjusting bolt easier to grip and improving ergonomics.
-
-
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-\begin{table}[!ht]
-\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
-\centering
-\caption{ISO 8655 for 100-1000 $\mu$L comparing a commercial pipette with our printed pipette used with existing 3 mL syringe scale and an adjusted scale}
-\label{table3}
-\begin{tabular}{lllllll}
-        &                       & Mean   & Systematic Error & \% Sys. err. & Random Error & \% Rand. err. \\
-1000 $\mu$L & ISO 8655, 100-1000 $\mu$L & 1000    & 8.00             & 0.80         & 3.00         & 0.30          \\
-        & Commercial Pipette    & 1002.98 & 2.98             & 0.30         & 1.72         & 0.17          \\
-        & Printed Pipette       & 949.29  & -50.71           & -5.07        & 0.60         & 0.06          \\
-        & Printed Pipette Scale & 1003.57 & 3.57             & 0.36         & 0.89         & 0.09          \\
-        &                       &         &                  &              &              &               \\
-500 $\mu$L  & ISO 8655, 100-1000 $\mu$L & 500     & 8.00             & 1.60         & 3.00         & 0.60          \\
-        & Commercial Pipette    & 503.67  & 3.67             & 0.73         & 0.49         & 0.10          \\
-        & Printed Pipette       & 475.99  & -24.01           & -4.80        & 4.75         & 1.00          \\
-        & Printed Pipette Scale & 503.62  & 3.62             & 0.72         & 1.64         & 0.33          \\
-        &                       &         &                  &              &              &               \\
-200 $\mu$L  & ISO 8655, 100-1000 $\mu$L & 200     & 8.00             & 4.00         & 3.00         & 1.50          \\
-        & Commercial Pipette    & 204.61  & 4.61             & 2.30         & 0.15         & 0.07          \\
-        & Printed Pipette       & 186.55  & -13.45           & -6.72        & 1.31         & 0.70          \\
-        & Printed Pipette Scale & 201.87  & 1.87             & 0.94         & 1.47         & 0.73          \\
-        &                       &         &                  &              &              &               \\
-100 $\mu$L  & ISO 8655, 100-1000 $\mu$L & 100     & 8.00             & 8.00         & 3.00         & 3.00          \\
-        & Commercial Pipette    & 104.29  & 4.29             & 4.29         & 1.65         & 1.58          \\
-        & Printed Pipette       & 94.02   & -5.98            & -5.98        & 4.81         & 5.12          \\
-        & Printed Pipette Scale & 101.00  & 1.00             & 1.00         & 1.05         & 1.04         
-\end{tabular}
-%\begin{flushleft} Table notes Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed.
-%\end{flushleft}
-\end{adjustwidth}
-\end{table}
-
-\begin{table}[!ht]
-\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
-\centering
-\caption{ISO 8655 for 30-300 $\mu$L comparing a commercial pipette with our printed pipette used with existing 3 mL syringe scale and an adjusted scale}
-\label{table4}
-\begin{tabular}{lllllll}
-       &                       & Mean   & Systematic Error & \% Sys. err. & Random Error & \% Rand. err. \\
-300 $\mu$L & ISO 8655, 30-300 $\mu$L   & 300    & 4.00             & 1.33         & 1.50         & 0.50          \\
-       & Commercial Pipette    & 301.19 & 1.19             & 0.40         & 0.53         & 0.18          \\
-       & Printed Pipette       & 286.91 & -13.09           & -4.36        & 0.42         & 0.15          \\
-       & Printed Pipette Scale & 299.11 & -0.89            & -0.30        & 0.48         & 0.16          \\
-       &                       &        &                  &              &              &               \\
-200 $\mu$L & ISO 8655, 30-300 $\mu$L   & 200    & 4                & 2            & 1.5          & 0.75          \\
-       & Commercial Pipette    & 200.06 & 0.06             & 0.03         & 0.46         & 0.23          \\
-       & Printed Pipette       & 193.40 & -6.60            & -3.30        & 2.86         & 1.48          \\
-       & Printed Pipette Scale & 200.57 & 0.57             & 0.28         & 0.86         & 0.43          \\
-       &                       &        &                  &              &              &               \\
-50 $\mu$L  & ISO 8655, 30-300 $\mu$L   & 50     & 4                & 8            & 1.5          & 3             \\
-       & Commercial Pipette    & 49.02  & -0.98            & -1.96        & 0.10         & 0.20          \\
-       & Printed Pipette       & 49.62  & -0.38            & -0.76        & 1.26         & 2.53          \\
-       & Printed Pipette Scale & 48.73  & -1.27            & -2.54        & 1.11         & 2.27          \\
-       &                       &        &                  &              &              &               \\
-30 $\mu$L  & ISO 8655, 30-300 $\mu$L   & 30     & 4                & 13.3         & 1.5          & 5             \\
-       & Commercial Pipette    & 29.08  & -0.92            & -3.06        & 0.09         & 0.31          \\
-       & Printed Pipette       & 29.22  & -0.78            & -2.59        & 0.31         & 1.07          \\
-       & Printed Pipette Scale & 27.78  & -2.22            & -7.41        & 1.37         & 4.93          \\
-       &                       &        &                  &              &              &               \\
-20 $\mu$L* & ISO 8655, 30-300 $\mu$L   & 20     & 4                & 20           & 1.5          & 7.5           \\
-       & Commercial Pipette    & NA     & NA               & NA           & NA           & NA            \\
-       & Printed Pipette       & 18.70  & -1.30            & -6.48        & 0.38         & 2.01          \\
-       & Printed Pipette Scale & 17.94  & -2.06            & -10.29       & 1.87         & 10.42         \\
-       &                       &        &                  &              &              &               \\
-10 $\mu$L* & ISO 8655, 30-300 $\mu$L   & 10     & 4                & 40           & 1.5          & 15            \\
-       & Commercial Pipette    & NA     & NA               & NA           & NA           & NA            \\
-       & Printed Pipette       & 11.95  & 1.95             & 19.52        & 0.73         & 6.08          \\
-       & Printed Pipette Scale & 7.64   & -2.36            & -23.64       & 0.38         & 4.92         
-\end{tabular}
-\begin{flushleft} * The 20 $\mu$L and 10 $\mu$L volumes are out of the range in this case but we wanted to demonstrate that the pipette is capable of even smaller volumes.
-\end{flushleft}
-\end{adjustwidth}
-\end{table}
+Future directions for this project include developing a tip ejection system and additional configurations for transferring volumes below 30 uL as well as increasing over all user friendliness, such as making the adjusting bolt easier to grip and improving ergonomics.
 
 \section*{Conclusion}
 We have presented an open design micropipette that uses 3D-printable parts in addition to a disposable syringe and a few easily sourced pieces of hardware.
 Our open design pipette is novel in that it allows the user to set the pipette to the desired volume without the need to calibrate or verify with a weighing scale. 
 We validated the accuracy and precision of our pipette and developed a new graduation scale to correct for the use of the syringe for air-displacement measurements that meets the ISO standard for adjustable pipettes.
 Our design is free to use and modify to encourage further collaborative development.
-
-%For more information, see \nameref{S1_Text}.
 
 \section*{Supporting Information}
 
@@ -497,6 +492,10 @@ Our design is free to use and modify to encourage further collaborative developm
 \subsection*{S2 Fig}
 \label{S2_Fig}
 {\bf Adjusted Scale Graduations for 100-1000 $\mu$L Pipette.} New scale graduations that can be printed on a transparency sheet and taped onto a 3 mL syringe. Using these graduations will correct for expansion of air and allow ISO standards to be met. PDF format for ease of printing to scale. 1 inch and 1 cm marks to check scale as well as reproduction of standard graduation marks.
+
+\subsection*{S1 Video}
+\label{S1_Video}
+{\bf Video showing assembly and demonstration of operation.} Assembly of the pipette in the 100-1000 $\mu$L and 30-300 $\mu$L configuration is preformed. https://www.youtube.com/watch?v=D8y5WUYpcW0
 
 \nolinenumbers
 
