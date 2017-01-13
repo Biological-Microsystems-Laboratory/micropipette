@@ -1,0 +1,160 @@
+%% Template for a preprint Letter or Article for submission
+%% to the journal Nature.
+%% Written by Peter Czoschke, 26 February 2004
+%%
+
+\documentclass{nature}
+
+%% make sure you have the nature.cls and naturemag.bst files where
+%% LaTeX can find them
+
+\bibliographystyle{naturemag}
+
+\title{Put title here (less than 90 characters).}
+
+%% Notice placement of commas and superscripts and use of &
+%% in the author list
+
+\author{Aauthor$^{1,2}$, Bauthor$^2$ \& LastAuthor$^2$}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{affiliations}
+ \item Put institutions in this environment and
+ \item separate with \verb|\item| commands.
+\end{affiliations}
+
+\begin{abstract}
+For Nature, the abstract is really an introductory paragraph set
+in bold type.  This paragraph must be ``fully referenced'' and
+less than 180 words for Letters.  This is the thing that is
+supposed to be aimed at people from other disciplines and is
+arguably the most important part to getting your paper past the
+editors.  End this paragraph with a sentence like ``Here we
+show...'' or something similar.
+\end{abstract}
+
+Then the body of the main text appears after the intro paragraph.
+Figure environments can be left in place in the document.
+\verb|\includegraphics| commands are ignored since Nature wants
+the figures sent as separate files and the captions are
+automatically moved to the end of the document (they are printed
+out with the \verb|\end{document}| command. However, tables must
+be manually moved to the end of the document, after the addendum.
+
+Citation of Einstein's paper \cite{Einstein}.
+
+\begin{figure}
+%%%\includegraphics{something} % this command will be ignored
+\caption{Each figure legend should begin with a brief title for
+the whole figure and continue with a short description of each
+panel and the symbols used. For contributions with methods
+sections, legends should not contain any details of methods, or
+exceed 100 words (fewer than 500 words in total for the whole
+paper). In contributions without methods sections, legends should
+be fewer than 300 words (800 words or fewer in total for the whole
+paper).}
+\end{figure}
+
+\section*{Another Section}
+
+Sections can only be used in Articles.  Contributions should be
+organized in the sequence: title, text, methods, references,
+Supplementary Information line (if any), acknowledgements,
+interest declaration, corresponding author line, tables, figure
+legends.
+
+Spelling must be British English (Oxford English Dictionary)
+
+In addition, a cover letter needs to be written with the
+following:
+\begin{enumerate}
+ \item A 100 word or less summary indicating on scientific grounds
+why the paper should be considered for a wide-ranging journal like
+\textsl{Nature} instead of a more narrowly focussed journal.
+ \item A 100 word or less summary aimed at a non-scientific audience,
+written at the level of a national newspaper.  It may be used for
+\textsl{Nature}'s press release or other general publicity.
+ \item The cover letter should state clearly what is included as the
+submission, including number of figures, supporting manuscripts
+and any Supplementary Information (specifying number of items and
+format).
+ \item The cover letter should also state the number of
+words of text in the paper; the number of figures and parts of
+figures (for example, 4 figures, comprising 16 separate panels in
+total); a rough estimate of the desired final size of figures in
+terms of number of pages; and a full current postal address,
+telephone and fax numbers, and current e-mail address.
+\end{enumerate}
+
+See \textsl{Nature}'s website
+(\texttt{http://www.nature.com/nature/submit/gta/index.html}) for
+complete submission guidelines.
+
+\begin{methods}
+Put methods in here.  If you are going to subsection it, use
+\verb|\subsection| commands.  Methods section should be less than
+800 words and if it is less than 200 words, it can be incorporated
+into the main text.
+
+\subsection{Method subsection.}
+
+Here is a description of a specific method used.  Note that the
+subsection heading ends with a full stop (period) and that the
+command is \verb|\subsection{}| not \verb|\subsection*{}|.
+
+\end{methods}
+
+%% Put the bibliography here, most people will use BiBTeX in
+%% which case the environment below should be replaced with
+%% the \bibliography{} command.
+
+% \begin{thebibliography}{1}
+% \bibitem{dummy} Articles are restricted to 50 references, Letters
+% to 30.
+% \bibitem{dummyb} No compound references -- only one source per
+% reference.
+% \end{thebibliography}
+
+\bibliographystyle{naturemag}
+\bibliography{sample}
+
+
+%% Here is the endmatter stuff: Supplementary Info, etc.
+%% Use \item's to separate, default label is "Acknowledgements"
+
+\begin{addendum}
+ \item Put acknowledgements here.
+ \item[Competing Interests] The authors declare that they have no
+competing financial interests.
+ \item[Correspondence] Correspondence and requests for materials
+should be addressed to A.B.C.~(email: myaddress@nowhere.edu).
+\end{addendum}
+
+%%
+%% TABLES
+%%
+%% If there are any tables, put them here.
+%%
+
+\begin{table}
+\centering
+\caption{This is a table with scientific results.}
+\medskip
+\begin{tabular}{ccccc}
+\hline
+1 & 2 & 3 & 4 & 5\\
+\hline
+aaa & bbb & ccc & ddd & eee\\
+aaaa & bbbb & cccc & dddd & eeee\\
+aaaaa & bbbbb & ccccc & ddddd & eeeee\\
+aaaaaa & bbbbbb & cccccc & dddddd & eeeeee\\
+1.000 & 2.000 & 3.000 & 4.000 & 5.000\\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
