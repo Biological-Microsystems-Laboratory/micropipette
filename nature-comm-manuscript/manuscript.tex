@@ -3,9 +3,11 @@
 %% Written by Peter Czoschke, 26 February 2004
 %%
 
-\documentclass{nature}
+\documentclass{naturegraphicx}
 
 \usepackage{changepage}
+\usepackage{graphicx}
+
 %% make sure you have the nature.cls and naturemag.bst files where
 %% LaTeX can find them
 
@@ -33,7 +35,7 @@ Initially used as a means to develop freely available software, open source proj
 Increasing convenience of 3D printing has fueled the proliferation of open labware projects aiming to develop and share designs for scientific tools that can be produced in-house as cheap alternatives to commercial products.
 We present our design of a micropipette that is assembled from 3D-printable parts and some hardware that works by actuating a disposable syringe to a user adjustable limit.
 Graduations on the syringe are used to accurately adjust the set point to the desired volume.  
-Our open design printed micropipette is assessed in comparison to a commercial pipette and meets ISO 8655 standards. (Add refs)
+Our open design printed micropipette is assessed in comparison to a commercial pipette and meets ISO 8655 standards.
 \end{abstract}
 
 \section*{Introduction}
@@ -41,13 +43,13 @@ The open source development model, initially applied to software, is thriving in
 Additive manufacturing methods have existed for decades although the recent availability of inexpensive desktop printers\cite{MakerbotIndustries,RepRap} have made it feasible for consumers to design and print prototypes and even functional parts, and consumer goods\cite{Fullerton2014,Wittbrodt2013}.
 Proliferation of free CAD software\cite{OpenScad,Blender,SketchUp,123D} and design sharing sites\cite{Thingiverse,NationalInstitutesofHealth,GrabCAD,GitHubInc} have also supported the growth and popularity of open designed parts and projects.
 Open design 3D-printable lab equipment is an attractive idea because, like open source software, it allows free access to technology that is otherwise inaccessible due to proprietary and/or financial barriers. 
-Open design tools create opportunity for scientists and educational programs in remote or resource limited areas to participate with inexpensive and easy to make tools\cite{Marzullo2012,Lang2011,Fobel2013,Baker2014,Cybulski2014}.
+Open design tools create opportunity for scientists and educational programs in remote or resource limited areas to participate with inexpensive and easy to make tools\cite{Marzullo2012,Lang2011,Fobel2013,Baker2014,Cybulski2014,Bhamla2017}.
 Open source development also enables the development of custom solutions to meet unique applications not met by commercial products that are shared freely and are user modifiable\cite{Fullerton2014,Pearce2012,Rankin2014,Sulkin2013,Dryden2015,DaCosta2014,Tek2008}.
-Some advanced, noteworthy, open source scientific equipment include a PCR device\cite{ChaiBiotechnologiesInc2015}, and a two-photon microscope\cite{Rosenegger2014} although simple tools have potential to be impactful as they can serve a wider community.
+Some advanced, noteworthy, open source scientific equipment include a PCR device\cite{ChaiBiotechnologiesInc2015}, a tissue scaffold printer\cite{Trachtenberg2014}, and a two-photon microscope\cite{Rosenegger2014} although simple tools have potential to be impactful as they can serve a wider community.
 
 Some simple and clever printable parts that have emerged are ones that give a new function to a ubiquitous existing device, such as drill bit attachment designed to hold centrifuge tubes, allowing a dremel to be used as a centrifuge\cite{Garvey2009}.
 Although this may make a rather crude centrifuge it may be an adequate solution for a fraction of the cost of a commercial centrifuge.
-Other examples of open source research tools that utilize 3D printed parts include optics equipment\cite{Zhang2013}, microscopes\cite{Baden2014a,Walus2014}, syringe pumps\cite{Wijnen2014}, reactionware\cite{Symes2012,Kitson2012,Mathieson2013,Kitson2014}, microfluidics\cite{Brennan2015,Dragone2013} and the list continues to grow\cite{PlosCollections}.
+Other examples of open source research tools that utilize 3D printed parts include optics equipment\cite{Zhang2013}, microscopes\cite{Baden2014a,Walus2014}, syringe pumps\cite{Wijnen2014,Patrick2015}, reactionware\cite{Symes2012,Kitson2012,Mathieson2013,Kitson2014}, microfluidics\cite{Brennan2015,Dragone2013} and the list continues to grow\cite{PlosCollections}.
 
 One example of a everyday scientific tool that provides opportunity for an open design solution is the micropipette.
 An open design micropipette that can be made cheaply affords more options for labs and educational settings.
@@ -57,7 +59,7 @@ Some pipettes may even re-calibrated for use with liquids of different propertie
 
 Air displacement pipettes use a piston operating principal to draw liquid into the pipette\cite{ISO8655}.
 In a typical commercial pipette the piston is made to be gas-tight with a gasketed plunger inside a smooth barrel.
-Consumer grade fused deposition modeling (FDM) printers are unable to build a smooth surface do to the formation of ridges that occur as each layer is deposited.
+Consumer grade fused deposition modeling (FDM) printers are unable to build a smooth surface do to the formation of ridges that occur as each layer is deposited\cite{Takagishi2017}.
 The ridges formed by FDM make it impractical to form a gas-tight seal between moving parts, even with a gasket.
 Existing printable open-design micropipettes get around this limitation by stretching a membrane over one end of a printed tube, which when pressed causes the displacement.
 The displacement membrane can be made from any elastic material such as a latex glove.
@@ -65,13 +67,14 @@ A few open design micropipettes exist including a popular one which, in addition
 Because there is no built in feature such as a readout for the user to set the displacement to a desired volume, this design requires the user to validate the volumes dispensed with a high precision scale.
 Without verification with a scale the volumes dispensed can only be estimated based on calculations of the deflection of the membrane which is not a practical protocol.
 
-We submit a new design whose major strength is the ability to adjust to any volume aided by the the built in scale
+We submit a new design whose major strength is the ability to adjust to any volume aided by the the built in scale.
 Our open design 3D-printable micropipette works by actuating a disposable syringe to a user adjustable set point.
 This allows the user to set the pipette to a volume by reading the graduations on the syringe barrel.
 We have also designed an adjusted graduation scale, to be used in place of the printed on scale, that corrects for the compressibility of air which allows the pipette to be set accurately.
 Additionally our pipette offers a simplified assembly requiring no glue, tape, or permanent connections.
 
 \begin{figure}
+\includegraphics[scale=0.4]{figure1.png} % this command will be ignored
 \caption{
 {\bf CAD renderings of printable parts and cross-sections.} (A) The printed plunger part is a shaft pushes on the syringe plunger and slides in the printed body part. The printed plunger has a latching tongue and button which interfaces with the printed body part. (B) The printed body part holds the syringe and interfaces with the printed plunger part. The body part features the unlatching button and slots to hold the syringe in place by its flanges. The body part also has two cutouts in the top for the plunger button and for the hex nut and bolt.
 }
@@ -79,6 +82,7 @@ Additionally our pipette offers a simplified assembly requiring no glue, tape, o
 \end{figure}
 
 \begin{figure}
+\includegraphics[scale=0.4]{figure2.png} % this command will be ignored
 \caption{
 {\bf CAD renderings of assembled pipette and function.} The pipette actuates the syringe to three positions. {\bf (A) The latched position.} When the plunger is pressed the pipette locks at this position. The tip is then placed in a liquid and the unlatching button is pressed to release the pipette back to the set position (B), drawing in liquid.  {\bf(B) The set position.} The position of the screw determines the total displacement that the plunger moves. The pipette is spring loaded to return to this position. {\bf (C) The blow-out position.} The fluid is transferred by pressing the plunger past the latched position to blow-out all the liquid. {\bf (D) Return to the latched position.} The pipette returns to the latched position ready to preform another transfer.
 }
@@ -86,6 +90,7 @@ Additionally our pipette offers a simplified assembly requiring no glue, tape, o
 \end{figure}
 
 \begin{figure}
+\includegraphics[scale=1]{figure3.png} % this command will be ignored
 \caption{
 {\bf Photos of assembled pipettes.}  (A) Two assemblies of the pipette: the 100-1000 $\mu$L configuration (above) and the 30-300 $\mu$L configuration (below). (B) Close-up photo of the taped on scale for each of the syringes. 
 }
@@ -103,7 +108,7 @@ Because the syringe graduations were used to measure the air under vacuum it cou
 This explains the negative systematic error we were experiencing.
 The water in the tip pulls on the air due to gravity which causes it to expand slightly but enough to make measuring with the graduation in this way inaccurate.
 Our solution was to replace the built-in scale with a scale that accounted for the expansion.
-Using the data from our initial testing we calculated a factor for the expansion and used that to make the new scale (\ref{S1_Fig} and \ref{S1_Fig}.)
+Using the data from our initial testing we calculated a factor for the expansion and used that to make the new scale (See SI Fig. 1 and SI Fig. 2). %\ref{S1_Fig} and \ref{S1_Fig}.
 With the new scale taped on the syringe our validation testing met the ISO 8655 standard.
 Replacing the scale with our scale that accounts for the expansion corrected this effect. 
 Our printed pipette with the adjusted scale meets ISO standards for accuracy and precision. (Table \ref{table3} and \ref{table4}).
@@ -137,59 +142,12 @@ Our open design pipette is novel in that it allows the user to set the pipette t
 We validated the accuracy and precision of our pipette and developed a new graduation scale to correct for the use of the syringe for air-displacement measurements that meets the ISO standard for adjustable pipettes.
 Our design is free to use and modify to encourage further collaborative development.
 
-\begin{figure}
-%%%\includegraphics{something} % this command will be ignored
-\caption{Each figure legend should begin with a brief title for
-the whole figure and continue with a short description of each
-panel and the symbols used. For contributions with methods
-sections, legends should not contain any details of methods, or
-exceed 100 words (fewer than 500 words in total for the whole
-paper). In contributions without methods sections, legends should
-be fewer than 300 words (800 words or fewer in total for the whole
-paper).}
-\end{figure}
-
-\section*{Another Section}
-
-Sections can only be used in Articles.  Contributions should be
-organized in the sequence: title, text, methods, references,
-Supplementary Information line (if any), acknowledgements,
-interest declaration, corresponding author line, tables, figure
-legends.
-
-Spelling must be British English (Oxford English Dictionary)
-
-In addition, a cover letter needs to be written with the
-following:
-\begin{enumerate}
- \item A 100 word or less summary indicating on scientific grounds
-why the paper should be considered for a wide-ranging journal like
-\textsl{Nature} instead of a more narrowly focussed journal.
- \item A 100 word or less summary aimed at a non-scientific audience,
-written at the level of a national newspaper.  It may be used for
-\textsl{Nature}'s press release or other general publicity.
- \item The cover letter should state clearly what is included as the
-submission, including number of figures, supporting manuscripts
-and any Supplementary Information (specifying number of items and
-format).
- \item The cover letter should also state the number of
-words of text in the paper; the number of figures and parts of
-figures (for example, 4 figures, comprising 16 separate panels in
-total); a rough estimate of the desired final size of figures in
-terms of number of pages; and a full current postal address,
-telephone and fax numbers, and current e-mail address.
-\end{enumerate}
-
-See \textsl{Nature}'s website
-(\texttt{http://www.nature.com/nature/submit/gta/index.html}) for
-complete submission guidelines.
-
 \begin{methods}
 Our printed pipette is designed to actuate a 1 mL or 3 mL syringe to a user set displacement.
-The core of the design is two printed parts, the body and the plunger which are able to be printed on a consumer grade FDM printer (fig.~\ref{fig1}), in this case a Makerbot Replicator.
+The core of the design is two printed parts, the body and the plunger which are able to be printed on a consumer grade FDM printer (fig. 1~\ref{fig1}), in this case a Makerbot Replicator.
 A 1 mL or 3 mL syringe twists to lock in the body part and is held into place by the syringe flanges.
 The 30-300 $\mu$L configuration uses a 1 mL pipette and the 100-1000 $\mu$L configuration uses a 3 mL pipette.
-The plunger part slides freely in the body part and actuates the syringe by pushing the thumb button (fig.~\ref{fig2}). 
+The plunger part slides freely in the body part and actuates the syringe by pushing the thumb button (fig. 2~\ref{fig2}). 
 The pipette is spring loaded towards a set point which is adjustable by a set-screw.
 When the thumb button is pressed the system locks when it reaches the latched position, where it is ready to draw in fluid.
 The plunger is held in place with a latching button design which is released with the unlatching button drawing in fluid.
@@ -205,7 +163,7 @@ As air is an compressible fluid, this pocket of air grows due to the weight of t
 Due to this effect the graduations on the syringe are not accurate, as they are designed for measuring liquid within the syringe.
 At larger volumes this effect is more pronounced resulting in the volume measured being greater than the amount of liquid pulled into the syringe.
 We remedied this by creating a new scale to account for the expansion.
-The scale is printed on a transparency sheet and is taped onto the syringe for accurate measurements (See~\ref{S1_Fig} and \ref{S2_Fig}).
+The scale is printed on a transparency sheet and is taped onto the syringe for accurate measurements (See SI Fig. 1 and SI Fig. 2).% ~\ref{S1_Fig} and ~\ref{S2_Fig}).
 
 \subsection{Fabrication \& Assembly}
 Two parts are printed (body.stl and plunger.stl) at normal resolution with rafts on a Makerbot Replicator.
@@ -214,7 +172,7 @@ The nut is sunk into the hex inset in the printed body part.
 The bolt is threaded in from the top of the body into the nut.
 Springs and washers are threaded onto the plunger of a 1 mL syringe for the 30-300 $\mu$L configuration.
 Springs are placed inside a 3 mL syringe for the 100-1000 $\mu$L configuration.
-The plunger part is inserted in the body and the syringe assembly is pushed in and locked from the syringe flanges to the body part to complete assembly(fig.~\ref{fig3}).
+The plunger part is inserted in the body and the syringe assembly is pushed in and locked from the syringe flanges to the body part to complete assembly (fig. 3~\ref{fig3}).
 Parts and cost are listed in Table~\ref{table1} and \ref{table2}.
 
 \subsection{Validation}
@@ -240,30 +198,361 @@ cv = 100\% \times s / \bar{V}
 
 \end{methods}
 
-%% Put the bibliography here, most people will use BiBTeX in
-%% which case the environment below should be replaced with
-%% the \bibliography{} command.
+%\bibliographystyle{naturemag}
+%\bibliography{sample}
 
-% \begin{thebibliography}{1}
-% \bibitem{dummy} Articles are restricted to 50 references, Letters
-% to 30.
-% \bibitem{dummyb} No compound references -- only one source per
-% reference.
-% \end{thebibliography}
-
-\bibliographystyle{naturemag}
-\bibliography{sample}
+\begin{thebibliography}{10}
+	\expandafter\ifx\csname url\endcsname\relax
+	\def\url#1{\texttt{#1}}\fi
+	\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+	\providecommand{\bibinfo}[2]{#2}
+	\providecommand{\eprint}[2][]{\url{#2}}
+	
+	\bibitem{Baden2015}
+	\bibinfo{author}{Baden, T.} \emph{et~al.}
+	\newblock \bibinfo{title}{{Open Labware: 3-D Printing Your Own Lab Equipment}}.
+	\newblock \emph{\bibinfo{journal}{PLOS Biology}} \textbf{\bibinfo{volume}{13}},
+	\bibinfo{pages}{e1002086} (\bibinfo{year}{2015}).
+	\newblock \urlprefix\url{http://dx.plos.org/10.1371/journal.pbio.1002086}.
+	
+	\bibitem{Pearce2013}
+	\bibinfo{author}{Pearce, J.~M.}
+	\newblock \emph{\bibinfo{title}{{Open-source Lab}}} (\bibinfo{year}{2013}).
+	
+	\bibitem{MakerbotIndustries}
+	\bibinfo{author}{{Makerbot Industries}}.
+	\newblock \bibinfo{title}{{Makerbot}} (\bibinfo{year}{2017}).
+	\newblock \urlprefix\url{https://www.makerbot.com/}.
+	
+	\bibitem{RepRap}
+	\bibinfo{author}{{RepRap Project}}.
+	\newblock \bibinfo{title}{{RepRap}} (\bibinfo{year}{2017}).
+	\newblock \urlprefix\url{reprap.org}.
+	
+	\bibitem{Fullerton2014}
+	\bibinfo{author}{Fullerton, J.~N.}, \bibinfo{author}{Frodsham, G. C.~M.} \&
+	\bibinfo{author}{Day, R.~M.}
+	\newblock \bibinfo{title}{{3D printing for the many, not the few}}.
+	\newblock \emph{\bibinfo{journal}{Nature Biotechnology}}
+	\textbf{\bibinfo{volume}{32}}, \bibinfo{pages}{1086--1087}
+	(\bibinfo{year}{2014}).
+	\newblock \urlprefix\url{http://www.nature.com/doifinder/10.1038/nbt.3056}.
+	
+	\bibitem{Wittbrodt2013}
+	\bibinfo{author}{Wittbrodt, B.} \emph{et~al.}
+	\newblock \bibinfo{title}{{Life-cycle economic analysis of distributed
+			manufacturing with open-source 3-D printers}}.
+	\newblock \emph{\bibinfo{journal}{Mechatronics}} \textbf{\bibinfo{volume}{23}},
+	\bibinfo{pages}{713--726} (\bibinfo{year}{2013}).
+	\newblock
+	\urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S0957415813001153}.
+	
+	\bibitem{OpenScad}
+	\bibinfo{author}{Kintel, M.}
+	\newblock \bibinfo{title}{{OpenSCAD}} (\bibinfo{year}{2017}).
+	\newblock \urlprefix\url{http://www.openscad.org/}.
+	
+	\bibitem{Blender}
+	\bibinfo{author}{{Blender Foudation}}.
+	\newblock \bibinfo{title}{{Blender}}  (\bibinfo{year}{2017}).
+	\newblock \urlprefix\url{www.blender.org}.
+	
+	\bibitem{SketchUp}
+	\bibinfo{author}{{Trimble Inc.}}
+	\newblock \bibinfo{title}{{SketchUp}} (\bibinfo{year}{2016}).
+	\newblock \urlprefix\url{www.sketchup.com}.
+	
+	\bibitem{123D}
+	\bibinfo{author}{{Autodesk Inc.}}
+	\newblock \bibinfo{title}{{Autodesk 123D}} (\bibinfo{year}{2017}).
+	\newblock \urlprefix\url{www.123dapp.com}.
+	
+	\bibitem{Thingiverse}
+	\bibinfo{author}{{Makerbot Industries}}.
+	\newblock \bibinfo{title}{{Thingiverse}} (\bibinfo{year}{2017}).
+	\newblock \urlprefix\url{https://www.thingiverse.com/}.
+	
+	\bibitem{NationalInstitutesofHealth}
+	\bibinfo{author}{{National Institutes of Health}}.
+	\newblock \bibinfo{title}{{NIH 3D Print Exchange}}  (\bibinfo{year}{2017}).
+	\newblock \urlprefix\url{http://3dprint.nih.gov/}.
+	
+	\bibitem{GrabCAD}
+	\bibinfo{author}{Stratasys}.
+	\newblock \bibinfo{title}{{GrabCAD}}.
+	\newblock \urlprefix\url{https://grabcad.com/}.
+	
+	\bibitem{GitHubInc}
+	\bibinfo{author}{{GitHub Inc.}}
+	\newblock \bibinfo{title}{{GitHub}}  (\bibinfo{year}{2017}).
+	\newblock \urlprefix\url{https://github.com/}.
+	
+	\bibitem{Marzullo2012}
+	\bibinfo{author}{Marzullo, T.~C.} \& \bibinfo{author}{Gage, G.~J.}
+	\newblock \bibinfo{title}{{The SpikerBox: A Low Cost, Open-Source BioAmplifier
+			for Increasing Public Participation in Neuroscience Inquiry}}.
+	\newblock \emph{\bibinfo{journal}{PLoS ONE}} \textbf{\bibinfo{volume}{7}},
+	\bibinfo{pages}{e30837} (\bibinfo{year}{2012}).
+	\newblock \urlprefix\url{http://dx.plos.org/10.1371/journal.pone.0030837}.
+	
+	\bibitem{Lang2011}
+	\bibinfo{author}{Lang, T.}
+	\newblock \bibinfo{title}{{Advancing global health research through digital
+			technology and sharing data.}}
+	\newblock \emph{\bibinfo{journal}{Science (New York, N.Y.)}}
+	\textbf{\bibinfo{volume}{331}}, \bibinfo{pages}{714--717}
+	(\bibinfo{year}{2011}).
+	
+	\bibitem{Fobel2013}
+	\bibinfo{author}{Fobel, R.}, \bibinfo{author}{Fobel, C.} \&
+	\bibinfo{author}{Wheeler, A.~R.}
+	\newblock \bibinfo{title}{{DropBot: An open-source digital microfluidic control
+			system with precise control of electrostatic driving force and instantaneous
+			drop velocity measurement}}.
+	\newblock \emph{\bibinfo{journal}{Applied Physics Letters}}
+	\textbf{\bibinfo{volume}{102}}, \bibinfo{pages}{1--5} (\bibinfo{year}{2013}).
+	
+	\bibitem{Baker2014}
+	\bibinfo{author}{Baker, E.}
+	\newblock \bibinfo{title}{{Open source data logger for low-cost environmental
+			monitoring.}}
+	\newblock \emph{\bibinfo{journal}{Biodiversity data journal}}
+	\bibinfo{pages}{e1059} (\bibinfo{year}{2014}).
+	\newblock
+	\urlprefix\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=4030251{\&}tool=pmcentrez{\&}rendertype=abstract}.
+	
+	\bibitem{Cybulski2014}
+	\bibinfo{author}{Cybulski, J.~S.}, \bibinfo{author}{Clements, J.} \&
+	\bibinfo{author}{Prakash, M.}
+	\newblock \bibinfo{title}{{Foldscope: origami-based paper microscope.}}
+	\newblock \emph{\bibinfo{journal}{PloS one}} \textbf{\bibinfo{volume}{9}},
+	\bibinfo{pages}{e98781} (\bibinfo{year}{2014}).
+	\newblock
+	\urlprefix\url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0098781}.
+	\newblock \eprint{1403.1211}.
+	
+	\bibitem{Bhamla2017}
+	\bibinfo{author}{Bhamla, M.~S.} \emph{et~al.}
+	\newblock \bibinfo{title}{{Hand-powered ultralow-cost paper centrifuge}}.
+	\newblock \emph{\bibinfo{journal}{Nature Biomedical Engineering}}
+	\textbf{\bibinfo{volume}{1}}, \bibinfo{pages}{0009} (\bibinfo{year}{2017}).
+	\newblock \urlprefix\url{http://www.nature.com/articles/s41551-016-0009}.
+	
+	\bibitem{Pearce2012}
+	\bibinfo{author}{Pearce, J.~M.}
+	\newblock \bibinfo{title}{{Building Research Equipment with Free, Open-Source
+			Hardware}}.
+	\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{337}},
+	\bibinfo{pages}{1303--1304} (\bibinfo{year}{2012}).
+	\newblock
+	\urlprefix\url{citeulike-article-id:11241059{\%}5Cnhttp://dx.doi.org/10.1126/science.1226328
+		http://www.ncbi.nlm.nih.gov/pubmed/22984060
+		http://www.sciencemag.org/cgi/doi/10.1126/science.1228183}.
+	
+	\bibitem{Rankin2014}
+	\bibinfo{author}{Rankin, T.~M.} \emph{et~al.}
+	\newblock \bibinfo{title}{{Three-dimensional printing surgical instruments: are
+			we there yet?}}
+	\newblock \emph{\bibinfo{journal}{Journal of Surgical Research}}
+	\textbf{\bibinfo{volume}{189}}, \bibinfo{pages}{193--197}
+	(\bibinfo{year}{2014}).
+	\newblock
+	\urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S0022480414001644}.
+	
+	\bibitem{Sulkin2013}
+	\bibinfo{author}{Sulkin, M.~S.} \emph{et~al.}
+	\newblock \bibinfo{title}{{Three-dimensional printing physiology laboratory
+			technology}}.
+	\newblock \emph{\bibinfo{journal}{AJP: Heart and Circulatory Physiology}}
+	\textbf{\bibinfo{volume}{305}}, \bibinfo{pages}{H1569--H1573}
+	(\bibinfo{year}{2013}).
+	\newblock
+	\urlprefix\url{http://ajpheart.physiology.org/cgi/doi/10.1152/ajpheart.00599.2013}.
+	
+	\bibitem{Dryden2015}
+	\bibinfo{author}{Dryden, M. D.~M.} \& \bibinfo{author}{Wheeler, A.~R.}
+	\newblock \bibinfo{title}{{DStat: A versatile, open-source potentiostat for
+			electroanalysis and integration}}.
+	\newblock \emph{\bibinfo{journal}{PLoS ONE}} \textbf{\bibinfo{volume}{10}},
+	\bibinfo{pages}{1--17} (\bibinfo{year}{2015}).
+	\newblock \urlprefix\url{http://dx.doi.org/10.1371/journal.pone.0140349}.
+	
+	\bibitem{DaCosta2014}
+	\bibinfo{author}{da~Costa, E.~T.} \emph{et~al.}
+	\newblock \bibinfo{title}{{Getting started with open-hardware: Development and
+			control of microfluidic devices}}.
+	\newblock \emph{\bibinfo{journal}{Electrophoresis}}
+	\textbf{\bibinfo{volume}{35}}, \bibinfo{pages}{2370--2377}
+	(\bibinfo{year}{2014}).
+	
+	\bibitem{Tek2008}
+	\bibinfo{author}{Tek, P.} \emph{et~al.}
+	\newblock \bibinfo{title}{{Rapid prototyping for neuroscience and neural
+			engineering}}.
+	\newblock \emph{\bibinfo{journal}{Journal of Neuroscience Methods}}
+	\textbf{\bibinfo{volume}{172}}, \bibinfo{pages}{263--269}
+	(\bibinfo{year}{2008}).
+	
+	\bibitem{ChaiBiotechnologiesInc2015}
+	\bibinfo{author}{{Chai Biotechnologies Inc}}.
+	\newblock \bibinfo{title}{{Open PCR}} (\bibinfo{year}{2017}).
+	\newblock \urlprefix\url{http://openpcr.org/}.
+	
+	\bibitem{Trachtenberg2014}
+	\bibinfo{author}{Trachtenberg, J.~E.} \emph{et~al.}
+	\newblock \bibinfo{title}{{Open-source three-dimensional printing of
+			biodegradable polymer scaffolds for tissue engineering}}.
+	\newblock \emph{\bibinfo{journal}{Journal of Biomedical Materials Research -
+			Part A}} \textbf{\bibinfo{volume}{102}}, \bibinfo{pages}{4326--4335}
+	(\bibinfo{year}{2014}).
+	
+	\bibitem{Rosenegger2014}
+	\bibinfo{author}{Rosenegger, D.~G.}, \bibinfo{author}{Tran, C. H.~T.},
+	\bibinfo{author}{LeDue, J.}, \bibinfo{author}{Zhou, N.} \&
+	\bibinfo{author}{Gordon, G.~R.}
+	\newblock \bibinfo{title}{{A High Performance, Cost-Effective, Open-Source
+			Microscope for Scanning Two-Photon Microscopy that Is Modular and Readily
+			Adaptable}}.
+	\newblock \emph{\bibinfo{journal}{PLoS ONE}} \textbf{\bibinfo{volume}{9}},
+	\bibinfo{pages}{e110475} (\bibinfo{year}{2014}).
+	\newblock \urlprefix\url{http://dx.plos.org/10.1371/journal.pone.0110475}.
+	
+	\bibitem{Garvey2009}
+	\bibinfo{author}{Garvey, C.}
+	\newblock \bibinfo{title}{{DremelFuge}} (\bibinfo{year}{2009}).
+	\newblock \urlprefix\url{https://www.thingiverse.com/thing:1483}.
+	
+	\bibitem{Zhang2013}
+	\bibinfo{author}{Zhang, C.}, \bibinfo{author}{Anzalone, N.~C.},
+	\bibinfo{author}{Faria, R.~P.} \& \bibinfo{author}{Pearce, J.~M.}
+	\newblock \bibinfo{title}{{Open-Source 3D-Printable Optics Equipment}}.
+	\newblock \emph{\bibinfo{journal}{PLoS ONE}} \textbf{\bibinfo{volume}{8}}
+	(\bibinfo{year}{2013}).
+	
+	\bibitem{Baden2014a}
+	\bibinfo{author}{Baden, T.}
+	\newblock \bibinfo{title}{{Raspberry Pi Scope}}  (\bibinfo{year}{2014}).
+	\newblock \urlprefix\url{http://3dprint.nih.gov/discover/3dpx-000609}.
+	
+	\bibitem{Walus2014}
+	\bibinfo{author}{Walus, K.}
+	\newblock \bibinfo{title}{{A Fully Printable Microscope}}
+	(\bibinfo{year}{2014}).
+	\newblock \urlprefix\url{http://3dprint.nih.gov/discover/3dpx-000304}.
+	
+	\bibitem{Wijnen2014}
+	\bibinfo{author}{Wijnen, B.}, \bibinfo{author}{Hunt, E.~J.},
+	\bibinfo{author}{Anzalone, G.~C.} \& \bibinfo{author}{Pearce, J.~M.}
+	\newblock \bibinfo{title}{{Open-Source Syringe Pump Library}}.
+	\newblock \emph{\bibinfo{journal}{PLoS ONE}} \textbf{\bibinfo{volume}{9}},
+	\bibinfo{pages}{e107216} (\bibinfo{year}{2014}).
+	\newblock \urlprefix\url{http://dx.plos.org/10.1371/journal.pone.0107216}.
+	
+	\bibitem{Patrick2015}
+	\bibinfo{author}{Patrick, W.~G.} \emph{et~al.}
+	\newblock \bibinfo{title}{{DNA assembly in 3D printed fluidics}}.
+	\newblock \emph{\bibinfo{journal}{PLoS ONE}} \textbf{\bibinfo{volume}{10}},
+	\bibinfo{pages}{1--18} (\bibinfo{year}{2015}).
+	
+	\bibitem{Symes2012}
+	\bibinfo{author}{Symes, M.} \emph{et~al.}
+	\newblock \bibinfo{title}{{Integrated 3D-printed reactionware for chemical
+			synthesis and analysis}}.
+	\newblock \emph{\bibinfo{journal}{Nature Chemistry}}
+	\textbf{\bibinfo{volume}{4}}, \bibinfo{pages}{349--354}
+	(\bibinfo{year}{2012}).
+	\newblock \urlprefix\url{http://eprints.gla.ac.uk/68744/}.
+	
+	\bibitem{Kitson2012}
+	\bibinfo{author}{Kitson, P.~J.}, \bibinfo{author}{Rosnes, M.~H.},
+	\bibinfo{author}{Sans, V.}, \bibinfo{author}{Dragone, V.} \&
+	\bibinfo{author}{Cronin, L.}
+	\newblock \bibinfo{title}{{Configurable 3D-Printed millifluidic and
+			microfluidic ‘lab on a chip' reactionware devices}}.
+	\newblock \emph{\bibinfo{journal}{Lab on a Chip}}
+	\textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{3267} (\bibinfo{year}{2012}).
+	
+	\bibitem{Mathieson2013}
+	\bibinfo{author}{Mathieson, J.~S.}, \bibinfo{author}{Rosnes, M.~H.},
+	\bibinfo{author}{Sans, V.}, \bibinfo{author}{Kitson, P.~J.} \&
+	\bibinfo{author}{Cronin, L.}
+	\newblock \bibinfo{title}{{Continuous parallel ESI-MS analysis of reactions
+			carried out in a bespoke 3D printed device}}.
+	\newblock \emph{\bibinfo{journal}{Beilstein Journal of Nanotechnology}}
+	\textbf{\bibinfo{volume}{4}}, \bibinfo{pages}{285--291}
+	(\bibinfo{year}{2013}).
+	
+	\bibitem{Kitson2014}
+	\bibinfo{author}{Kitson, P.~J.}, \bibinfo{author}{Marshall, R.~J.},
+	\bibinfo{author}{Long, D.}, \bibinfo{author}{Forgan, R.~S.} \&
+	\bibinfo{author}{Cronin, L.}
+	\newblock \bibinfo{title}{{3D Printed high-throughput hydrothermal reactionware
+			for discovery, optimization, and scale-up}}.
+	\newblock \emph{\bibinfo{journal}{Angewandte Chemie - International Edition}}
+	\bibinfo{pages}{1--7} (\bibinfo{year}{2014}).
+	
+	\bibitem{Brennan2015}
+	\bibinfo{author}{Brennan, M.~D.}, \bibinfo{author}{Rexius-Hall, M.~L.} \&
+	\bibinfo{author}{Eddington, D.~T.}
+	\newblock \bibinfo{title}{{A 3D-Printed Oxygen Control Insert for a 24-Well
+			Plate}}.
+	\newblock \emph{\bibinfo{journal}{Plos One}} \textbf{\bibinfo{volume}{10}},
+	\bibinfo{pages}{e0137631} (\bibinfo{year}{2015}).
+	\newblock \urlprefix\url{http://dx.plos.org/10.1371/journal.pone.0137631}.
+	
+	\bibitem{Dragone2013}
+	\bibinfo{author}{Dragone, V.}, \bibinfo{author}{Sans, V.},
+	\bibinfo{author}{Rosnes, M.~H.}, \bibinfo{author}{Kitson, P.~J.} \&
+	\bibinfo{author}{Cronin, L.}
+	\newblock \bibinfo{title}{{3D-printed devices for continuous-flow organic
+			chemistry}}.
+	\newblock \emph{\bibinfo{journal}{Beilstein Journal of Organic Chemistry}}
+	\textbf{\bibinfo{volume}{9}}, \bibinfo{pages}{951--959}
+	(\bibinfo{year}{2013}).
+	
+	\bibitem{PlosCollections}
+	\bibinfo{author}{{Plos Collections}}.
+	\newblock \bibinfo{title}{{Open Source Toolkit Hardware}}
+	(\bibinfo{year}{2017}).
+	\newblock
+	\urlprefix\url{http://collections.plos.org/open-source-toolkit-hardware}.
+	
+	\bibitem{ISO8655}
+	\bibinfo{author}{{International Organization for Standardization}}.
+	\newblock \emph{\bibinfo{title}{{ISO 8655-1:2002(en)}}} (\bibinfo{year}{2002}).
+	
+	\bibitem{Takagishi2017}
+	\bibinfo{author}{Takagishi, K.} \& \bibinfo{author}{Umezu, S.}
+	\newblock \bibinfo{title}{{Development of the Improving Process for the 3D
+			Printed Structure}}.
+	\newblock \emph{\bibinfo{journal}{Nature Publishing Group}}
+	\bibinfo{pages}{1--10} (\bibinfo{year}{2017}).
+	\newblock \urlprefix\url{http://dx.doi.org/10.1038/srep39852}.
+	
+	\bibitem{Baden2014}
+	\bibinfo{author}{Baden, T.}
+	\newblock \bibinfo{title}{{Biropette: customisable, high precision pipette.}}
+	(\bibinfo{year}{2014}).
+	\newblock \urlprefix\url{http://www.thingiverse.com/thing:255519}.
+	
+	\bibitem{BMLmicropipette}
+	\bibinfo{author}{{Eddington Lab}}.
+	\newblock \bibinfo{title}{{3D Printable Micropipette}} (\bibinfo{year}{2017}).
+	\newblock
+	\urlprefix\url{https://github.com/Biological-Microsystems-Laboratory/micropipette}.
+	
+\end{thebibliography}
 
 
 %% Here is the endmatter stuff: Supplementary Info, etc.
 %% Use \item's to separate, default label is "Acknowledgements"
 
 \begin{addendum}
- \item Put acknowledgements here.
+ \item We would like to acknowledge the UIC Bioengineering Senior Design team of 2014 for initial work on this project: Oluwafemi Aboloye, Pedro Hurtado, Rafael Romero, and Vivian Sandoval.
  \item[Competing Interests] The authors declare that they have no
 competing financial interests.
  \item[Correspondence] Correspondence and requests for materials
-should be addressed to A.B.C.~(email: myaddress@nowhere.edu).
+should be addressed to David T. Eddington~(email: dte@uic.edu).
 \end{addendum}
 
 %%
@@ -307,7 +596,7 @@ total        & \$6.63     &                &             \\ \hline
 \end{table}
 
 \begin{table}
-\begin{adjustwidth}{-0.75in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
+\begin{adjustwidth}{-0.75in}{-1.0in}
 \centering
 \caption{ISO 8655 for 100-1000 $\mu$L comparing a commercial pipette with our printed pipette used with existing 3 mL syringe scale and an adjusted scale}
 \label{table3}
@@ -337,7 +626,7 @@ total        & \$6.63     &                &             \\ \hline
 \end{table}
 
 \begin{table}
-\begin{adjustwidth}{-0.75in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
+\begin{adjustwidth}{-0.75in}{-1.0in}
 \centering
 \caption{ISO 8655 for 30-300 $\mu$L comparing a commercial pipette with our printed pipette used with existing 3 mL syringe scale and an adjusted scale}
 \label{table4}
@@ -364,23 +653,6 @@ total        & \$6.63     &                &             \\ \hline
 & Printed Pipette Scale & 27.78  & -2.22            & -7.41        & 1.37         & 4.93          \\        
 \end{tabular}
 \end{adjustwidth}
-\end{table}
-
-\begin{table}
-\centering
-\caption{This is a table with scientific results.}
-\medskip
-\begin{tabular}{ccccc}
-\hline
-1 & 2 & 3 & 4 & 5\\
-\hline
-aaa & bbb & ccc & ddd & eee\\
-aaaa & bbbb & cccc & dddd & eeee\\
-aaaaa & bbbbb & ccccc & ddddd & eeeee\\
-aaaaaa & bbbbbb & cccccc & dddddd & eeeeee\\
-1.000 & 2.000 & 3.000 & 4.000 & 5.000\\
-\hline
-\end{tabular}
 \end{table}
 
 \end{document}
