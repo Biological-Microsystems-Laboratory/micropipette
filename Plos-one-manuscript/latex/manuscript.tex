@@ -225,13 +225,13 @@ The open source development model, initially applied to software, is thriving in
 Additive manufacturing methods have existed for decades although the recent availability of inexpensive desktop printers\cite{MakerbotIndustries,RepRap} have made it feasible for consumers to design and print prototypes and even functional parts, and consumer goods\cite{Fullerton2014,Wittbrodt2013}.
 Proliferation of free CAD software\cite{OpenScad,Blender,SketchUp,123D} and design sharing sites\cite{Thingiverse,NationalInstitutesofHealth,GrabCAD,GitHubInc} have also supported the growth and popularity of open designed parts and projects.
 Open design 3D-printable lab equipment is an attractive idea because, like open source software, it allows free access to technology that is otherwise inaccessible due to proprietary and/or financial barriers. 
-Open design tools create opportunity for scientists and educational programs in remote or resource limited areas to participate with inexpensive and easy to make tools\cite{Marzullo2012,Lang2011,Fobel2013,Baker2014,Cybulski2014}.
+Open design tools create opportunity for scientists and educational programs in remote or resource limited areas to participate with inexpensive and easy to make tools\cite{Marzullo2012,Lang2011,Fobel2013,Baker2014,Cybulski2014,Bhamla2017}.
 Open source development also enables the development of custom solutions to meet unique applications not met by commercial products that are shared freely and are user modifiable\cite{Fullerton2014,Pearce2012,Rankin2014,Sulkin2013,Dryden2015,DaCosta2014,Tek2008}.
-Some advanced, noteworthy, open source scientific equipment include a PCR device\cite{ChaiBiotechnologiesInc2015}, and a two-photon microscope\cite{Rosenegger2014} although simple tools have potential to be impactful as they can serve a wider community.
+Some advanced, noteworthy, open source scientific equipment include a PCR device\cite{ChaiBiotechnologiesInc2015}, a tissue scaffold printer\cite{Trachtenberg2014}, and a two-photon microscope\cite{Rosenegger2014} although simple tools have potential to be impactful as they can serve a wider community.
 
 Some simple and clever printable parts that have emerged are ones that give a new function to a ubiquitous existing device, such as drill bit attachment designed to hold centrifuge tubes, allowing a dremel to be used as a centrifuge\cite{Garvey2009}.
 Although this may make a rather crude centrifuge it may be an adequate solution for a fraction of the cost of a commercial centrifuge.
-Other examples of open source research tools that utilize 3D printed parts include optics equipment\cite{Zhang2013}, microscopes\cite{Baden2014a,Walus2014}, syringe pumps\cite{Wijnen2014}, reactionware\cite{Symes2012,Kitson2012,Mathieson2013,Kitson2014}, microfluidics\cite{Brennan2015,Dragone2013} and the list continues to grow\cite{PlosCollections}.
+Other examples of open source research tools that utilize 3D printed parts include optics equipment\cite{Zhang2013}, microscopes\cite{Baden2014a,Walus2014}, syringe pumps\cite{Wijnen2014,Patrick2015}, reactionware\cite{Symes2012,Kitson2012,Mathieson2013,Kitson2014}, microfluidics\cite{Brennan2015,Dragone2013} and the list continues to grow\cite{PlosCollections}.
 
 One example of a everyday scientific tool that provides opportunity for an open design solution is the micropipette.
 An open design micropipette that can be made cheaply affords more options for labs and educational settings.
@@ -241,7 +241,7 @@ Some pipettes may even re-calibrated for use with liquids of different propertie
 
 Air displacement pipettes use a piston operating principal to draw liquid into the pipette\cite{ISO8655}.
 In a typical commercial pipette the piston is made to be gas-tight with a gasketed plunger inside a smooth barrel.
-Consumer grade fused deposition modeling (FDM) printers are unable to build a smooth surface do to the formation of ridges that occur as each layer is deposited.
+Consumer grade fused deposition modeling (FDM) printers are unable to build a smooth surface do to the formation of ridges that occur as each layer is deposited\cite{Takagishi2017}.
 The ridges formed by FDM make it impractical to form a gas-tight seal between moving parts, even with a gasket.
 Existing printable open-design micropipettes get around this limitation by stretching a membrane over one end of a printed tube, which when pressed causes the displacement.
 The displacement membrane can be made from any elastic material such as a latex glove.
@@ -386,7 +386,7 @@ Our printed pipette with the adjusted scale meets ISO standards for accuracy and
 		\centering
 		\caption{ISO 8655 for 100-1000 $\mu$L comparing a commercial pipette with our printed pipette used with existing 3 mL syringe scale and an adjusted scale}
 		\label{table3}
-		\begin{tabular}{lllllll}
+		\begin{tabular}{llccccc}
 			&                       & Mean   & Systematic Error & \% Sys. err. & Random Error & \% Rand. err. \\
 			1000 $\mu$L & ISO 8655, 100-1000 $\mu$L & 1000    & 8.00             & 0.80         & 3.00         & 0.30          \\
 			& Commercial Pipette    & 1002.98 & 2.98             & 0.30         & 1.72         & 0.17          \\
@@ -418,7 +418,7 @@ Our printed pipette with the adjusted scale meets ISO standards for accuracy and
 		\centering
 		\caption{ISO 8655 for 30-300 $\mu$L comparing a commercial pipette with our printed pipette used with existing 3 mL syringe scale and an adjusted scale}
 		\label{table4}
-		\begin{tabular}{lllllll}
+		\begin{tabular}{llccccc}
 			&                       & Mean   & Systematic Error & \% Sys. err. & Random Error & \% Rand. err. \\
 			300 $\mu$L & ISO 8655, 30-300 $\mu$L   & 300    & 4.00             & 1.33         & 1.50         & 0.50          \\
 			& Commercial Pipette    & 301.19 & 1.19             & 0.40         & 0.53         & 0.18          \\
@@ -439,19 +439,8 @@ Our printed pipette with the adjusted scale meets ISO standards for accuracy and
 			& Commercial Pipette    & 29.08  & -0.92            & -3.06        & 0.09         & 0.31          \\
 			& Printed Pipette       & 29.22  & -0.78            & -2.59        & 0.31         & 1.07          \\
 			& Printed Pipette Scale & 27.78  & -2.22            & -7.41        & 1.37         & 4.93          \\
-			&                       &        &                  &              &              &               \\
-			20 $\mu$L* & ISO 8655, 30-300 $\mu$L   & 20     & 4                & 20           & 1.5          & 7.5           \\
-			& Commercial Pipette    & NA     & NA               & NA           & NA           & NA            \\
-			& Printed Pipette       & 18.70  & -1.30            & -6.48        & 0.38         & 2.01          \\
-			& Printed Pipette Scale & 17.94  & -2.06            & -10.29       & 1.87         & 10.42         \\
-			&                       &        &                  &              &              &               \\
-			10 $\mu$L* & ISO 8655, 30-300 $\mu$L   & 10     & 4                & 40           & 1.5          & 15            \\
-			& Commercial Pipette    & NA     & NA               & NA           & NA           & NA            \\
-			& Printed Pipette       & 11.95  & 1.95             & 19.52        & 0.73         & 6.08          \\
-			& Printed Pipette Scale & 7.64   & -2.36            & -23.64       & 0.38         & 4.92         
+			&                       &        &                  &              &              &               \\         
 		\end{tabular}
-		\begin{flushleft} * The 20 $\mu$L and 10 $\mu$L volumes are out of the range in this case but we wanted to demonstrate that the pipette is capable of even smaller volumes.
-		\end{flushleft}
 	\end{adjustwidth}
 \end{table}
 
