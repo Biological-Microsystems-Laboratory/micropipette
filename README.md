@@ -6,32 +6,33 @@ This printable micropipette actuates a disposable syringe to an adjustable set-p
 <img src="images/gif-side-cross.gif" alt="image" style="width: 500px;"/>
 
 <img src="images/photo.png" alt="image" style="width: 500px;"/>
-##Parts
+
+## Parts
 
 Both the 30-300 uL Pipette and the 100-1000 uL Pipette use the same printed parts: body-clip.stl and plunger.stl. In addition a disposable syringe and some additional hardware is used to assemble the pipette.
 
 **30-300 uL Pipette:**
 
-| Part         | Unit Price | Source         | Part number |
-|--------------|------------|----------------|-------------|
-| Filament     | $1.63      | Makerbot       | NA          |
-| 1 mL Syringe | $0.15      | BD Biosciences | 309628      |
-| Bolt         | $0.12      | McMaster-Carr  | 91287A026   |
-| Nut          | $0.01      | McMaster-Carr  | 90591A121   |
-| Spring (2)   | $4.14      | McMaster-Carr  | 94125K542   |
-| Washers (2)  | $0.16      | McMaster-Carr  | 90107A012   |
-| **total**    | **$6.21**  |                |             |
+| Part           | Unit Price | Source         | Part number |
+|----------------|------------|----------------|-------------|
+| Filament       | $1.63      | Makerbot       | NA          |
+| 1 mL Syringe   | $0.15      | BD Biosciences | 309628      |
+| M3 Bolt, 35 mm | $0.12      | McMaster-Carr  | 91287A026   |
+| M3 Nut         | $0.01      | McMaster-Carr  | 90591A121   |
+| Spring (2)     | $4.14      | McMaster-Carr  | 94125K542   |
+| Washers (2)    | $0.16      | McMaster-Carr  | 90107A012   |
+| **total**      | **$6.21**  |                |             |
 
 **100-1000 uL Pipette:**
 
-| Part         | Unit Price | Source         | Part number |
-|--------------|------------|----------------|-------------|
-| Filament     | $1.63      | Makerbot       | NA          |
-| 3 mL Syringe | $0.73      | BD Biosciences | 309657      |
-| Bolt         | $0.12      | McMaster-Carr  | 91287A026   |
-| Nut          | $0.01      | McMaster-Carr  | 90591A121   |
-| Spring (2)   | $4.14      | McMaster-Carr  | 94125K542   |
-| **total**    | **$6.63**  |                |             |
+| Part           | Unit Price | Source         | Part number |
+|----------------|------------|----------------|-------------|
+| Filament       | $1.63      | Makerbot       | NA          |
+| 3 mL Syringe   | $0.73      | BD Biosciences | 309657      |
+| M3 Bolt, 35 mm | $0.12      | McMaster-Carr  | 91287A026   |
+| M3 Nut         | $0.01      | McMaster-Carr  | 90591A121   |
+| Spring (2)     | $4.14      | McMaster-Carr  | 94125K542   |
+| **total**      | **$6.63**  |                |             |
 
 ## Assembly
 
@@ -41,7 +42,7 @@ See our video demonstration: https://www.youtube.com/watch?v=D8y5WUYpcW0
 
 For ease of use and to achieve the highest accuracy replace the syringe graduations with the adjusted scale. Print out on a transparency sheet and tape on to the syringe aligning the zero point with the plunger position.
 
-##Validation
+## Validation
 
 Data from a commercial pipette and our printed pipette with and without the adjusted print-and-paste scale compared to the ISO standard.
 
@@ -104,3 +105,5 @@ Data from a commercial pipette and our printed pipette with and without the adju
 |        | Printed Pipette Scale | 7.64   | -2.36            | -23.64       | 0.38         | 4.92          |
 
 * *these volumes are outside of 30-300 uL but we wanted to show data in this range achievable by the pipette.*
+
+Check out our write-up in BioRxiv: http://biorxiv.org/content/early/2017/02/20/109231
