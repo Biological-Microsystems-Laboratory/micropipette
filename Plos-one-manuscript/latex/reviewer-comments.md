@@ -5,11 +5,13 @@ Please use the space provided to explain your answers to the questions above. Yo
 1. Reviewer #1: This study about FDM printed micropipettes is very interesting. It gives a good idea of what is possible using an FDM printer, and where other technologies should be preferred.
 The Luer connector between the syringe and pipette tip is not FDM manufactured, did you try to use different printing technologies as SLA or MJP technology? Especially SLA devices are purchasable in the same price range as FDM printer and come with higher surface quality and z-axis resolution.
 
-> While SLA and MJP may provide higher resolution and smoother finishing FDM are the the most widely available and affordable of printing technologies. SLA printers are coming down in price but are still significantly more expensive especially considering the higher cost of the resin vs. FDM filament. Ultimately the goal is to make this pipette cheap and easy to make and share.
+> The following was added to the discussion "The luer to pipette tip connection is a good candidate for a 3D printed solution.
+Unfortunately the current state of FDM can not make this adapter with high enough resolution or critically, surface smoothness.
+Other printing techniques, such as stereolithography (SLA) and MultiJet Printing (MJP), provide higher resolution and smoother finishing, yet FDM is the the most widely available and affordable of printing technologies.
+SLA printers are coming down in price but are still significantly more expensive especially considering the higher cost of the consumable resin vs. FDM filament.
+Ultimately the goal of this project is to make this pipette cheap and easy to make."
 
 Since the technology opens a very new topic to many researchers, the issue of general acceptance of 3D printing should be discussed. New technologies always come with a (healthy) amount of skepticism.
-
-> the following disscusion was added 
 
 2. Reviewer #2: In their MS “Open Design 3D Printable Adjustable Micropipette that meets ISO Standard for Accuracy” Bennan et al. present their design of a 3D printable pipette which is substantially improved compared to previously published designs. The lynchpin of their idea is to use a commercial syringe as part of the design, which effectively solves a big issue with other designs out there: the pipette is much more accurate, sturdy, and, critically, not “leaky”. The authors also provide a nice set of build instructions that makes its reasonably easy to build one. So I did just that and compared it to the Biropette (my own design). Notably, I appreciate that the paper is also live on bioRxiv where I first saw it.
 
@@ -19,8 +21,7 @@ Major
 
 1) Syringe standards. The authors are all based in the USA, where syringes have a certain shape. This shape syringe, unfortunately, is not the same in Europe where I am based. As such, European syringe flanges don’t fit the 3D printed design but instead just fall out. Obviously, this is a big problem, which would be most easily fixed by providing more than one 3D printed file with different size mounts. Since the design provided is not an OpenSCAD file, modifying the existing one is tedious, and will put off most people. As such, I strongly recommend that the authors provide additional versions of the pipette body to accommodate different types of syringe flanges. It’s probably worth checking what different standards are in different regions of the world and accommodate at least the most common ones.
 
-> The syringe used for this design is available in Europe. We do hope to expand compatibility. This line was added to the discussion: "It's our hope that this project is under continuous development and compatibility with different syringes and printers can be crowd-sourced from community contributors."
-I have re made the parts in OpenSCAD so they are able to be adjusted without the need for proprietary software.
+> The syringe used for this design is available in Europe, BD distributes worldwide. We do hope to expand compatibility. This line was added to the discussion: "It's our hope that this project is under continuous development and compatibility with different syringes and printers can be crowd-sourced from community contributors."
 
 2) Related to this, the authors don’t provide the calculation for the adjusted volume scale for the syringe types they used. As such, I cannot easily make a new scale for a different pipette standard. Could the authors please show their working, and, ideally, provide more printable scales for different syringe standards.
 

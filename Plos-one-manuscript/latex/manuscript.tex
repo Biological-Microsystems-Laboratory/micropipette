@@ -378,7 +378,7 @@ Our solution was to replace the built-in scale with a scale that accounted for t
 We compared expected volumes with actual measurements and noticed a linear relationship.
 We scaled up the graduations by a factor of 1.027x for both the 100-1000 $\mu$L, and 30-300 $\mu$L configurations.
 These scales were exported to portable document format (PDF) so that they are most easily printed to scale.
-These adjusted scales are printed on a transparency sheet and taped onto the syringe with the zero at plunger in the latched position (\nameref{S1_Fig} and \nameref{S1_Fig}).
+These adjusted scales are printed on paper or a transparency sheet and taped onto the syringe with the zero at plunger in the latched position (\nameref{S1_Fig} and \nameref{S1_Fig}).
 
 With the new scale taped on the syringe our validation testing met the ISO 8655 standard.
 Replacing the scale with our scale that accounts for the expansion corrected this effect. 
@@ -457,8 +457,16 @@ Conveniently, our design can also reach to the bottom of a 15 mL conical tube al
 Unlike existing designs our design does not use a membrane that may wear out and require replacement.
 The only major limitation of this design compared to the biropipette is the option for a pipette tip ejector.
 The biropipette also uses arguably easier to source parts (a pen VS a syringe) relative to what is required from our design.
-The biropipette also was developed in OpenSCAD which is free and open source CAD software where our design was created in Solidworks a proprietary software. 
- 
+The biropipette also was developed in OpenSCAD which is free and open source CAD software where our design was created in Solidworks a proprietary software.
+This creates a limitation for users who may not have access to the proprietary software used to make the design.
+Fortunately the produced STL files are universal and can be imported an modified by any CAD software.
+
+The luer to pipette tip connection is a good candidate for a 3D printed solution.
+Unfortunately the current state of FDM can not make this adapter with high enough resolution or critically, surface smoothness.
+Other printing techniques, such as stereolithography (SLA) and MultiJet Printing (MJP), provide higher resolution and smoother finishing, yet FDM is the the most widely available and affordable of printing technologies.
+SLA printers are coming down in price but are still significantly more expensive especially considering the higher cost of the consumable resin vs. FDM filament.
+Ultimately the goal of this project is to make this pipette cheap and easy to make.
+
 Our design relies heavily on the syringe, a specialized part, for the core function as well as accuracy.
 Fortunately, as disposable syringes are a regulated medical device they must meet high standards making them a reliable part for this design.
 As good as the performance of our printed pipette is, a commercial pipette should be expected to be more reliable and preferred for critical procedures. 
