@@ -19,7 +19,7 @@ Both the 30-300 uL Pipette and the 100-1000 uL Pipette use the same printed part
 | 1 mL Syringe   | $0.15      | BD Biosciences | 309628      |
 | M3 Bolt, 35 mm | $0.12      | McMaster-Carr  | 91287A026   |
 | M3 Nut         | $0.01      | McMaster-Carr  | 90591A121   |
-| Spring (2)     | $4.14      | McMaster-Carr  | 94125K542   |
+| Spring (2)     | $4.14      | McMaster-Carr  | 9657K347    |
 | Washers (2)    | $0.16      | McMaster-Carr  | 90107A012   |
 | **total**      | **$6.21**  |                |             |
 
@@ -31,7 +31,7 @@ Both the 30-300 uL Pipette and the 100-1000 uL Pipette use the same printed part
 | 3 mL Syringe   | $0.73      | BD Biosciences | 309657      |
 | M3 Bolt, 35 mm | $0.12      | McMaster-Carr  | 91287A026   |
 | M3 Nut         | $0.01      | McMaster-Carr  | 90591A121   |
-| Spring (2)     | $4.14      | McMaster-Carr  | 94125K542   |
+| Spring (2)     | $4.14      | McMaster-Carr  | 9657K347    |
 | **total**      | **$6.63**  |                |             |
 
 ## Assembly
