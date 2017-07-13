@@ -1,0 +1,16 @@
+*.md~
+.DS_Store
+.~*
+.blend2*
+.blend1*
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.out
+*.log
+*.gz
+*.Rap*
+*~
+*.swp
+.Rhistory
