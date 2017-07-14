@@ -23,7 +23,7 @@ Major
 
 1) Syringe standards. The authors are all based in the USA, where syringes have a certain shape. This shape syringe, unfortunately, is not the same in Europe where I am based. As such, European syringe flanges don’t fit the 3D printed design but instead just fall out. Obviously, this is a big problem, which would be most easily fixed by providing more than one 3D printed file with different size mounts. Since the design provided is not an OpenSCAD file, modifying the existing one is tedious, and will put off most people. As such, I strongly recommend that the authors provide additional versions of the pipette body to accommodate different types of syringe flanges. It’s probably worth checking what different standards are in different regions of the world and accommodate at least the most common ones.
 
-> The syringe used for this design is available in Europe, BD distributes worldwide. We do hope to expand compatibility. This line was added to the discussion: "It's our hope that this project is under continuous development and compatibility with different syringes and printers can be crowd-sourced from community contributors."
+> The syringe used for this design is available in Europe, BD distributes worldwide. We do hope to expand compatibility. This line was added to the discussion: "It's our hope that this project is under continuous development where improvements and compatibility with different syringes and printers can be crowd-sourced from community contributors."
 
 2) Related to this, the authors don’t provide the calculation for the adjusted volume scale for the syringe types they used. As such, I cannot easily make a new scale for a different pipette standard. Could the authors please show their working, and, ideally, provide more printable scales for different syringe standards.
 
@@ -35,7 +35,7 @@ Major
 
 4) I could not really get the 2 point pressure thing working in my print. Basically, the chassis flap and the inner piston wedge don’t interlock, they just slide past each other. I printed on an Ultimaker 2 with “normal” quality setting so I don’t think it’s a print precision issue. Is the user required to press the little flap inwards while pushing the thumb piston down? This was not clear to me from the description. Also, if I do that, the system “locks” if I press the thumb button all the way in – is that on purpose? Perhaps, could the authors make a little video about the pipette assembly? E.g. just film someone putting one together with a few closeups, and just talking over it while they are doing it? I think this would really help, plus I suspect it would raise the appeal to actually build one for many people.
 
-> We printed on a Makerbot, perhaps some adjustments may need to be made for different printers. I have an assembly video to share. I can also make a longer walk through video with voice over commentary.
+> We printed on a Makerbot, perhaps some adjustments may need to be made for different printers. We have made new video with a voice commentary, walk through of assembly and operation of the pipette.
 
 Minor
 
@@ -45,11 +45,11 @@ Minor
 
 2) Where exactly is the printed scale to be glued on? Presumably, with “0” being exactly at the end of the non-constricted pipette shaft? Again, this could be fixed in a video. Related, how should one account for the little bit of air that is in the thin part and inside the pipette tip itself?
 
-> The scale is taped on with the zero at the position of the plunger when the pipette is in the latched postion.  The air already in the pipette is accounted for with this design. This is specified in the results section (line XXX) and in the updated video.
+> The scale is taped on with the zero at the position of the plunger when the pipette is in the latched position.  The air already in the pipette is accounted for with this design. This is specified in the results section and in the updated videos.
 
 3) I think it would help to display the data from Table 3 graphically. The table has too many numbers to be easily parsed. Also, perhaps include some histograms of effective volume for a given setting to that one can better appreciate any outliers. Alternatively, use boxplots which is probably the better thing to do anyway.
 
-> Plotting the data. I had box plots at one point. I'll have to go back to them.
+> Box plots are included in the updated manuscript (figure 4 and figure 5) presenting the systematic error data of table 3 and table 4.
 
 4) Please fix typos:
 a. Line 26, “a everyday” – change to “an”
@@ -61,3 +61,5 @@ e. Line 109, “performed” not “preformed”
 > Fixed. Thank you for catching these.
 
 3. Reviewer #3: This is a really nice paper by Dave's group and, in the opinion of this reviewer, encompasses the spirit of 3D printing in the sciences. Specifically, Dave has constructed something, an important piece of equipment that can be used in scientific labs. The pipette is a major tool used in thousands of labs. This is really neat and the statistical proof that it works is presented in the manuscript. I would publish as is...people will use this!
+
+> Thank you.
