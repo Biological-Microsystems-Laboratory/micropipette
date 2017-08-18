@@ -34,6 +34,8 @@ Both the 30-300 uL Pipette and the 100-1000 uL Pipette use the same printed part
 | Spring (2)     | $4.14      | McMaster-Carr  | 9657K347    |
 | **total**      | **$6.63**  |                |             |
 
+Kits can also be ordered from: https://www.gogomicro.com
+
 ## Assembly
 
 See our video demonstration: https://www.youtube.com/watch?v=D8y5WUYpcW0
