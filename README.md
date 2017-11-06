@@ -39,6 +39,8 @@ Both the 30-300 uL Pipette and the 100-1000 uL Pipette use the same printed part
 | 1000 uL Tips (10)                      | Fisher Scientific | 02-707-400  | $0.41      |
 |                                        | **Total**         |             | **$4.84**  |
 
+*Spring Specifications: Overall length 38 mm, OD 7.62 mm, wire diameter 0.56 mm, Max load 0.86 kg, with closed and flat ends. Also avalible from McMaster-Carr P/N: 9657K347.
+
 Kits can also be ordered from: https://www.gogomicro.com
 
 ## Assembly and Operation
